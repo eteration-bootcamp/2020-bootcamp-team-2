@@ -1,4 +1,4 @@
-# 2020 Bootcamp Team 2 - `<Düşünüyoruz>`
+# 2020 Bootcamp Team 2 - `<At the stage of thinking>`
 
 ## Team Members
 
@@ -12,7 +12,7 @@
 
 ## Project
 
-Proje şuan sadece Frontend kısmını içermektedir. Burçak hanımın istediği ödev ile ilgili yapılmıştır. Projede sadece Frontend olduğu için tüm üyeler Frontend Developer olarak göre verilmiştir. İlerleyen dönemlerde roller güncellenecektir.
+The project currently includes only the Frontend section. Ms. Burçak's request was made regarding the homework. Since there is the only Frontend in the project, all members are given as Frontend Developer. Roles will be updated in the future.
 .
 .
 .
