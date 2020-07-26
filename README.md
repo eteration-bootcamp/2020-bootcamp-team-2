@@ -9,6 +9,7 @@
 | Frontend Developer  |  Merve YILDIRIM|
 | Frontend Developer  |  Güliz AKKAYA |
 | Frontend Developer  |  Furkan ÇAKICI |
+| Frontend Developer  |  Elçin Seray ÇELİK |
 
 ## Project
 
