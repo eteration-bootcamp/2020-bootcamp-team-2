@@ -1,4 +1,4 @@
-# 2020 Bootcamp Team 2 - TRAWELL
+# 2020 Bootcamp Team 2
 
 ## Team Members
 
@@ -9,8 +9,8 @@
 | Frontend Developer  |  Merve YILDIRIM|
 | Frontend Developer  |  Güliz AKKAYA |
 | Frontend Developer  |  Furkan ÇAKICI |
-| Frontend Developer  |  Elçin Seray ÇELİK |
+
 
 ## Project
 
-Trawell is a web-based travel guide application. This application provides users to increase the travel experience. 
+The project currently includes only the Frontend section. Ms. Burçak's request was made regarding the homework. Since there is the only Frontend in the project, all members are given as Frontend Developer.
