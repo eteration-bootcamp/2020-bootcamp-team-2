@@ -9,6 +9,7 @@ class Navbar extends React.Component {
                 </div>
                 <Slider />
             </div>
+            
         )
     }
 }
