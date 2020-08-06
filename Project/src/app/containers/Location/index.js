@@ -1,18 +1,17 @@
 import React from 'react';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import Header from "../../components/Header/Header";
-import Cards from "../../components/Header/Cards";
+import Location from "./Location";
 
-function Location() {
+
+function LocationPage() {
   return (
     <div>
       <Navbar />
-      <Header />
-      <Cards />
+      <Location />
       <Footer />
     </div>
   );
 }
 
-export default Location;
+export default LocationPage;
