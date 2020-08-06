@@ -1,17 +1,49 @@
 import React from 'react';
-import Slider from "./Slider";
-class Navbar extends React.Component {
+import Carousel from 'react-bootstrap/Carousel';
+import Navbar from '../Navbar';
+class Header extends React.Component {
     render() {
         return (
-            <div className="header">
-                <div className = "header-text">
-                    <center><h1>TO DISCOVER NEW PLACES!</h1></center>
-                </div>
-                <Slider />
+            <div>
+                <Navbar />
+                <Carousel>
+                    
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 img_cover"
+                            src={require("../../images/varnelfall.jpg")}
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>First slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="d-block w-100 img_cover"  src={require("../../images/menton.jpg")} alt="Second slide" />
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 img_cover"
+                            src={require("../../images/oludeniz.jpg")}
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Third slide label</h3>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                </Carousel>
             </div>
-            
         )
     }
-}
 
-export default Navbar
+
+}
+export default Header

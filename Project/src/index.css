@@ -1,6 +1,10 @@
 .img_cover{ height:650px;}
 .img_card{ height:200px;}
 .img_footer{font-family: "Times New Roman"}
-.sz{font-size: 12px}
-.bg{background-color: #cbe4f7}
+.sz{font-size: 12px;}
+.bg{background-color: #cbe4f7;}
+.navbar_text_color{color:#fff; font-size: 20pt;  }
+.navbar_text_color:hover{ text-decoration: none;color:#ccc}
 .menu_margin{margin-right: 40px;}
+.content_grid_card{height:300px; margin-bottom : 40px;}
+.content_grid_card_image{height:250px;  margin-bottom : 5px;}

@@ -1,52 +1,47 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Navbar extends React.Component {
     render() {
-        const imgStyle = {
+        const imgStyle =
+        {
             width: "80px",
-            marginRight : "70px"
+            marginRight: "70px"
         };
         return (
-            <nav className= "navbar navbar-expand-lg navbar-light bg">
-                <a className = "navbar-brand" href= "index.html">
-                    <img 
-                        src = {require('../images/logo.png')}   
-                        alt = "sese"
-                        style={imgStyle}
-                    />
-                   
+            <nav className="navbar navbar-expand-lg navbar-light bg-transparent" style={{ position: "fixed", zIndex: "2" }}>
+                <Link to="/">
+                <a className="navbar-brand" href="index.html">
+                    <img src={require('../images/logo.png')} alt="Logo" style={imgStyle}/>
                 </a>
-                <button className = "navbar-toggler" type="button" dataToggle="collapse" dataTarget="#navbarSupportedContent">
-                    <span className = "navbar-toggler-icon"></span>
-                </button>
-
-                <div className = "collapse navbar-collapse" id="nvbarSupportedContent">
-                    <ul className = "navbar-nav mr-auto">
-                        <li className = "nav-item active">
-                            <a className = "nav-link menu_margin" href = "index.html">Home <span className = "sr-only"> (current) </span></a>
-                        </li>
-                        <li className = "nav-item">
-                            <a className = "nav-link menu_margin" href = "index.html" id = "navbarDropdown" role="button" ariaHaspopup="true" ariaExpanded="false">
-                                Choose Travel
-                            </a>
-                        </li>
-                        <li className = "nav-item">
-                            <a className = "nav-link menu_margin" href = "index.html" id = "navbarDropdown" role="button" ariaHaspopup="true" ariaExpanded="false">
-                               Hotel
-                            </a>
-                        </li>
-                        <li className = "nav-item">
-                            <a className = "nav-link menu_margin" href = "index.html" id = "navbarDropdown" role="button" ariaHaspopup="true" ariaExpanded="false">
-                                Blog
-                            </a>
-                        </li>
+                </Link>
+                <div className="collapse navbar-collapse" id="nvbarSupportedContent">
+                    <ul className="navbar-nav mr-auto">
+                        <Link to="/">
+                            <li className="nav-item active">
+                                <a className="menu_margin navbar_text_color" href="index.html">HOME</a>
+                            </li>
+                        </Link>
+                        <Link to="/Location">
+                            <li className="nav-item">
+                                <a className="menu_margin navbar_text_color" href="index.html" role="button">LOCATION</a>
+                            </li>
+                        </Link>
+                        <Link to="/Blog">
+                            <li className="nav-item">
+                                <a className="navbar_text_color" style={{ marginRight:"880px"}} href="index.html" role="button">BLOG</a>
+                            </li>
+                        </Link>
                     </ul>
                 </div>
-                <form className = "from-inline my-2 my-lg-0">
-                    <button className = "btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">Register</button>
-                    <button className = "btn btn-outline-success my-2 my-sm-0" type="submit">&nbsp; Login &nbsp;</button>
-
-                </form>
+                    <form className="from-inline my-2 my-lg-0">
+                            <Link to="/Register">
+                                <button className="btn btn-outline-light my-2 my-sm-0 mr-3 " type="submit">REGISTER</button>
+                            </Link>
+                        <Link to="/Login">
+                            <button className="btn btn-outline-light my-2 my-sm-0" type="submit">&nbsp; LOGIN &nbsp;</button>
+                        </Link>
+                    </form>
 
             </nav>
         )
