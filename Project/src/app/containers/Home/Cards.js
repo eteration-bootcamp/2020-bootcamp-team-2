@@ -7,10 +7,10 @@ class Cards extends React.Component {
     render() {
         return (
             <div className="container-md">
-                <div className="row" style={{ margin: "50px" }}>
+                <div className="row card_deck_margin">
                     <CardDeck>
                         <Card className="text-white text-right">
-                            <Card.Img variant="top" src={require("../../images/oludeniz.jpg")} />
+                            <Card.Img className="card_img_height"  src={require("../../images/oludeniz.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Content</Card.Title>
                                 <Card.Text>
@@ -26,7 +26,7 @@ class Cards extends React.Component {
 
                         </Card>
                         <Card className="text-white text-right">
-                            <Card.Img variant="top" src={require("../../images/national-park-canada.jpg")} />
+                            <Card.Img sclassName="card_img_height" src={require("../../images/national-park-canada.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Title</Card.Title>
                                 <Card.Text>
@@ -38,7 +38,7 @@ class Cards extends React.Component {
 
                         </Card>
                         <Card className="text-white text-right">
-                            <Card.Img variant="top" src={require("../../images/telmessos-ancient-city-mugla.jpg")} />
+                            <Card.Img className="card_img_height" src={require("../../images/telmessos-ancient-city-mugla.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Title</Card.Title>
                                 <Card.Text>
@@ -47,13 +47,11 @@ class Cards extends React.Component {
                                 <Card.Text>3 dk once</Card.Text>
                                 <Button variant="primary">See And Enjoy!</Button>
                             </Card.ImgOverlay>
-
                         </Card>
-
                     </CardDeck>
-                    <CardDeck style={{ marginTop: "10px" }}>
+                    <CardDeck className="card_deck_margin">
                         <Card className="text-white text-right">
-                            <Card.Img variant="top" src={require("../../images/grand-canyon.jpg")} />
+                            <Card.Img className="card_img_height" src={require("../../images/grand-canyon.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Title</Card.Title>
                                 <Card.Text>
@@ -65,7 +63,7 @@ class Cards extends React.Component {
 
                         </Card>
                         <Card className="text-white text-right">
-                            <Card.Img variant="top" src={require("../../images/menton.jpg")} />
+                            <Card.Img className="card_img_height" src={require("../../images/menton.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Title</Card.Title>
                                 <Card.Text>
@@ -77,7 +75,7 @@ class Cards extends React.Component {
 
                         </Card>
                         <Card className="text-white text-right">
-                            <Card.Img variant="top" src={require("../../images/national-park-canada.jpg")} />
+                            <Card.Img className="card_img_height" src={require("../../images/national-park-canada.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Title</Card.Title>
                                 <Card.Text>
@@ -86,13 +84,11 @@ class Cards extends React.Component {
                                 <Card.Text>3 dk once</Card.Text>
                                 <Button variant="primary">See And Enjoy!</Button>
                             </Card.ImgOverlay>
-
                         </Card>
-
                     </CardDeck>
-                    <CardDeck style={{ marginTop: "10px" }}>
+                    <CardDeck className="card_deck_margin">
                         <Card className="text-white text-right">
-                            <Card.Img variant="top" src={require("../../images/grand-canyon.jpg")} />
+                            <Card.Img className="card_img_height" src={require("../../images/grand-canyon.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Title</Card.Title>
                                 <Card.Text>
@@ -104,7 +100,7 @@ class Cards extends React.Component {
 
                         </Card>
                         <Card className="text-white text-right">
-                            <Card.Img variant="top" src={require("../../images/menton.jpg")} />
+                            <Card.Img className="card_img_height" src={require("../../images/menton.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Title</Card.Title>
                                 <Card.Text>
@@ -116,7 +112,7 @@ class Cards extends React.Component {
 
                         </Card>
                         <Card className="text-white text-right">
-                            <Card.Img variant="top" src={require("../../images/national-park-canada.jpg")} />
+                            <Card.Img className="card_img_height" src={require("../../images/national-park-canada.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Title</Card.Title>
                                 <Card.Text>

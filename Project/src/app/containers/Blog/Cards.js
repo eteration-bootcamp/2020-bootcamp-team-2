@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 class Cards extends React.Component {
     render() {
         return (
-            <div className="container-md" style = {{columnFill : "auto"}}>
-                <div className="row" style={{ margin: "50px" }}>
-                    <CardDeck>
+            <div className="container-md">
+                <div className="row">
+                    <CardDeck className="card_deck_margin">
                         <Card className="text-white text-right">
                             <Card.Img  variant="top" src={require("../../images/oludeniz.jpg")} />
                             <Card.ImgOverlay>
@@ -51,7 +51,7 @@ class Cards extends React.Component {
                         </Card>
 
                     </CardDeck>
-                    <CardDeck style={{ marginTop: "10px" }}>
+                    <CardDeck className="card_deck_margin">
                         <Card className="text-white text-right">
                             <Card.Img variant="top" src={require("../../images/grand-canyon.jpg")} />
                             <Card.ImgOverlay>

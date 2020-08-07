@@ -11,7 +11,7 @@ class Cards extends React.Component {
     render() {
         return (
             <Container fluid="md">
-                <Row style={{ marginBottom: "20px" }}>
+                <Row className="card_deck_margin">
                     <Col md={3}>
                         <Card class="content_grid_card" className="text-white text-right">
                             <Card.Img variant="top" class="content_grid_card_image" src={require("../../images/oludeniz.jpg")} />
@@ -46,7 +46,7 @@ class Cards extends React.Component {
                         </Card>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="card_deck_margin">
                     <Col md={6}>
                         <Card class="content_grid_card" className="text-white text-right">
                             <Card.Img variant="top" class="content_grid_card_image" src={require("../../images/oludeniz.jpg")} />

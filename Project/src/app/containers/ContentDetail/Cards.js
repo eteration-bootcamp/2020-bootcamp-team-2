@@ -10,7 +10,7 @@ class Cards extends React.Component {
         return (
             <Container fluid="md">
                 <Row><Col><h2>Lokanta Alsancak</h2></Col></Row>
-                <Row style={{ marginBottom: "20px" }}>
+                <Row>
                     <Col md={6} >
                         <Card class="content_grid_card" className="text-white text-right">
                             <Card.Img class="content_grid_card_image" variant="top" src={require("../../images/oludeniz.jpg")} />
@@ -20,7 +20,7 @@ class Cards extends React.Component {
                         <h3>Information</h3>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="card_deck_margin">
                     <Col md={6}>
                         <Row>
                             <Col>

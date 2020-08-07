@@ -25,7 +25,7 @@ class Navbar extends React.Component {
 
                     </ul>
                 </div>
-                <div style={{ float: "right" }}>
+                <div className="navbar_login">
                     <Link to="/Register">
                         <button className="btn btn-outline-light my-2 my-sm-0 mr-3 " type="submit">REGISTER</button>
                     </Link>

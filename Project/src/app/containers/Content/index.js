@@ -6,12 +6,7 @@ function Content() {
   return (
     <div>     
       <Header />
-      <Cards />
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>    
+      <Cards />  
     </div>
   );
 }
