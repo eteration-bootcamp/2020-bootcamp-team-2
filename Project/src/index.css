@@ -1,7 +1,7 @@
 .img_cover{ height:650px;}
 .logo_style{ width: 80px; margin-right: 70px;}
 .navbar_menu_margin{margin-right:4em;}
-.navbar_text_color{ color:#fff; font-size: 20pt;}
+.navbar_text_color{ color:#fff; font-size: 20pt; font-family:Mv Boli}
 .navbar_text_color:hover{text-decoration:none; color:#ccc}
 .navbar_style{position:fixed; z-index:2; box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.70); width: 100%;}
 .navbar_login{float: right;}
@@ -12,7 +12,10 @@
 .login_register_form{margin-right:20px;background-color: #FFFFFF; color:#000; 
     border:1px solid #24a19c; width: 420px; opacity: 0.7; font-family: Mv Boli;}
 .login_register_button{margin-right:20px; background-color: #24a19c; color:#fff; 
-    border:1px solid #24a19c; width: 420px; font-family: Mv Boli; border-radius: 50px; font-weight:Bold; box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.70);}
+    border:1px solid #24a19c; width: 420px; font-family: Mv Boli; border-radius: 50px; 
+    font-weight:Bold; box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.70);}
 .login_button_width{ width: 200px;}
 .location_header_style{margin:30px; font-family: MV Boli;color:#3B6978;}
 .location_component_style{margin-top:40%; font-family: MV Boli;color:#3B6978; font-size: 28px; }
+.footer_style{margin-top:20px; background-color: #FFFFFF; color:#000; 
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.70); width: 100%; opacity: 0.7; font-family: Mv Boli;}

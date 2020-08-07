@@ -1,15 +1,27 @@
 import React from 'react';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 
 class Footer extends React.Component {
     render() {
         return (
-            <div style={{ backgroundColor: "#cbe4f7"}}>
-
-                <footer className="page-footer font-small blue">
-                    <div className="footer-copyright text-center elegant-color">© 2020 Copyright:
-                        <a href="index.html">Eteration Bootcampers - TEAM-2</a>
-                    </div>
-                </footer>
+            <div className="footer_style" >
+                <Container fluid>
+                    <Row>
+                        <Col><p>ABOUT</p>
+                            <p>This company is a travel-guide wep application.</p>
+                        </Col>
+                        <Col>
+                            <a href="#">PRIVACY POLICY</a>
+                        </Col>
+                        <Col>
+                            <div float="right">© 2020 Copyright:
+                            <a href="index.html">TRAWELL</a>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         )
     }
