@@ -5,7 +5,7 @@ import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import '../../../index.css';
-import { Link } from 'react-router-dom';
+
 
 class Cards extends React.Component {
     render() {

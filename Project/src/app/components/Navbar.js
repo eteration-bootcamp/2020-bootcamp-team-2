@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 class Navbar extends React.Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-transparent navbar_style">
+            <nav className="navbar navbar-expand-lg navbar-light bg-transparent navbar_style" >
                 <Link to="/"><img src={require('../images/logo.png')} className="logo_style" alt="Logo" /></Link>
                 <div className="collapse navbar-collapse" id="nvbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
@@ -38,6 +35,8 @@ class Navbar extends React.Component {
                 </div>
             </nav>
         )
+
+    
     }
 }
 

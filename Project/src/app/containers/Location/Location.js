@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Dropdown from 'react-bootstrap/Dropdown'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -21,7 +20,7 @@ class CarouselBox extends React.Component{
                             />
                             
                             <Carousel.Caption>
-                            
+                             
                                 <h3>First slide label</h3>
                                 <Button variant="info">Info</Button>{' '}
                                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -69,8 +68,41 @@ class Location extends React.Component {
 
         
         };
+
+       
         return (
-            <div className="mb-2">
+            
+            <div className="mb-2" >
+                <Container fluid>
+                    <Row><Carousel>
+                        <Carousel.Item>
+                            <img
+                                height={300}
+                                className="d-block w-100"
+                                src={require('./images/izmir.jpg')}
+                                alt="First slide"
+                            />
+                            <Carousel.Caption>
+                                <h3>First slide label</h3>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                height={300}
+                                className="d-block w-100"
+                                src={require('./images/izmir2.jpg')}
+                                alt="Third slide"
+                            />
+
+                            <Carousel.Caption>
+                                <h3>Second slide label</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                    </Carousel></Row>
+                </Container>
                 <Container>
                     <Row>
                         <Col xs={6} md={4}>
@@ -120,6 +152,8 @@ class Location extends React.Component {
                     </Row>
 
                 </Container>
+
+
                 <Container fluid>
                     <Row>
                         <Col>
@@ -132,36 +166,7 @@ class Location extends React.Component {
                     </Row>
                 </Container>
 
-                <Container fluid>
-                    <Row><Carousel>
-                        <Carousel.Item>
-                            <img
-                                height={300}
-                                className="d-block w-100"
-                                src={require('./images/izmir.jpg')}
-                                alt="First slide"
-                            />
-                            <Carousel.Caption>
-                                <h3>First slide label</h3>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                height={300}
-                                className="d-block w-100"
-                                src={require('./images/izmir2.jpg')}
-                                alt="Third slide"
-                            />
-
-                            <Carousel.Caption>
-                                <h3>Second slide label</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                    </Carousel></Row>
-                </Container>
+               
 
                 <Container fluid>
                     <div className='mt-5'>

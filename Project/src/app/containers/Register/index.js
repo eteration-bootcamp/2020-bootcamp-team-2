@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import RegisterPage from "./RegisterPage";
 
@@ -8,7 +7,7 @@ function Register() {
     <div>
       <RegisterPage />
       <Header />
-      <Footer />
+
     </div>
   );
 }

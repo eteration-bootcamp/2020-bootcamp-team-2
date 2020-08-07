@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Cards from "./Cards";
 function Home() {
@@ -7,7 +6,7 @@ function Home() {
     <div>
       <Header />
       <Cards />
-      <Footer />
+
     </div>
   );
 }

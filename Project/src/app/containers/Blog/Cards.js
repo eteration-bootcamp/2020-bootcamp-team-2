@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 class Cards extends React.Component {
     render() {
         return (
-            <div className="container-md">
+            <div className="container-md" style = {{columnFill : "auto"}}>
                 <div className="row" style={{ margin: "50px" }}>
                     <CardDeck>
                         <Card className="text-white text-right">
-                            <Card.Img variant="top" src={require("../../images/oludeniz.jpg")} />
+                            <Card.Img  variant="top" src={require("../../images/oludeniz.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Content</Card.Title>
                                 <Card.Text>

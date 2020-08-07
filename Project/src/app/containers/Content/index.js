@@ -1,21 +1,17 @@
 import React from 'react';
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
 import Header from "./Header";
 import Cards from "./Cards";
 
 function Content() {
   return (
-    <div>
-      <Navbar />
+    <div>     
       <Header />
       <Cards />
       <br></br>
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
-      <Footer />
+      <br></br>    
     </div>
   );
 }
