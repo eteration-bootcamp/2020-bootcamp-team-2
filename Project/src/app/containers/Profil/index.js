@@ -5,7 +5,6 @@ import Footer from "../../components/Footer";
 function Profil() {
   return (
     <div>
-      <h2></h2>
       <Navbar />
       <Footer />
     </div>

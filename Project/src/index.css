@@ -3,8 +3,10 @@
 .img_footer{font-family: "Times New Roman"}
 .sz{font-size: 12px;}
 .bg{background-color: #cbe4f7;}
-.navbar_text_color{color:#fff; font-size: 20pt;  }
-.navbar_text_color:hover{ text-decoration: none;color:#ccc}
-.menu_margin{margin-right: 40px;}
+.logo_style{ width: 80px; margin-right: 70px;}
+.navbar_menu_margin{margin-right:4em;}
+.navbar_text_color{ color:#fff; font-size: 20pt;}
+.navbar_text_color:hover{text-decoration:none; color:#ccc}
+.navbar_style{position:fixed; z-index:2; box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.70); width: 100%;}
 .content_grid_card{height:300px; margin-bottom : 40px;}
-.content_grid_card_image{height:250px;  margin-bottom : 5px;}
+.content_grid_card_image{height:250px;  margin-bottom : 5px;} 

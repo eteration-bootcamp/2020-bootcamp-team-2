@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from "../../components/Footer";
-import Header from "../../components/Header/Header";
-import Cards from "../../components/Header/Cards";
+import Header from "../../components/Header";
+import Cards from "./Cards";
 function Home() {
   return (
     <div>
