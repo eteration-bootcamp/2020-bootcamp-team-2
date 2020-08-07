@@ -5,10 +5,7 @@ import Location from "./Location";
 function LocationPage() {
   return (
     <div>
-      
-
       <Location />
-
     </div>
   );
 }

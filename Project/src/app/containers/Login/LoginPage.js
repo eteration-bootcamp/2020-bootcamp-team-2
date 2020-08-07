@@ -6,16 +6,6 @@ import Container from 'react-bootstrap/Container';
 
 class LoginPage extends React.Component {
     render() {
-        const styleButton = {
-            marginRight: "20px",
-            backgroundColor: "#24a19c",
-            color: "#fff",
-            border: "1px solid #24a19c",
-            borderRadius: "50px",
-            width: "200px",
-            fontFamily: "Mv Boli"
-        };
-
         return (
             <Container fluid="md">
                 <Col md={6} className="mx-auto">
