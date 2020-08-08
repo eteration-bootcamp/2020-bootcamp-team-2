@@ -10,18 +10,6 @@ import Media from 'react-bootstrap/Media'
 
 class ProfilePage extends React.Component {
     render() {
-
-        const imgStyle = {
-            width: 100,
-            height: 100,
-            margin: "20px",
-        }
-
-        const cardStyle = {
-            margin: "20px",
-            height: 400,
-
-        }
         return (
             <div>
                 <Container>
@@ -29,16 +17,13 @@ class ProfilePage extends React.Component {
                         <Col md={4}>
                         <Media style={{margin: "20px"}} as="li">
                             <img
-                                width={100}
-                                height={100}
-                                margin={"20px"}
-                                className="mr-3"
+                                className="mr-3 profile-image-style"
                                 src={require('./images/user.png')}/>
                         <Media.Body>
-                            <center><h5 style={{marginTop: "10px"}}>Name Surname</h5>
+                            <center><h5 className="profile-font-style" style={{marginTop: "10px"}}>Name Surname</h5>
 
-                            <Button style={{margin: "10px"}} variant="outline-success">Edit</Button>
-                            <Button style={{margin: "10px"}} variant="outline-success">Settings</Button>
+                            <Button style={{margin: "10px"}} variant="outline-info">Edit</Button>
+                            <Button style={{margin: "10px"}} variant="outline-info">Settings</Button>
                             </center>
                             <p style={{marginTop: "20px", float:"left"}}>
                                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
@@ -56,23 +41,27 @@ class ProfilePage extends React.Component {
 
 
                         <Col md={4} >
-                            <center><h2 style={{ margin: "20px" }}>Visited Places</h2></center>
-                            <ListGroup style={{ margin: "20px" }}>
+                            <center><h2 className="profile-font-style" style={{ margin: "20px" }}>Visited Places</h2></center>
+                            <ListGroup style={{ margin: "20px", overflowY: "scroll", maxHeight: '250px' }}>
                                 <ListGroup.Item>İzmir</ListGroup.Item>
                                 <ListGroup.Item>Ankara</ListGroup.Item>
                                 <ListGroup.Item>İstanbul</ListGroup.Item>
                                 <ListGroup.Item>Antalya</ListGroup.Item>
                                 <ListGroup.Item>Bursa</ListGroup.Item>
+                                <ListGroup.Item>Muğla</ListGroup.Item>
+                                <ListGroup.Item>Rize</ListGroup.Item>
                             </ListGroup>
                         </Col>
                         <Col md={4} >
-                            <center><h2 style={{ margin: "20px" }}>Places To Visit</h2></center>
-                            <ListGroup style={{ margin: "20px" }}>
+                            <center><h2 className="profile-font-style" style={{ margin: "20px" }}>Places To Visit</h2></center>
+                            <ListGroup style={{ margin: "20px", overflowY: "scroll", maxHeight: '250px'}}>
                                 <ListGroup.Item>İzmir</ListGroup.Item>
                                 <ListGroup.Item>Ankara</ListGroup.Item>
                                 <ListGroup.Item>İstanbul</ListGroup.Item>
                                 <ListGroup.Item>Antalya</ListGroup.Item>
                                 <ListGroup.Item>Bursa</ListGroup.Item>
+                                <ListGroup.Item>Muğla</ListGroup.Item>
+                                <ListGroup.Item>Rize</ListGroup.Item>
                             </ListGroup>
                         </Col>
                     </Row>
@@ -80,7 +69,7 @@ class ProfilePage extends React.Component {
 
                     <Row md={3}>
                         <Col md={4}>
-                            <Card style={cardStyle}>
+                            <Card className="profile-card-style">
                                 <Card.Img style={{ height: 200 }} variant="top" src={require('../Location/images/izmir.jpg')} />
                                 <Card.Body>
                                     <Card.Title>Blog</Card.Title>
@@ -95,7 +84,7 @@ class ProfilePage extends React.Component {
                         </Col>
 
                         <Col md={8}>
-                            <Card style={cardStyle}>
+                            <Card className="profile-card-style">
                                 <Card.Img style={{ height: 200 }} variant="top" src={require('../Location/images/izmir2.jpg')} />
                                 <Card.Body>
                                     <Card.Title>Blog</Card.Title>
@@ -111,8 +100,8 @@ class ProfilePage extends React.Component {
                     </Row>
 
                     <Row md={3}>
-                        <Col md={8}>
-                            <Card style={cardStyle}>
+                        <Col md={4}>
+                            <Card className="profile-card-style">
                                 <Card.Img style={{ height: 200 }} variant="top" src={require('../Location/images/izmir2.jpg')} />
                                 <Card.Body>
                                     <Card.Title>Blog</Card.Title>
@@ -127,7 +116,21 @@ class ProfilePage extends React.Component {
                         </Col>
 
                         <Col md={4}>
-                            <Card style={cardStyle}>
+                            <Card className="profile-card-style">
+                                <Card.Img style={{ height: 200 }} variant="top" src={require('../Location/images/izmir.jpg')} />
+                                <Card.Body>
+                                    <Card.Title>Blog</Card.Title>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the bulk of
+                                        the card's content.
+                                    </Card.Text>
+                                    <Button variant="primary">Read</Button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+
+                        <Col md={4}>
+                            <Card className="profile-card-style">
                                 <Card.Img style={{ height: 200 }} variant="top" src={require('../Location/images/izmir.jpg')} />
                                 <Card.Body>
                                     <Card.Title>Blog</Card.Title>
