@@ -11,10 +11,10 @@ class CarouselBox extends React.Component {
         return (
             <div>
                 <Dropdown>
-                    <Dropdown.Toggle className="location_card_button" variant="info" id="dropdown-basic">+</Dropdown.Toggle>
+                    <Dropdown.Toggle className="location_card_button" id="dropdown-basic">+</Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item href="#">Gittim</Dropdown.Item>
-                        <Dropdown.Item href="#">Gitmedim</Dropdown.Item>
+                        <Dropdown.Item href="#">Add visited places</Dropdown.Item>
+                        <Dropdown.Item href="#">Add places to visit</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <Carousel>
@@ -77,7 +77,7 @@ class Location extends React.Component {
                             <Col md={2}></Col>
                             <Col >
                                 <Dropdown>
-                                    <Dropdown.Toggle className="location_header_style" variant="outline-info" id="dropdown-basic">
+                                    <Dropdown.Toggle className="location_header_style button_shadow" variant="outline-info" id="dropdown-basic">
                                         Please select a country
                                 </Dropdown.Toggle>
                                     <Dropdown.Menu>
@@ -92,7 +92,7 @@ class Location extends React.Component {
                             <Col>
                                 <center>
                                     <Dropdown>
-                                        <Dropdown.Toggle className="location_header_style" variant="outline-info" id="dropdown-basic">
+                                        <Dropdown.Toggle className="location_header_style button_shadow" variant="outline-info" id="dropdown-basic">
                                             Please select a city
                                 </Dropdown.Toggle>
                                         <Dropdown.Menu>
@@ -105,7 +105,7 @@ class Location extends React.Component {
                             </Col>
                             <Col>
                                 <center>
-                                    <Button className="location_header_style" variant="outline-info">SELECT</Button>{' '}
+                                    <Button className="location_header_style button_shadow" variant="outline-info">SELECT</Button>{' '}
                                 </center>
                             </Col>
                         </Row>

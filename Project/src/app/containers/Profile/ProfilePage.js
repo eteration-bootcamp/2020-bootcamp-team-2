@@ -22,8 +22,8 @@ class ProfilePage extends React.Component {
                         <Media.Body>
                             <center><h5 className="profile-font-style" style={{marginTop: "10px"}}>Name Surname</h5>
 
-                            <Button style={{margin: "10px"}} variant="outline-info">Edit</Button>
-                            <Button style={{margin: "10px"}} variant="outline-info">Settings</Button>
+                            <Button className ="profile_button" >Edit</Button>
+                            <Button className ="profile_button" variant="outline-info">Settings</Button>
                             </center>
                             <p style={{marginTop: "20px", float:"left"}}>
                                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
@@ -77,7 +77,7 @@ class ProfilePage extends React.Component {
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                    <Button variant="primary">Read</Button>
+                                    <Button className ="profile_button">Read</Button>
                                 </Card.Body>
                             </Card>
 
@@ -92,7 +92,7 @@ class ProfilePage extends React.Component {
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                    <Button variant="primary">Read</Button>
+                                    <Button className ="profile_button">Read</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -109,7 +109,7 @@ class ProfilePage extends React.Component {
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                    <Button variant="primary">Read</Button>
+                                    <Button className ="profile_button">Read</Button>
                                 </Card.Body>
                             </Card>
 
@@ -124,7 +124,7 @@ class ProfilePage extends React.Component {
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                    <Button variant="primary">Read</Button>
+                                    <Button className ="profile_button">Read</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -138,7 +138,7 @@ class ProfilePage extends React.Component {
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                    <Button variant="primary">Read</Button>
+                                    <Button className ="profile_button">Read</Button>
                                 </Card.Body>
                             </Card>
                         </Col>

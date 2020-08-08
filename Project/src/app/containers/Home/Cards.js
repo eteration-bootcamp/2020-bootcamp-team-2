@@ -8,43 +8,6 @@ class Cards extends React.Component {
         return (
             <div className="container-md">
                 <div className="row card_deck_margin" >
-                    <CardDeck>
-                        <Card className="text-white text-right">
-
-                            <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Content</Card.Title>
-                                <Card.Text>Go And Enjoy!lar</Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                                <Link to="/Content" >
-                                    <Button className="card_button" variant="primary">See And Enjoy!</Button>
-                                </Link>
-                            </Card.ImgOverlay>
-                        </Card>
-                        <Card className="text-white text-right">
-
-                            <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Content</Card.Title>
-                                <Card.Text>Go And Enjoy!lar</Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                                <Link to="/Content" >
-                                    <Button className="card_button" variant="primary">See And Enjoy!</Button>
-                                </Link>
-                            </Card.ImgOverlay>
-                        </Card>
-                        <Card className="text-white text-right">
-                            <Card.Img className="card_img_height" src={require("../../images/telmessos-ancient-city-mugla.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Title</Card.Title>
-                                <Card.Text>
-                                    Go And Enjoy!lar
-                                </Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
-                            </Card.ImgOverlay>
-                        </Card>
-                    </CardDeck>
                     <CardDeck className="card_deck_margin">
                         <Card className="text-white text-right">
                             <Card.Img className="card_img_height" src={require("../../images/grand-canyon.jpg")} />
