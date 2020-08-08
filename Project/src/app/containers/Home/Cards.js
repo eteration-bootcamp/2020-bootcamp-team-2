@@ -7,35 +7,31 @@ class Cards extends React.Component {
     render() {
         return (
             <div className="container-md">
-                <div className="row card_deck_margin">
+                <div className="row card_deck_margin" >
                     <CardDeck>
                         <Card className="text-white text-right">
-                            <Card.Img className="card_img_height"  src={require("../../images/oludeniz.jpg")} />
+
+                            <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Content</Card.Title>
-                                <Card.Text>
-                                    Go And Enjoy!lar
-                                </Card.Text>
+                                <Card.Text>Go And Enjoy!lar</Card.Text>
                                 <Card.Text>3 dk once</Card.Text>
-
-                                <Link to="/Content">
-                                    <Button variant="primary">See And Enjoy!</Button>
+                                <Link to="/Content" >
+                                    <Button className="card_button" variant="primary">See And Enjoy!</Button>
                                 </Link>
                             </Card.ImgOverlay>
-
-
                         </Card>
                         <Card className="text-white text-right">
-                            <Card.Img sclassName="card_img_height" src={require("../../images/national-park-canada.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Title</Card.Title>
-                                <Card.Text>
-                                    Go And Enjoy!lar
-                                </Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                                <Button variant="primary">See And Enjoy!</Button>
-                            </Card.ImgOverlay>
 
+                            <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
+                            <Card.ImgOverlay>
+                                <Card.Title>Content</Card.Title>
+                                <Card.Text>Go And Enjoy!lar</Card.Text>
+                                <Card.Text>3 dk once</Card.Text>
+                                <Link to="/Content" >
+                                    <Button className="card_button" variant="primary">See And Enjoy!</Button>
+                                </Link>
+                            </Card.ImgOverlay>
                         </Card>
                         <Card className="text-white text-right">
                             <Card.Img className="card_img_height" src={require("../../images/telmessos-ancient-city-mugla.jpg")} />
@@ -45,7 +41,7 @@ class Cards extends React.Component {
                                     Go And Enjoy!lar
                                 </Card.Text>
                                 <Card.Text>3 dk once</Card.Text>
-                                <Button variant="primary">See And Enjoy!</Button>
+                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
                             </Card.ImgOverlay>
                         </Card>
                     </CardDeck>
@@ -58,7 +54,7 @@ class Cards extends React.Component {
                                     Go And Enjoy!lar
                                 </Card.Text>
                                 <Card.Text>3 dk once</Card.Text>
-                                <Button variant="primary">See And Enjoy!</Button>
+                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
                             </Card.ImgOverlay>
 
                         </Card>
@@ -70,7 +66,7 @@ class Cards extends React.Component {
                                     Go And Enjoy!lar
                                 </Card.Text>
                                 <Card.Text>3 dk once</Card.Text>
-                                <Button variant="primary">See And Enjoy!</Button>
+                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
                             </Card.ImgOverlay>
 
                         </Card>
@@ -82,7 +78,7 @@ class Cards extends React.Component {
                                     Go And Enjoy!lar
                                 </Card.Text>
                                 <Card.Text>3 dk once</Card.Text>
-                                <Button variant="primary">See And Enjoy!</Button>
+                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
                             </Card.ImgOverlay>
                         </Card>
                     </CardDeck>
@@ -95,35 +91,27 @@ class Cards extends React.Component {
                                     Go And Enjoy!lar
                                 </Card.Text>
                                 <Card.Text>3 dk once</Card.Text>
-                                <Button variant="primary">See And Enjoy!</Button>
+                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
                             </Card.ImgOverlay>
-
                         </Card>
                         <Card className="text-white text-right">
                             <Card.Img className="card_img_height" src={require("../../images/menton.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Title</Card.Title>
-                                <Card.Text>
-                                    Go And Enjoy!lar
-                                </Card.Text>
+                                <Card.Text>Go And Enjoy!lar</Card.Text>
                                 <Card.Text>3 dk once</Card.Text>
-                                <Button variant="primary">See And Enjoy!</Button>
+                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
                             </Card.ImgOverlay>
-
                         </Card>
                         <Card className="text-white text-right">
                             <Card.Img className="card_img_height" src={require("../../images/national-park-canada.jpg")} />
                             <Card.ImgOverlay>
                                 <Card.Title>Title</Card.Title>
-                                <Card.Text>
-                                    Go And Enjoy!lar
-                                </Card.Text>
+                                <Card.Text>Go And Enjoy!lar</Card.Text>
                                 <Card.Text>3 dk once</Card.Text>
-                                <Button variant="primary">See And Enjoy!</Button>
+                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
                             </Card.ImgOverlay>
-
                         </Card>
-
                     </CardDeck>
                 </div>
             </div>

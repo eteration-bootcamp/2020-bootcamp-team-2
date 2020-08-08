@@ -8,15 +8,45 @@
 .content_grid_card{height:300px; margin-bottom : 40px;}
 .content_grid_card_image{height:250px;  margin-bottom : 5px;} 
 .card_deck_margin{margin-top: 20px;}
-.card_img_height{height: 100%;}
+.card_img_height{height: 85%;} 
 .login_register_form{margin-right:20px;background-color: #FFFFFF; color:#000; 
     border:1px solid #24a19c; width: 420px; opacity: 0.7; font-family: Mv Boli;}
 .login_register_button{margin-right:20px; background-color: #24a19c; color:#fff; 
     border:1px solid #24a19c; width: 420px; font-family: Mv Boli; border-radius: 50px; 
     font-weight:Bold; box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.70);}
 .login_button_width{ width: 200px;}
-.location_header_style{margin-top: 30px; margin-bottom: 30px; font-family: MV Boli;color:#3B6978; width:300px;}
+.location_header_style{margin-top: 30px; margin-bottom: 30px; font-family: MV Boli;color:#3B6978; width:100%;}
 .location_component_style{margin-top:40%; font-family: MV Boli;color:#3B6978; font-size: 28px; }
 .footer_style{margin-top:20px; background-color: #FFFFFF; color:#000; 
     box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.70); width: 100%; opacity: 0.7; font-family: Mv Boli;}
+.location_card_button{ z-index:5; position:absolute ; top: 0; right:0; font-size: 17pt;}
+.card_button{position:absolute;left:0; bottom:0; height:15%; width:100%; box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.70); border-radius: 0;}
 
+
+
+.black{
+    position:fixed;
+    top:0;
+    background:#333;
+    width:100%;
+    height:50px;
+    
+  }
+  .black ul{
+    list-style-type:none;
+    padding:0;
+  }
+  
+  .black ul li{
+    display:inline-block;
+    width:100px;
+    color:red;
+  }
+  
+  .blue{
+    position:fixed;
+    top:0;
+    background:blue;
+    width:100%;
+    height:50px;
+  }
