@@ -3,32 +3,59 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
+import { connect } from 'react-redux';
+import { signUp } from '../../store/actions/authActions'
+import { Redirect} from 'react-router-dom'
+import axios from 'axios'
 
-class RegisterPage extends React.Component {  
+class RegisterPage extends React.Component {
+    state = {
+        email: '',
+        password: '',
+        confirmPassword: '',
+        fullName: ''
+    }
+    handleChange = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+    }
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.signUp(this.state);
+    }
+
     render() {
+        const { auth , authError } = this.props;
+        if(auth.uid) return <Redirect to= '/' />
         return (
             <Container fluid="md">
             <Col>
                 <center md={6} className="col-md-offset-6 centered">
-                    <Form style={{position:"absolute", zIndex: "3", marginTop:"15%",marginLeft:"30%"}}>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Control className="login_register_form" type="name" placeholder="ENTER A NAME AND SURNAME" />
+                    <Form onSubmit={this.handleSubmit} style={{position:"absolute", zIndex: "3", marginTop:"15%",marginLeft:"30%"}}>
+                    
+                    <Form.Group controlId="email">
+                        <Form.Control onChange={this.handleChange} className="login_register_form" type="email" placeholder="ENTER AN E-MAIL ADDRESS" />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Control className="login_register_form" type="email" placeholder="ENTER AN E-MAIL ADDRESS" />
+                    <Form.Group controlId="password">
+                        <Form.Control onChange={this.handleChange} className="login_register_form" type="password" placeholder="ENTER A PASSWORD" />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Control className="login_register_form" type="password" placeholder="ENTER A PASSWORD" />
-                    </Form.Group>
-                    <Form.Group controlId="formBasicPassword">
+                    <Form.Group controlId="confirmPassword">
                         <Form.Control className="login_register_form" type="password" placeholder="CONFIRM A PASSWORD" />
+                    </Form.Group>
+
+                    <Form.Group controlId="fullName">
+                        <Form.Control onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER A NAME AND SURNAME" />
                     </Form.Group>
                         
                     <Button className="login_register_button" variant="primary" type="submit">
                         SIGN UP
-                    </Button>                 
+                    </Button>
+                    <div className="red-text center" style={{ backgroundColor: 'white'}}>
+                            {authError ? <p style={{ color: 'red' }}>{authError}</p> : <p style={{color : 'green'}}></p>} 
+                        </div>                 
                 </Form>                
 
                 </center>
@@ -39,4 +66,19 @@ class RegisterPage extends React.Component {
     }
 }
 
-export default RegisterPage
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth,
+        authError: state.auth.authError
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signUp: (newUser) => dispatch(signUp(newUser))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(RegisterPage)
+
+

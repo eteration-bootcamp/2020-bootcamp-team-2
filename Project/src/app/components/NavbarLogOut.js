@@ -9,7 +9,7 @@ const NavbarLogOut = (props) => {
             <Link to="/">
                 <button onClick = {props.signOut} className="btn btn-outline-light my-2 my-sm-0 mr-3 " type="submit">LOGOUT</button>
             </Link>
-            <Link to="/Home">
+            <Link to="/Profile">
                 <button className="btn btn-outline-light my-2 my-sm-0" type="submit">&nbsp; PROFILE &nbsp;</button>
             </Link>
         </div>

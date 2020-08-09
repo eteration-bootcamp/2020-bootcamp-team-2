@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import { connect } from 'react-redux';
 import { signIn } from '../../store/actions/authActions'
+import { Redirect} from 'react-router-dom'
+import axios from 'axios'
 class LoginPage extends React.Component {
     state = {
         email: '',
@@ -21,7 +23,8 @@ class LoginPage extends React.Component {
         this.props.signIn(this.state);
     }
     render() {
-        const { authError } = this.props
+        const { auth, authError } = this.props;
+        if(auth.uid) return <Redirect to= '/' />
         return (
             <Container fluid="md">
                 <Col md={6} className="mx-auto">
@@ -43,7 +46,7 @@ class LoginPage extends React.Component {
                             LOGIN
                         </Button>
                         <div className="red-text center" style={{ backgroundColor: 'white'}}>
-                            {authError ? <p style={{ color: 'red' }}>{authError}</p> : <p style={{color : 'green'}}>GİRİŞ BAŞARILI</p>} 
+                            {authError ? <p style={{ color: 'red' }}>{authError}</p> : <p style={{color : 'green'}}></p>} 
                         </div>
                     </Form>
 
@@ -57,6 +60,7 @@ class LoginPage extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
+        auth: state.firebase.auth,
         authError: state.auth.authError
     }
 }
