@@ -1,14 +1,25 @@
 import React from 'react';
 import Header from "../../components/Header";
 import Cards from "./Cards";
-function Home() {
-  return (
-    <div>
-      <Header />
-      <Cards />
+import { connect } from "react-redux";
 
+class Home extends React.Component{
+  render() {
+
+    const { cardsDetail } = this.props;
+    return (
+      <div>
+        <Header/>
+        <Cards  cardsDetail = {cardsDetail} />
     </div>
-  );
+    )
+  }
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    cardsDetail : state.cardDetail.cardsDetail
+  }
+}
+
+export default connect(mapStateToProps)(Home);

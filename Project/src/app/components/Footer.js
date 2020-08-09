@@ -1,7 +1,5 @@
 import React from 'react';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
+
 
 class Footer extends React.Component {
     render() {
@@ -27,10 +25,10 @@ class Footer extends React.Component {
                         <div className="col">
                             <br></br>
                             <h4>FOLLOW US</h4>
-                            <a style={{color: "#FFFFFF", fontSize: "36px"}} className="icon" href="#"><i className="fab fa-github"></i></a>
+                            <a style={{color: "#FFFFFF", fontSize: "36px"}} className="icon" href="!#"><i className="fab fa-github"></i></a>
                         </div>
                     </div>
-
+ 
                     <hr style={{ height: "5px" }} />
 
                     <div className="row">

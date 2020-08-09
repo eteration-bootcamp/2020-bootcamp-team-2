@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-class Navbar extends React.Component {
-    render() {
+import { connect } from 'react-redux';
+import NavbarLogIn from './NavbarLogIn';
+import NavbarLogOut from './NavbarLogOut';
+const Navbar = (props) => {
+    const { auth } = props;
+    const links = auth.uid ? <NavbarLogOut /> : <NavbarLogIn />;
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-transparent navbar_style" >
                 <Link to="/"><img src={require('../images/logo.png')} className="logo_style" alt="Logo" /></Link>
@@ -25,19 +29,16 @@ class Navbar extends React.Component {
 
                     </ul>
                 </div>
-                <div className="navbar_login">
-                    <Link to="/Register">
-                        <button className="btn btn-outline-light my-2 my-sm-0 mr-3 " type="submit">REGISTER</button>
-                    </Link>
-                    <Link to="/Login">
-                        <button className="btn btn-outline-light my-2 my-sm-0" type="submit">&nbsp; LOGIN &nbsp;</button>
-                    </Link>
-                </div>
+                { links }
             </nav>
         )
-
     
+}
+
+const mapStateToProps = (state) => {
+    return{
+        auth : state.firebase.auth
     }
 }
 
-export default Navbar
+export default connect(mapStateToProps)(Navbar)

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -17,22 +16,20 @@ class ProfilePage extends React.Component {
                         <Col md={4}>
                         <Media style={{margin: "20px"}} as="li">
                             <img
+                                alt = "bilmiyorum"
                                 className="mr-3 profile-image-style"
                                 src={require('./images/user.png')}/>
-                        <Media.Body>
-                            <center><h5 className="profile-font-style" style={{marginTop: "10px"}}>Name Surname</h5>
+                            <Media.Body>
+                                <center><h5 className="profile-font-style" style={{marginTop: "10px"}}>Name Surname</h5>
 
-                            <Button className ="profile_button" >Edit</Button>
-                            <Button className ="profile_button" variant="outline-info">Settings</Button>
-                            </center>
-                            <p style={{marginTop: "20px", float:"left"}}>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-                                ante sollicitudin commodo. 
-                            </p>
-
-                                
-
-                        </Media.Body>
+                                <Button className ="profile_button" >Edit</Button>
+                                <Button className ="profile_button" variant="outline-info">Settings</Button>
+                                </center>
+                                <p style={{marginTop: "20px", float:"left"}}>
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+                                    ante sollicitudin commodo. 
+                                </p>
+                            </Media.Body>
                         </Media>
 
 

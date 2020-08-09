@@ -2,84 +2,30 @@ import React from 'react';
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
 import Button from 'react-bootstrap/Button'
-import { Link } from 'react-router-dom';
-class Cards extends React.Component {
-    render() {
-        return (
-            <div className="container-md">
-                <div className="row card_deck_margin" >
-                    <CardDeck className="card_deck_margin">
-                        <Card className="text-white text-right">
-                            <Card.Img className="card_img_height" src={require("../../images/grand-canyon.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Title</Card.Title>
-                                <Card.Text>
-                                    Go And Enjoy!lar
-                                </Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
-                            </Card.ImgOverlay>
+import CardsDetail from './CardsDetail'
 
-                        </Card>
-                        <Card className="text-white text-right">
-                            <Card.Img className="card_img_height" src={require("../../images/menton.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Title</Card.Title>
-                                <Card.Text>
-                                    Go And Enjoy!lar
-                                </Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
-                            </Card.ImgOverlay>
 
-                        </Card>
-                        <Card className="text-white text-right">
-                            <Card.Img className="card_img_height" src={require("../../images/national-park-canada.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Title</Card.Title>
-                                <Card.Text>
-                                    Go And Enjoy!lar
-                                </Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
-                            </Card.ImgOverlay>
-                        </Card>
-                    </CardDeck>
-                    <CardDeck className="card_deck_margin">
-                        <Card className="text-white text-right">
-                            <Card.Img className="card_img_height" src={require("../../images/grand-canyon.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Title</Card.Title>
-                                <Card.Text>
-                                    Go And Enjoy!lar
-                                </Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
-                            </Card.ImgOverlay>
-                        </Card>
-                        <Card className="text-white text-right">
-                            <Card.Img className="card_img_height" src={require("../../images/menton.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Title</Card.Title>
-                                <Card.Text>Go And Enjoy!lar</Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
-                            </Card.ImgOverlay>
-                        </Card>
-                        <Card className="text-white text-right">
-                            <Card.Img className="card_img_height" src={require("../../images/national-park-canada.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Title</Card.Title>
-                                <Card.Text>Go And Enjoy!lar</Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                                <Button className="card_button" variant="primary">See And Enjoy!</Button>
-                            </Card.ImgOverlay>
-                        </Card>
-                    </CardDeck>
-                </div>
+const Cards = ({ cardsDetail }) => {
+    return (
+        <div className="container-md">
+            <div className="row card_deck_margin" >
+                <CardDeck className="card_deck_margin">
+                    {cardsDetail && cardsDetail.map(cardDetail => {
+                        return (
+                            <CardsDetail cardDetail={cardDetail} key={cardDetail.id} />
+                        )
+                    })}
+                </CardDeck>
+                <CardDeck className="card_deck_margin">
+                    {cardsDetail && cardsDetail.map(cardDetail => {
+                        return (
+                            <CardsDetail cardDetail={cardDetail} key={cardDetail.id} />
+                        )
+                    })}
+                </CardDeck>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 
