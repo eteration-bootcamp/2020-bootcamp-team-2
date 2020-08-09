@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
 import Card from 'react-bootstrap/Card'
 import Media from 'react-bootstrap/Media'
+import Navbar from '../../components/Navbar'
 
 class ProfilePage extends React.Component {
     render() {

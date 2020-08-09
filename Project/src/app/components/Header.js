@@ -1,11 +1,9 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Navbar from './Navbar';
 class Header extends React.Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <Carousel>
                     <Carousel.Item>
                         <img className="d-block w-100 img_cover" src={require("../images/varnelfall.jpg")} alt="Second slide" />

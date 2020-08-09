@@ -12,9 +12,7 @@ import Footer from "./app/components/Footer";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
-  
   return (
-    
     <Router>
       <div>
       <Navbar />
