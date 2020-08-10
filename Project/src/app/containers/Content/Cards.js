@@ -1,89 +1,31 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
-import { Card } from 'react-bootstrap';
-import '../../../index.css';
+import Card from 'react-bootstrap/Card'
+import CardDeck from 'react-bootstrap/CardDeck'
+import Button from 'react-bootstrap/Button'
+import CardsDetail from './CardsDetail'
 
 
-class Cards extends React.Component {
-    render() {
-        return (
-            <Container fluid="md">
-                <Row className="card_deck_margin">
-                    <Col md={3}>
-                        <Card class="content_grid_card" className="text-white text-right">
-                            <Card.Img variant="top" class="content_grid_card_image" src={require("../../images/oludeniz.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Cafe2</Card.Title>
-                                <Card.Text>Go And Enjoy!lar</Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                            </Card.ImgOverlay>
-                            <Button variant="primary">See And Enjoy!</Button>
-                        </Card>
-                    </Col>
-                    <Col md={3}>
-                        <Card class="content_grid_card" className="text-white text-right">
-                            <Card.Img variant="top" class="content_grid_card_image" src={require("../../images/oludeniz.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Cafe2</Card.Title>
-                                <Card.Text>Go And Enjoy!lar</Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                            </Card.ImgOverlay>
-                            <Button variant="primary">See And Enjoy!</Button>
-                        </Card>
-                    </Col>
-                    <Col md={6}>
-                        <Card class="content_grid_card" className="text-white text-right">
-                            <Card.Img variant="top" class="content_grid_card_image" src={require("../../images/oludeniz.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Cafe5</Card.Title>
-                                <Card.Text>Go And Enjoy!lar</Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                            </Card.ImgOverlay>
-                            <Button variant="primary">See And Enjoy!</Button>
-                        </Card>
-                    </Col>
-                </Row>
-                <Row className="card_deck_margin">
-                    <Col md={6}>
-                        <Card class="content_grid_card" className="text-white text-right">
-                            <Card.Img variant="top" class="content_grid_card_image" src={require("../../images/oludeniz.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Cafe6</Card.Title>
-                                <Card.Text>Go And Enjoy!lar</Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                            </Card.ImgOverlay>
-                            <Button variant="primary">See And Enjoy!</Button>
-                        </Card>
-                    </Col>
-                    <Col md={3}>
-                        <Card class="content_grid_card" className="text-white text-right">
-                            <Card.Img variant="top" class="content_grid_card_image" src={require("../../images/oludeniz.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Cafe7</Card.Title>
-                                <Card.Text>Go And Enjoy!lar</Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                            </Card.ImgOverlay>
-                            <Button variant="primary">See And Enjoy!</Button>
-                        </Card>
-                    </Col>
-                    <Col md={3}>
-                        <Card class="content_grid_card" className="text-white text-right">
-                            <Card.Img variant="top" class="content_grid_card_image" src={require("../../images/oludeniz.jpg")} />
-                            <Card.ImgOverlay>
-                                <Card.Title>Cafe8</Card.Title>
-                                <Card.Text>Go And Enjoy!lar</Card.Text>
-                                <Card.Text>3 dk once</Card.Text>
-                            </Card.ImgOverlay>
-                            <Button variant="primary">See And Enjoy!</Button>
-                        </Card>
-                    </Col>
-                </Row>
-            </Container>
-        )
-    }
+const Cards = ({ cardsDetail }) => {
+    return (
+        <div className="container-md">
+            <div className="row card_deck_margin" >
+                <CardDeck className="card_deck_margin">
+                    {cardsDetail && cardsDetail.map(cardDetail => {
+                        return (
+                            <CardsDetail cardDetail={cardDetail} key={cardDetail.id} />
+                        )
+                    })}
+                </CardDeck>
+                <CardDeck className="card_deck_margin">
+                    {cardsDetail && cardsDetail.map(cardDetail => {
+                        return (
+                            <CardsDetail cardDetail={cardDetail} key={cardDetail.id} />
+                        )
+                    })}
+                </CardDeck>
+            </div>
+        </div>
+    )
 }
 
 
