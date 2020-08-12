@@ -12,7 +12,7 @@ const CardsDetail = ({ cardDetail }) => {
                     Go And Enjoy!lar
                                 </Card.Text>
                 <Card.Text>3 dk once</Card.Text>
-                <Button className="card_button" variant="primary">{cardDetail.button}</Button>
+                <Button className="card_button">{cardDetail.button}</Button>
             </Card.ImgOverlay>
         </Card>
     )

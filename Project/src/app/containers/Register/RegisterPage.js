@@ -7,6 +7,47 @@ import { connect } from 'react-redux';
 import { signUp } from '../../store/actions/authActions'
 import { Redirect} from 'react-router-dom'
 import axios from 'axios'
+import Alert from 'react-bootstrap/Alert';
+import { useState } from 'react';
+
+function LoginSuccess() {
+    const [show, setShow] = useState(true);
+
+    return(
+        <>
+        <Alert className="alert_showbox" show={show} onClose={() => setShow(false)} dismissible>
+          <p>
+          <center>Success</center>
+          </p>
+          
+        </Alert>
+  
+      </>
+
+    );
+  
+
+  }
+
+  function LoginFail() {
+    const [show, setShow] = useState(true);
+
+    return(
+        <>
+        <Alert className="alert_showbox_fail" show={show}  onClose={() => setShow(false)} dismissible>
+          <p>
+              <center>Fail</center>
+            
+          </p>
+          
+        </Alert>
+  
+      </>
+
+    );
+  
+
+  }
 
 class RegisterPage extends React.Component {
     state = {
@@ -53,9 +94,9 @@ class RegisterPage extends React.Component {
                     <Button className="login_register_button" variant="primary" type="submit">
                         SIGN UP
                     </Button>
-                    <div className="red-text center" style={{ backgroundColor: 'white'}}>
-                            {authError ? <p style={{ color: 'red' }}>{authError}</p> : <p style={{color : 'green'}}></p>} 
-                        </div>                 
+                    
+                        {authError ? <LoginFail /> : <LoginSuccess />} 
+                                  
                 </Form>                
 
                 </center>
