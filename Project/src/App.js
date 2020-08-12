@@ -9,6 +9,7 @@ import Register from "./app/containers/Register/index";
 import Blog from "./app/containers/Blog/index";
 import BlogShare from "./app/containers/Blog/BlogShare/index";
 import BlogExtra from "./app/containers/Blog/BlogExtra/index";
+import EditProfile from "./app/containers/EditProfile/index";
 import Navbar from "./app/components/Navbar";
 import Footer from "./app/components/Footer";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -28,7 +29,8 @@ function App() {
           <Route path="/Location" component={Location} />
           <Route path="/Login" component={Login} />
           <Route path="/Profile" component={Profile} />
-          <Route path="/Register" component={Register} />          
+          <Route path="/Register" component={Register} />  
+          <Route path="/EditProfile" component={EditProfile} />          
         </Switch>
         <Footer />
       </div>
