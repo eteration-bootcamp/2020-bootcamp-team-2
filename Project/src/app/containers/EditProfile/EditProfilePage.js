@@ -34,7 +34,7 @@ const [key, setKey] = useState('editProfile');
 
 
                         <Col md={8} >
-                            <Tabs className="profile-font-style" style={{margin:"20px"}} defaultActiveKey="profile" id="uncontrolled-tab-example" activeKey={key} onSelect={(k) => setKey(k)}>
+                            <Tabs className="profile-font-style" style={{marginTop:"20px"}} defaultActiveKey="profile" id="uncontrolled-tab-example" activeKey={key} onSelect={(k) => setKey(k)}>
 
                                 <Tab  eventKey="editProfile" title=" Edit Profile" >
                                     <Form>
@@ -59,16 +59,16 @@ const [key, setKey] = useState('editProfile');
                                         </Form.Group>
                            
                                         <Form.Group>
-                                            <Form.File id="exampleFormControlFile1" label="Select a file" />
+                                            <Form.File className="profile-font-style" id="exampleFormControlFile1" label="Select a file" />
                                         </Form.Group>
-                                        <Button className="login_register_button login_button_width" variant="primary" type="submit">
+                                        <Button className="login_register_button " variant="primary" type="submit">
                                             Save
                                         </Button>
                                     </Form>
                                 </Tab>
-                                <Tab eventKey="settings" title="Settings" >
 
-                                </Tab>
+                                <Tab  eventKey="settings" title="Settings" ></Tab>
+                                
                             </Tabs>
 
                         </Col>

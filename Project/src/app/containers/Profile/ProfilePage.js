@@ -22,13 +22,14 @@ class ProfilePage extends React.Component {
                             <Media.Body>
                                 <center><h5 className="profile-font-style" style={{marginTop: "10px"}}>Name Surname</h5>
 
-                                <Button className ="profile_button" >Edit</Button>
-                                <Button className ="profile_button" variant="outline-info">Settings</Button>
-                                </center>
+                                <Button className ="edit_profile_button profile_button">Edit Profile</Button>
+                                
+                                
                                 <p style={{marginTop: "20px", float:"left"}}>
                                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
                                     ante sollicitudin commodo. 
                                 </p>
+                                </center>
                             </Media.Body>
                         </Media>
 

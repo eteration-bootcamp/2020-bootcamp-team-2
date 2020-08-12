@@ -29,6 +29,7 @@
 .profile-card-style{margin: 20px; height: 400px}
 .profile-font-style{color: #3B6978; font-family: Mv Boli}
 .profile_button{margin: 10px; border: 0px; background-color: #24a19c; color:#fff}
+.edit_profile_button{width: 100%;}
 .profile_button:hover{background-color: #23ada9; box-shadow: 5px 5px 10px 0px rgba(22,109,106,0.70);}
 .button_shadow{box-shadow: 5px 5px 10px 0px rgba(22,109,106,0.70);}
 .dropdown_color{color: #000000;}
