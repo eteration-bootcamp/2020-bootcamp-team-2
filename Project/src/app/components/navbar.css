@@ -1,0 +1,8 @@
+.logo_style{ width: 80px; margin-right: 70px;}
+.navbar_menu_margin{margin-right:4em;}
+.navbar_text_color{ color:#fff; font-size: 20pt; font-family:Mv Boli}
+.navbar_text_color:hover{text-decoration:none; color:#ccc}
+.navbar_style{background-color: rgba(36, 161, 156, 0.7); top:0; z-index:2; box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.70); width: 100%;}
+.navbar_style_vertical{background-color: rgba(36, 161, 156, 0.8); box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.70); height: 100%;}
+.navbar_style_opacity{ background-color: rgba(36, 161, 156, 0.7); z-index:4;}
+.navbar_login{float: right;}
