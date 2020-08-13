@@ -4,13 +4,15 @@ import java.lang.Math;
 
 public class CodeSmellExample {
     //Bad Code
-    public double radiusBadExample(int circumference){
-        return circumference / (2.0 * 3.14);
+    public double calculateAreaBad(){
+        return  (2.0*2.0 * 3.14);
 
     }
     //Clean Code
-    public double radiusCleanExample(int circumference){
-        return circumference / (2.0 * Math.PI);
+    public double calculateAreaClean(double radius){
+
+        final double pi = Math.PI;
+        return (Math.pow(radius,2) * pi);
 
     }
 
