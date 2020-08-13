@@ -78,7 +78,7 @@ class LoginPage extends React.Component {
                             <Form.Control onChange={this.handleChange} className="login_register_form" type="password" placeholder="ENTER A PASSWORD" />
                         </Form.Group>
 
-                        <Button className="login_register_button login_button_width" variant="primary" type="submit">
+                        <Button className="login_register_button login_button_width" style={{marginRight:"20px"}} variant="primary" type="submit">
                             FORGET PASSWORD?
                         </Button>
 
