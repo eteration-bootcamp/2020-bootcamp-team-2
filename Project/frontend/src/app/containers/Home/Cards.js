@@ -9,16 +9,20 @@ const Cards = ({ cardsDetail }) => {
             <div className="row card_deck_margin" >
                 <CardDeck className="card_deck_margin">
                     {cardsDetail && cardsDetail.map(cardDetail => {
-                        return (
-                            <CardsDetail cardDetail={cardDetail} key={cardDetail.id} />
-                        )
+                        if (cardDetail.id <= 3) {
+                            return (
+                                <CardsDetail cardDetail={cardDetail} key={cardDetail.id} />
+                            )
+                        }
                     })}
                 </CardDeck>
                 <CardDeck className="card_deck_margin">
                     {cardsDetail && cardsDetail.map(cardDetail => {
-                        return (
-                            <CardsDetail cardDetail={cardDetail} key={cardDetail.id} />
-                        )
+                        if (cardDetail.id > 3) {
+                            return (
+                                <CardsDetail cardDetail={cardDetail} key={cardDetail.id} />
+                            )
+                        }
                     })}
                 </CardDeck>
             </div>

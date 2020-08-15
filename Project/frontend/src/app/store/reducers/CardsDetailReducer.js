@@ -1,5 +1,8 @@
 import cafes from '../../images/cafes.jpg';
 import hotels from '../../images/hotels.jpg';
+import eats from '../../images/eats.jpg';
+import activities from '../../images/activities.jpg';
+import bars from '../../images/bars.jpg';
 import historical_places from '../../images/historical_places.jpg';
 
 
@@ -8,7 +11,11 @@ const initState = {
     cardsDetail : [
         {id: '1', title: 'Cafes' , url: cafes , button: 'See and enjoy'},
         {id: '2', title: 'Hotels' , url: hotels , button: 'See and enjoy'},
-        {id: '3', title: 'Historical Places' , url: historical_places , button: 'See and enjoy'}
+        {id: '3', title: 'Historical Places' , url: historical_places , button: 'See and enjoy'},
+        {id: '4', title: 'Eats' , url: eats , button: 'See and enjoy'},
+        {id: '5', title: 'Activities' , url: activities , button: 'See and enjoy'},
+        {id: '6', title: 'Bars' , url: bars , button: 'See and enjoy'}
+
     ]
 
 }
