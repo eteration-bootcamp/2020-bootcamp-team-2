@@ -1,13 +1,14 @@
-import grand from '../../images/grand-canyon.jpg';
-import menton from '../../images/menton.jpg';
-import national from '../../images/national-park-canada.jpg';
+import cafes from '../../images/cafes.jpg';
+import hotels from '../../images/hotels.jpg';
+import historical_places from '../../images/historical_places.jpg';
+
 
 
 const initState = {
     cardsDetail : [
-        {id: '1', title: 'title 1' , url: grand , button: 'See and enjoy'},
-        {id: '2', title: 'title 2' , url: menton , button: 'See and enjoy'},
-        {id: '3', title: 'title 3' , url: national , button: 'See and enjoy'}
+        {id: '1', title: 'Cafes' , url: cafes , button: 'See and enjoy'},
+        {id: '2', title: 'Hotels' , url: hotels , button: 'See and enjoy'},
+        {id: '3', title: 'Historical Places' , url: historical_places , button: 'See and enjoy'}
     ]
 
 }

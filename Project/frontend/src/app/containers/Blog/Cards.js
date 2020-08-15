@@ -4,7 +4,7 @@ import CardDeck from 'react-bootstrap/CardDeck'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import BlogNavbar from '../BlogNavbar'
+import BlogNavbar from './BlogNavbar'
 import Container from 'react-bootstrap/Container'
 import { Link } from 'react-router-dom';
 class Cards extends React.Component {
