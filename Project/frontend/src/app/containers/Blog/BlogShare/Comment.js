@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Navbar from 'react-bootstrap/Navbar';
+import BlogNavbar from '../BlogNavbar';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
 import { blog } from '../../../../api/apiCalls';
@@ -61,14 +61,7 @@ class Comment extends React.Component {
             <Container fluid>
                 <Row >
                     <Col md={2}>
-                        <Navbar className="nav flex-column navbar_style_vertical" >
-                            <a className="navbar_text_color card_deck_margin" href="#">{t('Eat')}</a>
-                            <a className="navbar_text_color card_deck_margin" href="#">{t('Hotel')}</a>
-                            <a className="navbar_text_color card_deck_margin" href="#">{t('History')}</a>
-                            <a className="navbar_text_color card_deck_margin" href="#">{t('Art')}</a>
-
-                        </Navbar>
-
+                        <BlogNavbar/>
                     </Col>
                     <Col style={{ marginRight: "20px" }}>
                         <Form>

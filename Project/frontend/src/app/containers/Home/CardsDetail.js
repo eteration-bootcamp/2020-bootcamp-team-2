@@ -10,8 +10,7 @@ const CardsDetail = ({ cardDetail }) => {
             <Card.Img className="card_img_height" src={cardDetail.url} />
             <Card.ImgOverlay>
                 <Card.Title>{cardDetail.title}</Card.Title>
-                <Card.Text>Go And Enjoy!lar</Card.Text>
-                <Card.Text>3 dk once</Card.Text>
+                <Card.Text style={{ marginTop: "40%"}}>Turkey</Card.Text>
                 <Link to="/Content">
                     <Button className="card_button">{cardDetail.button}</Button>
                 </Link>

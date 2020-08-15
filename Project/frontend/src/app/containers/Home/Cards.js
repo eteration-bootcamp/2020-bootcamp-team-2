@@ -21,10 +21,10 @@ const Cards = ({ cardsDetail }) => {
                         )
                     })}
                 </CardDeck>
+                <br /> <br />
             </div>
         </div>
     )
 }
-
 
 export default Cards
