@@ -96,9 +96,9 @@ class Cards extends React.Component {
                         </Row>
                     </Col>
                 </Row>
-                 <br/><br/>
+                <br /><br />
             </Container>
-           
+
         )
     }
 }

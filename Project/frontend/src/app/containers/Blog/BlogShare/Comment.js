@@ -19,8 +19,8 @@ class Comment extends React.Component {
 
     onChange = event => {
         const { t } = this.props;
-        const {name, value} = event.target;
-        const errors = { ...this.state.errors}
+        const { name, value } = event.target;
+        const errors = { ...this.state.errors }
         errors[name] = undefined
         this.setState({
             [name]: value,
@@ -31,24 +31,24 @@ class Comment extends React.Component {
     onClickComment = async event => {
         event.preventDefault();
 
-        const {blogComment, blogImage} = this.state;
+        const { blogComment, blogImage } = this.state;
 
         const body = {
             blogComment,
             blogImage
         };
-        this.setState({ pendingApiCall: true});
+        this.setState({ pendingApiCall: true });
 
-        try{
+        try {
             const response = await blog(body);
         }
-        catch(error){
-        if(error.response.data.validationErrors){
-            this.setState({ errors: error.response.data.validationErrors });               
+        catch (error) {
+            if (error.response.data.validationErrors) {
+                this.setState({ errors: error.response.data.validationErrors });
             }
-            
+
         }
-        
+
         this.setState({ pendingApiCall: false });
 
     };
@@ -74,20 +74,20 @@ class Comment extends React.Component {
                         <Form>
                             <div className="form-group">
                                 <label for="exampleFormControlTextarea1">{t('Write a comment')}</label><br />
-                                <textarea onChange = {this.onChange} name = 'blogComment' className={blogComment ? "form-control is-invalid" : "form-control"} id="exampleFormControlTextarea1" rows="3"></textarea>
-                                <div className="invalid-feedback">{ blogComment }</div>
+                                <textarea onChange={this.onChange} name='blogComment' className={blogComment ? "form-control is-invalid" : "form-control"} id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <div className="invalid-feedback">{blogComment}</div>
                             </div>
                             <br />
 
                             <div className="form-group">
                                 <label for="exampleFormControlFile1">{t('Choose photo')}</label>
-                                <input onChange = {this.onChange} type="file" name = 'blogImage' className="form-control-file" id="exampleFormControlFile1" />
+                                <input onChange={this.onChange} type="file" name='blogImage' className="form-control-file" id="exampleFormControlFile1" />
                             </div>
                             <br /><br /> <br /><br />
 
-                            <Button onClick = {this.onClickComment} disabled={pendingApiCall} className="card_button navbar_text_color share_button">
-                            {pendingApiCall && <span className="spinner-border spinner-border-sm"></span>}{t('Share Blog')}</Button>                      
-                            
+                            <Button onClick={this.onClickComment} disabled={pendingApiCall} className="card_button navbar_text_color share_button">
+                                {pendingApiCall && <span className="spinner-border spinner-border-sm"></span>}{t('Share Blog')}</Button>
+
                         </Form>
                     </Col>
                 </Row>

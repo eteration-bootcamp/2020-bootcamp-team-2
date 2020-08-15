@@ -19,25 +19,25 @@ class Footer extends React.Component {
 
                         <div className="col">
                             <br></br>
-                            <a style={{color: "#FFFFFF"}} href="url">PRIVACY POLICY</a>
+                            <a style={{ color: "#FFFFFF" }} href="url">PRIVACY POLICY</a>
                         </div>
 
                         <div className="col">
                             <br></br>
                             <h4>FOLLOW US</h4>
-                            <a style={{color: "#FFFFFF", fontSize: "36px"}} className="icon" href="!#"><i className="fab fa-github"></i></a>
+                            <a style={{ color: "#FFFFFF", fontSize: "36px" }} className="icon" href="!#"><i className="fab fa-github"></i></a>
                         </div>
                     </div>
- 
+
                     <hr style={{ height: "5px" }} />
 
                     <div className="row">
                         <p className="col float-center">
                             &copy;{new Date().getFullYear()} TRAWELL | All right reserved
                         </p>
-                   </div>
+                    </div>
 
-                </div>               
+                </div>
             </div>
         )
     }

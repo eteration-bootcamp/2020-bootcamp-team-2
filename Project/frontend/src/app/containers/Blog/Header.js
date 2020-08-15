@@ -7,7 +7,6 @@ class Header extends React.Component {
                     <center><h1>Blog</h1></center>
                 </div>
             </div>
-
         )
     }
 }

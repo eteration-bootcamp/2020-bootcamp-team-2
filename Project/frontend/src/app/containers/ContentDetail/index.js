@@ -4,9 +4,7 @@ import Cards from "./Cards";
 function ContentDetail() {
   return (
     <div>
-
       <Cards />
-
     </div>
   );
 }

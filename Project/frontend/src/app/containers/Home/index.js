@@ -3,22 +3,22 @@ import Header from "../../components/Header";
 import Cards from "./Cards";
 import { connect } from "react-redux";
 
-class Home extends React.Component{
+class Home extends React.Component {
   render() {
 
     const { cardsDetail } = this.props;
     return (
       <div>
-        <Header/>
-        <Cards  cardsDetail = {cardsDetail} />
-    </div>
+        <Header />
+        <Cards cardsDetail={cardsDetail} />
+      </div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    cardsDetail : state.cardDetail.cardsDetail
+    cardsDetail: state.cardDetail.cardsDetail
   }
 }
 

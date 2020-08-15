@@ -8,41 +8,41 @@ import LanguageSelector from './LanguageSelector';
 const Navbar = (props) => {
     const { auth } = props;
     const links = auth.uid ? <NavbarLogOut /> : <NavbarLogIn />;
-        return (
-            <nav className="navbar navbar-expand-lg navbar-light navbar_style" >
-                <Link to="/"><img src={require('../images/logo.png')} className="logo_style" alt="Logo" /></Link>
-                <div className="collapse navbar-collapse" id="nvbarSupportedContent">
-                    <ul className="navbar-nav mr-auto">
-                        <Link to="/">
-                            <li className="nav-item active">
-                                <a className="navbar_menu_margin navbar_text_color" href="index.html">HOME</a>
-                            </li>
-                        </Link>
-                        <Link to="/Location">
-                            <li className="nav-item">
-                                <a className="navbar_menu_margin navbar_text_color" href="index.html" role="button">LOCATION</a>
-                            </li>
-                        </Link>
-                        <Link to="/Blog">
-                            <li className="nav-item">
-                                <a className="navbar_text_color" href="index.html" role="button">BLOG</a>
-                            </li>
-                        </Link>
+    return (
+        <nav className="navbar navbar-expand-lg navbar-light navbar_style" >
+            <Link to="/"><img src={require('../images/logo.png')} className="logo_style" alt="Logo" /></Link>
+            <div className="collapse navbar-collapse" id="nvbarSupportedContent">
+                <ul className="navbar-nav mr-auto">
+                    <Link to="/">
+                        <li className="nav-item active">
+                            <a className="navbar_menu_margin navbar_text_color" href="index.html">HOME</a>
+                        </li>
+                    </Link>
+                    <Link to="/Location">
+                        <li className="nav-item">
+                            <a className="navbar_menu_margin navbar_text_color" href="index.html" role="button">LOCATION</a>
+                        </li>
+                    </Link>
+                    <Link to="/Blog">
+                        <li className="nav-item">
+                            <a className="navbar_text_color" href="index.html" role="button">BLOG</a>
+                        </li>
+                    </Link>
 
-                    </ul>
-                </div>
-                { links }
-                <div>
+                </ul>
+            </div>
+            {links}
+            <div>
                 <LanguageSelector />
-                </div>
-            </nav>
-        )
-    
+            </div>
+        </nav>
+    )
+
 }
 
 const mapStateToProps = (state) => {
-    return{
-        auth : state.firebase.auth
+    return {
+        auth: state.firebase.auth
     }
 }
 

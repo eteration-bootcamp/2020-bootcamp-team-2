@@ -14,35 +14,35 @@ import { register } from '../../../api/apiCalls';
 function LoginSuccess() {
     const [show, setShow] = useState(true);
 
-    return(
+    return (
         <>
-        <Alert className="alert_showbox" show={show} onClose={() => setShow(false)} dismissible>
-          <p>
-          <center>Success</center>
-          </p>
-          
-        </Alert>
-  
-      </>
+            <Alert className="alert_showbox" show={show} onClose={() => setShow(false)} dismissible>
+                <p>
+                    <center>Success</center>
+                </p>
+
+            </Alert>
+
+        </>
 
     );
-  
 
-  }
 
-  function LoginFail() {
+}
+
+function LoginFail() {
     const [show, setShow] = useState(true);
 
-    return(
+    return (
         <>
-        <Alert className="alert_showbox_fail" show={show}  onClose={() => setShow(false)} dismissible>
-          <p>
-              <center>Fail</center>          
-          </p>         
-        </Alert> 
-      </>
-    ); 
-  }
+            <Alert className="alert_showbox_fail" show={show} onClose={() => setShow(false)} dismissible>
+                <p>
+                    <center>Fail</center>
+                </p>
+            </Alert>
+        </>
+    );
+}
 
 class RegisterPage extends React.Component {
     state = {
@@ -59,7 +59,7 @@ class RegisterPage extends React.Component {
     }
     handleSubmit = async (e) => {
         e.preventDefault();
-        const {email,password, fullName, userName} = this.state;
+        const { email, password, fullName, userName } = this.state;
 
         const body = {
             email,
@@ -68,37 +68,37 @@ class RegisterPage extends React.Component {
             userName
         };
 
-        try{
+        try {
             const response = await register(body);
         }
-        catch(error){}
+        catch (error) { }
         this.props.signUp(this.state);
     }
 
     render() {
-        const { auth , authError } = this.props;
-        if(auth.uid) return <Redirect to= '/' />
+        const { auth, authError } = this.props;
+        if (auth.uid) return <Redirect to='/' />
         return (
             <Container fluid="md">
-            <Col>
-                <center md={6} className="col-md-offset-6 centered">
-                    <Form onSubmit={this.handleSubmit} style={{position:"absolute", zIndex: "3", marginTop:"15%",marginLeft:"30%"}}>
-                    
-                    <Input controlId = "email" onChange={this.handleChange} className="login_register_form" type="email" placeholder="ENTER AN E-MAIL ADDRESS" />                   
-                    <Input controlId = "password" onChange={this.handleChange} className="login_register_form" type="password" placeholder="ENTER A PASSWORD" />
-                    <Input controlId= "confirmPassword" onChange={this.handleChange} className="login_register_form" type="password" placeholder="CONFIRM A PASSWORD" />                   
-                    <Input controlId= "fullName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER A NAME AND SURNAME" />
-                    <Input controlId= "userName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER AN USERNAME" />
-  
-                    <Button className="login_register_button" variant="primary" type="submit">
-                        SIGN UP
-                    </Button>                   
-                        {authError ? <LoginFail /> : <LoginSuccess />}                                  
-                </Form>                
+                <Col>
+                    <center md={6} className="col-md-offset-6 centered">
+                        <Form onSubmit={this.handleSubmit} style={{ position: "absolute", zIndex: "3", marginTop: "15%", marginLeft: "30%" }}>
 
-                </center>
-            </Col>           
-            
+                            <Input controlId="email" onChange={this.handleChange} className="login_register_form" type="email" placeholder="ENTER AN E-MAIL ADDRESS" />
+                            <Input controlId="password" onChange={this.handleChange} className="login_register_form" type="password" placeholder="ENTER A PASSWORD" />
+                            <Input controlId="confirmPassword" onChange={this.handleChange} className="login_register_form" type="password" placeholder="CONFIRM A PASSWORD" />
+                            <Input controlId="fullName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER A NAME AND SURNAME" />
+                            <Input controlId="userName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER AN USERNAME" />
+
+                            <Button className="login_register_button" variant="primary" type="submit">
+                                SIGN UP
+                            </Button>
+                            {authError ? <LoginFail /> : <LoginSuccess />}
+                        </Form>
+
+                    </center>
+                </Col>
+
             </Container>
         )
     }
