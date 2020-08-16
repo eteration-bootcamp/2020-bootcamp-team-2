@@ -1,5 +1,6 @@
 package com.trawell.ws.services;
 
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,7 @@ public class CountryService {
 	public Page<Country> getCountries(Pageable page) {
 		return countryRepository.findAll(page);
 	}
+	
 	
 
 }

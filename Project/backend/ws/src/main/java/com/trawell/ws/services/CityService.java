@@ -1,5 +1,7 @@
 package com.trawell.ws.services;
 
+import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -21,5 +23,8 @@ public class CityService {
 		return cityRepository.findAll(page);
 	}
 	
+	public Optional<City> getfindById(Long id) {
+		return cityRepository.findById(id);
+	}
 
 }

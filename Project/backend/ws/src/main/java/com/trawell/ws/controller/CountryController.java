@@ -19,5 +19,6 @@ public class CountryController {
 	Page<Country> getCountries(Pageable page){
 		return countryService.getCountries(page);
 	}
+	
 
 }

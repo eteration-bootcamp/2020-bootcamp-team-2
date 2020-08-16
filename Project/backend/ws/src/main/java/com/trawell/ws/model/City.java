@@ -3,7 +3,7 @@ package com.trawell.ws.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+
 
 import lombok.Data;
 
@@ -16,8 +16,7 @@ public class City {
 	@GeneratedValue
 	private long id;
 	private String cityName;
+	private long country_id;
 	
-	@ManyToOne
-	private Country country;
 
 }
