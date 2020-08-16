@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Carousel from 'react-bootstrap/Carousel'
+import CountryList from '../../components/CountryList'
+import CityList from '../../components/CityList'
 class CarouselBox extends React.Component {
     render() {
         return (
@@ -80,11 +82,7 @@ class Location extends React.Component {
                                         Please select a country
                                 </Dropdown.Toggle>
                                     <Dropdown.Menu>
-                                        <Dropdown.Item href="#/action-1">Turkey</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2">USA</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Spain</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Germany</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Italy</Dropdown.Item>
+                                        <CountryList />
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </Col>
@@ -95,9 +93,7 @@ class Location extends React.Component {
                                             Please select a city
                                 </Dropdown.Toggle>
                                         <Dropdown.Menu>
-                                            <Dropdown.Item href="#/action-1">İzmir</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">İstanbul</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-3">Ankara</Dropdown.Item>
+                                            <CityList />
                                         </Dropdown.Menu>
                                     </Dropdown>
                                 </center>

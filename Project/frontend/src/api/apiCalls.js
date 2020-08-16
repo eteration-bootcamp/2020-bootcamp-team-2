@@ -14,3 +14,11 @@ export const changeLanguage = language => {
 export const getBlogs = (page = 0) => {
     return axios.get('/api/1.0/blogs?page=' + page);
 };
+
+export const getCountries = (page = 0) => {
+    return axios.get('/api/1.0/countries?page=' + page);
+};
+
+export const getCities = (page = 0) => {
+    return axios.get('/api/1.0/cities?page=' + page);
+};
