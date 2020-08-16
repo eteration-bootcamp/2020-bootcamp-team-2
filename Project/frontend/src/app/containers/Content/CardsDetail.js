@@ -8,9 +8,9 @@ const CardsDetail = ({ contentCardDetail }) => {
         <Card className="text-white text-right">
             <Card.Img className="card_img_height" src={contentCardDetail.url} />
             <Card.ImgOverlay>
-                <Card.Title>{contentCardDetail.title}</Card.Title>
+                <Card.Title className="navbar_text_color">{contentCardDetail.title}</Card.Title>
                 <Link to="/ContentDetail">
-                    <Button className="card_button" variant="primary">{contentCardDetail.button}</Button>
+                    <Button className="card_button navbar_text_color" variant="primary">{contentCardDetail.button}</Button>
                 </Link>
             </Card.ImgOverlay>
         </Card>

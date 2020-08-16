@@ -1,7 +1,5 @@
+.margin_top_20{margin-top: 20px;}
 .slider_image{ height:650px;}
-.content_grid_card{height:300px; margin-bottom : 40px;}
-.content_grid_card_image{height:250px;} 
-.card_deck_margin{margin-top: 20px;}
 .card_img_height{height: 230px;} 
 .login_register_form{margin-right:20px;background-color: #FFFFFF; color:#000; 
     border:1px solid #24a19c; width: 420px; opacity: 0.7; font-family: Mv Boli;}
@@ -21,7 +19,6 @@
 .profile-card-style{margin: 20px; height: 400px}
 .profile-font-style{color: #3B6978; font-family: Mv Boli}
 .profile_button{margin: 10px; border: 0px; background-color: #24a19c; color:#fff}
-.edit_profile_button{width: 100%;}
 .profile_button:hover{background-color: #23ada9; box-shadow: 5px 5px 10px 0px rgba(22,109,106,0.70);}
 .button_shadow{box-shadow: 5px 5px 10px 0px rgba(22,109,106,0.70);}
 .dropdown_color{color: #000000;}

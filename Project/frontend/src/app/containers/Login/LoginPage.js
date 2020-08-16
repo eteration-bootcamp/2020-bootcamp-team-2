@@ -6,7 +6,6 @@ import Container from 'react-bootstrap/Container';
 import { connect } from 'react-redux';
 import { signIn } from '../../store/actions/authActions'
 import { Redirect } from 'react-router-dom'
-import axios from 'axios'
 import Alert from 'react-bootstrap/Alert';
 import { useState } from 'react';
 import Input from '../../components/Input';

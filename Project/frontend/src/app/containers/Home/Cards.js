@@ -6,8 +6,8 @@ import CardsDetail from './CardsDetail'
 const Cards = ({ cardsDetail }) => {
     return (
         <div className="container-md">
-            <div className="row card_deck_margin" >
-                <CardDeck className="card_deck_margin">
+            <div className="row margin_top_20" >
+                <CardDeck className="margin_top_20">
                     {cardsDetail && cardsDetail.map(cardDetail => {
                         if (cardDetail.id <= 3) {
                             return (
@@ -16,7 +16,7 @@ const Cards = ({ cardsDetail }) => {
                         }
                     })}
                 </CardDeck>
-                <CardDeck className="card_deck_margin">
+                <CardDeck className="margin_top_20">
                     {cardsDetail && cardsDetail.map(cardDetail => {
                         if (cardDetail.id > 3) {
                             return (

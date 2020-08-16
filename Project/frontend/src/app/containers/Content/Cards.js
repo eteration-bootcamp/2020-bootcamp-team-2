@@ -7,7 +7,7 @@ const Cards = ({ cardsDetail }) => {
     return (
         <div className="container-fluid">
 
-                <CardDeck className="card_deck_margin">
+                <CardDeck className="margin_top_20">
                     {cardsDetail && cardsDetail.map(contentCardDetail => {
                         if (contentCardDetail.id <= 4) {
                             return (
@@ -16,7 +16,7 @@ const Cards = ({ cardsDetail }) => {
                         }
                     })}
                 </CardDeck>
-                <CardDeck className="card_deck_margin">
+                <CardDeck className="margin_top_20">
                     {cardsDetail && cardsDetail.map(contentCardDetail => {
                         if (contentCardDetail.id > 4) {
                             return (

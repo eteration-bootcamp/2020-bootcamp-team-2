@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-import CardDeck from 'react-bootstrap/CardDeck'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
@@ -28,7 +27,7 @@ class Cards extends React.Component {
                             </Card>
                         </Row>
                         <Row>
-                            <Card className="text-white text-right card_deck_margin">
+                            <Card className="text-white text-right margin_top_20">
                                 <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
                                 <Card.ImgOverlay>
                                     <Card.Title>BlogExtra</Card.Title>
@@ -52,7 +51,7 @@ class Cards extends React.Component {
                             </Card>
                         </Row>
                         <Row>
-                            <Card className="text-white text-right card_deck_margin ">
+                            <Card className="text-white text-right margin_top_20 ">
                                 <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
                                 <Card.ImgOverlay>
                                     <Card.Title>BlogExtra</Card.Title>
@@ -76,7 +75,7 @@ class Cards extends React.Component {
                             </Card>
                         </Row>
                         <Row>
-                            <Card className="text-white text-right card_deck_margin ">
+                            <Card className="text-white text-right margin_top_20 ">
                                 <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
                                 <Card.ImgOverlay>
                                     <Card.Title>BlogExtra</Card.Title>

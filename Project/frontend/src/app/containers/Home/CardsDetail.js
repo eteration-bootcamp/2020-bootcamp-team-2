@@ -9,10 +9,9 @@ const CardsDetail = ({ cardDetail }) => {
         <Card className="text-white text-right">
             <Card.Img className="card_img_height" src={cardDetail.url} />
             <Card.ImgOverlay>
-                <Card.Title>{cardDetail.title}</Card.Title>
-                <Card.Text style={{ marginTop: "40%" }}>Go And Enjoy</Card.Text>
+                <Card.Title className="navbar_text_color">{cardDetail.title}</Card.Title>
                 <Link to="/Content">
-                    <Button className="card_button">{cardDetail.button}</Button>
+                    <Button className="card_button navbar_text_color">{cardDetail.button}</Button>
                 </Link>
             </Card.ImgOverlay>
         </Card>

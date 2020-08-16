@@ -3,21 +3,14 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import ListGroup from 'react-bootstrap/ListGroup'
-import Card from 'react-bootstrap/Card'
-import Media from 'react-bootstrap/Media'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import Image from 'react-bootstrap/Image'
 import Form from 'react-bootstrap/Form'
 import { useState } from 'react';
 
-
-
 function EditProfilePage() {
-
     const [key, setKey] = useState('editProfile');
-
     return (
         <div>
             <Container>
@@ -27,12 +20,7 @@ function EditProfilePage() {
                             <Image className="edit_profile_image" src={require('./images/user.png')} rounded />
                             <h3 class="profile-font-style">Name Surname</h3>
                         </center>
-
-
                     </Col>
-
-
-
                     <Col md={8} >
                         <Tabs className="profile-font-style" style={{ marginTop: "20px" }} defaultActiveKey="profile" id="uncontrolled-tab-example" activeKey={key} onSelect={(k) => setKey(k)}>
 
@@ -66,22 +54,13 @@ function EditProfilePage() {
                                         </Button>
                                 </Form>
                             </Tab>
-
                             <Tab eventKey="settings" title="Settings" ></Tab>
-
                         </Tabs>
-
                     </Col>
-
                 </Row>
-
-
-
             </Container>
         </div>
     )
-
-
 }
-
+ 
 export default EditProfilePage;
