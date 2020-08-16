@@ -3,16 +3,14 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom';
 
-const CardsDetail = ({ cardDetail }) => {
+const CardsDetail = ({ contentCardDetail }) => {
     return (
         <Card className="text-white text-right">
-            <Card.Img className="card_img_height" src={cardDetail.url} />
+            <Card.Img className="card_img_height" src={contentCardDetail.url} />
             <Card.ImgOverlay>
-                <Card.Title>{cardDetail.title}</Card.Title>
-                <Card.Text>Go And Enjoy!lar</Card.Text>
-                <Card.Text>3 dk once</Card.Text>
+                <Card.Title>{contentCardDetail.title}</Card.Title>
                 <Link to="/ContentDetail">
-                    <Button className="card_button" variant="primary">{cardDetail.button}</Button>
+                    <Button className="card_button" variant="primary">{contentCardDetail.button}</Button>
                 </Link>
             </Card.ImgOverlay>
         </Card>

@@ -18,7 +18,7 @@ class Content extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    cardsDetail: state.cardDetail.cardsDetail
+    cardsDetail: state.contentCardDetail.cardsDetail
   }
 }
 

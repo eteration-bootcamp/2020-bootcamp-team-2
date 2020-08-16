@@ -5,23 +5,27 @@ import CardsDetail from './CardsDetail'
 
 const Cards = ({ cardsDetail }) => {
     return (
-        <div className="container-md">
-            <div className="row card_deck_margin" >
+        <div className="container-fluid">
+
                 <CardDeck className="card_deck_margin">
-                    {cardsDetail && cardsDetail.map(cardDetail => {
-                        return (
-                            <CardsDetail cardDetail={cardDetail} key={cardDetail.id} />
-                        )
+                    {cardsDetail && cardsDetail.map(contentCardDetail => {
+                        if (contentCardDetail.id <= 4) {
+                            return (
+                                <CardsDetail contentCardDetail={contentCardDetail} key={contentCardDetail.id} />
+                            )
+                        }
                     })}
                 </CardDeck>
                 <CardDeck className="card_deck_margin">
-                    {cardsDetail && cardsDetail.map(cardDetail => {
-                        return (
-                            <CardsDetail cardDetail={cardDetail} key={cardDetail.id} />
-                        )
+                    {cardsDetail && cardsDetail.map(contentCardDetail => {
+                        if (contentCardDetail.id > 4) {
+                            return (
+                                <CardsDetail contentCardDetail={contentCardDetail} key={contentCardDetail.id} />
+                            )
+                        }
                     })}
                 </CardDeck>
-            </div>
+         
         </div>
     )
 }
