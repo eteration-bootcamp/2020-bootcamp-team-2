@@ -20,10 +20,10 @@ class Cards extends React.Component {
                             <Card className="text-white text-right">
                                 <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
                                 <Card.ImgOverlay>
-                                    <Card.Title>Content</Card.Title>
+                                    <Card.Title>BlogExtra</Card.Title>
                                     <Card.Text>Go And Enjoy!lar</Card.Text>
                                     <Card.Text>3 dk once</Card.Text>
-                                    <Link to="/Content"><Button className="card_button">See And Enjoy!</Button></Link>
+                                    <Link to="/BlogExtra"><Button className="card_button">See And Enjoy!</Button></Link>
                                 </Card.ImgOverlay>
                             </Card>
                         </Row>
@@ -31,10 +31,10 @@ class Cards extends React.Component {
                             <Card className="text-white text-right card_deck_margin">
                                 <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
                                 <Card.ImgOverlay>
-                                    <Card.Title>Content</Card.Title>
+                                    <Card.Title>BlogExtra</Card.Title>
                                     <Card.Text>Go And Enjoy!lar</Card.Text>
                                     <Card.Text>3 dk once</Card.Text>
-                                    <Link to="/Content"><Button className="card_button">See And Enjoy!</Button></Link>
+                                    <Link to="/BlogExtra"><Button className="card_button">See And Enjoy!</Button></Link>
                                 </Card.ImgOverlay>
                             </Card>
                         </Row>
@@ -44,10 +44,10 @@ class Cards extends React.Component {
                             <Card className="text-white text-right  ">
                                 <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
                                 <Card.ImgOverlay>
-                                    <Card.Title>Content</Card.Title>
+                                    <Card.Title>BlogExtra</Card.Title>
                                     <Card.Text>Go And Enjoy!lar</Card.Text>
                                     <Card.Text>3 dk once</Card.Text>
-                                    <Link to="/Content"><Button className="card_button">See And Enjoy!</Button></Link>
+                                    <Link to="/BlogExtra"><Button className="card_button">See And Enjoy!</Button></Link>
                                 </Card.ImgOverlay>
                             </Card>
                         </Row>
@@ -55,10 +55,10 @@ class Cards extends React.Component {
                             <Card className="text-white text-right card_deck_margin ">
                                 <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
                                 <Card.ImgOverlay>
-                                    <Card.Title>Content</Card.Title>
+                                    <Card.Title>BlogExtra</Card.Title>
                                     <Card.Text>Go And Enjoy!lar</Card.Text>
                                     <Card.Text>3 dk once</Card.Text>
-                                    <Link to="/Content"><Button className="card_button">See And Enjoy!</Button></Link>
+                                    <Link to="/BlogExtra"><Button className="card_button">See And Enjoy!</Button></Link>
                                 </Card.ImgOverlay>
                             </Card>
                         </Row>
@@ -68,10 +68,10 @@ class Cards extends React.Component {
                             <Card className="text-white text-right  ">
                                 <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
                                 <Card.ImgOverlay>
-                                    <Card.Title>Content</Card.Title>
+                                    <Card.Title>BlogExtra</Card.Title>
                                     <Card.Text>Go And Enjoy!lar</Card.Text>
                                     <Card.Text>3 dk once</Card.Text>
-                                    <Link to="/Content"><Button className="card_button">See And Enjoy!</Button></Link>
+                                    <Link to="/BlogExtra"><Button className="card_button">See And Enjoy!</Button></Link>
                                 </Card.ImgOverlay>
                             </Card>
                         </Row>
@@ -79,10 +79,10 @@ class Cards extends React.Component {
                             <Card className="text-white text-right card_deck_margin ">
                                 <Card.Img className="card_img_height" src={require("../../images/oludeniz.jpg")} />
                                 <Card.ImgOverlay>
-                                    <Card.Title>Content</Card.Title>
+                                    <Card.Title>BlogExtra</Card.Title>
                                     <Card.Text>Go And Enjoy!lar</Card.Text>
                                     <Card.Text>3 dk once</Card.Text>
-                                    <Link to="/Content"><Button className="card_button">See And Enjoy!</Button></Link>
+                                    <Link to="/BlogExtra"><Button className="card_button">See And Enjoy!</Button></Link>
                                 </Card.ImgOverlay>
                             </Card>
                         </Row>
