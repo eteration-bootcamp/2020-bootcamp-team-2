@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { getCities } from '../../api/apiCalls';
 import CityView from './CityView';
 
-const CityList = () => {
+const CityList = (props)=> {
     const [cityPage, setCityPage] = useState({ content: [], last: true, number: 0 })
 
     useEffect(() => {
-
-        loadCities();
+        // props.countryId bilgisi geçipşehirleri çağıracaksınız.
+        loadCities(props.countryId);
     }, []);
 
-    const loadCities = async (page) => {
+    const loadCities = async (countryId) => {
         try {
-            const response = await getCities(page);
+            const response = await getCities(countryId);
             setCityPage(previousCityPage => ({
                 ...response.data,
                 content: [...previousCityPage.content, ...response.data.content]

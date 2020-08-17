@@ -6,7 +6,7 @@ function Blog() {
   return (
     <div>
       <Header />
-      <Cards />
+      <Cards /> 
     </div>
   );
 }

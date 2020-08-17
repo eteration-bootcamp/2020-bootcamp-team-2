@@ -1,13 +1,5 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
-import Tabs from 'react-bootstrap/Tabs'
-import Tab from 'react-bootstrap/Tab'
-import Image from 'react-bootstrap/Image'
-import Form from 'react-bootstrap/Form'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Container, Row, Col, Button, Tabs, Tab, Image, Form} from 'react-bootstrap' 
 
 function EditProfilePage() {
     const [key, setKey] = useState('editProfile');

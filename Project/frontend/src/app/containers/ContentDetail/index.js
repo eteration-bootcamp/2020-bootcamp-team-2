@@ -4,6 +4,7 @@ import Cards from "./Cards";
 function ContentDetail() {
   return (
     <div>
+      {/* <div> */}
       <Cards />
     </div>
   );

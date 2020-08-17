@@ -3,7 +3,7 @@ import EditProfilePage from "./EditProfilePage";
 
 function Profile() {
   return (
-    <div>
+    <div> 
       <EditProfilePage />
     </div>
   );
