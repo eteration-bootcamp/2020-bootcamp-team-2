@@ -20,6 +20,7 @@ public class Hotel {
 	@Size(min = 250, max=5000)
 	@Column(length = 5000)
 	private String hotelContent;
+	private String imageUrl;
 	
 
 }

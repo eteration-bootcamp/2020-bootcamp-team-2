@@ -20,6 +20,6 @@ public class Historical {
 	@Size(min = 250, max=5000)
 	@Column(length = 5000)
 	private String historicalContent;
-	
+	private String imageUrl;
 
 }

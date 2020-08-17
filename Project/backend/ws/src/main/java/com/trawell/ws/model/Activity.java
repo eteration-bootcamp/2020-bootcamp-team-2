@@ -20,6 +20,7 @@ public class Activity {
 	@Size(min = 250, max=5000)
 	@Column(length = 5000)
 	private String activityContent;
+	private String imageUrl;
 	
 
 }

@@ -20,6 +20,7 @@ public class Bar {
 	@Size(min = 250, max=5000)
 	@Column(length = 5000)
 	private String barContent;
+	private String imageUrl;
 	
 
 }

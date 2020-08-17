@@ -20,6 +20,7 @@ public class Cafe {
 	@Size(min = 250, max=5000)
 	@Column(length = 5000)
 	private String cafeContent;
+	private String imageUrl;
 	
 
 }
