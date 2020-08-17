@@ -10,15 +10,15 @@ import lombok.Data;
 
 @Data
 @Entity
-public class City {
+public class District {
 	
 	@Id
 	@GeneratedValue
 	private long id;
-	private String cityName;
+	private String districtName;
 	
 	@ManyToOne
-	private Country country;
+	private City city;
 	
 
 }
