@@ -5,6 +5,20 @@ import CityList from '../../components/CityList'
 import CarouselBox from './CarouselBox'
 
 class Location extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            countryId : null
+
+        }
+    };
+
+    setCountry = (countryId) => {
+        this.setState({
+            countryId
+        }) 
+        
+    };
     render() {
         return (
             <div className="mb-2" >
@@ -61,7 +75,7 @@ class Location extends React.Component {
                                 </Dropdown.Toggle>
                                         <Dropdown.Menu>
                                             {/* CityList componentine gelen CountryId bilgisini prop olarak geç ve şehirleri servisten çağır */}
-                                            <CityList />
+                                            <CityList countryId = {this.state.countryId} />
                                         </Dropdown.Menu>
                                     </Dropdown>
                                 </center>
