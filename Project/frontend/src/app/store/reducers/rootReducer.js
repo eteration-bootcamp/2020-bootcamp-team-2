@@ -10,7 +10,7 @@ import { firebaseReducer } from 'react-redux-firebase'
 const rootReducer = combineReducers({
     auth: authReducer,
     cardDetail : CardsDetailReducer,
-    cafe : ContentCardsDetailReducer,
+    contentCardDetail : ContentCardsDetailReducer,
     firebase : firebaseReducer
 })
 

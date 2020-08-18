@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Button, Col, Row, Container } from 'react-bootstrap';
 import BlogNavbar from '../BlogNavbar';
+import { Link } from 'react-router-dom';
 import { blog } from '../../../../api/apiCalls';
 import { withTranslation } from 'react-i18next';
 
