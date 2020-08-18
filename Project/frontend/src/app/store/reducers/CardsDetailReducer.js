@@ -15,9 +15,7 @@ const initState = {
         {id: '4', title: 'Eats' , url: eats , button: 'See and enjoy'},
         {id: '5', title: 'Activities' , url: activities , button: 'See and enjoy'},
         {id: '6', title: 'Bars' , url: bars , button: 'See and enjoy'}
-
     ]
-
 }
 
 const CardsDetailReducer = (state = initState, action) => {

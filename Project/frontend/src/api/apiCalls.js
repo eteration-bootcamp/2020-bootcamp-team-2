@@ -20,5 +20,5 @@ export const getCountries = (page = 0) => {
 };
 
 export const getCities = (countryId) => {
-    return axios.get('/api/1.0/cities/{countryId}');
+    return axios.get('/api/1.0/cities/' + countryId);
 };
