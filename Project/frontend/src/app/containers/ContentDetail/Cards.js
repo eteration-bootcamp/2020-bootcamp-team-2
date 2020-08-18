@@ -1,36 +1,41 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container'
+import React, { useState, useEffect } from 'react';
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card';
+import CafeView from './CafeView';
+import { getCafes } from '../../../api/apiCalls';
 
+const Cards = () => {
+    const [cafePage, setCafePage] = useState({ content: [] })
 
+    useEffect(() => {
 
-class Cards extends React.Component {
-    render() {
-        return (
-            <Container fluid="md">
-                <Row>
-                    <h2 className="location_header_style">Loop Cafe</h2>
-                </Row>
-                <Row>
-                    <Col md={6} >
-                        <Card class="" className="text-white text-right">
-                            <Card.Img class="card_img_height" src={"https://b.zmtcdn.com/data/pictures/8/18480208/0071ba5033cddbe529bf8ab7a9992b82.jpg?output-format=webp"} />
-                        </Card>
-                    </Col>
-                    <Col md={6}>
-                        <h3>
-                            Kahve, Çay <br />
-                            Kadıköy Merkez <br />
-                            Açılış saati 09:00 <br />
-                        </h3>
-                    </Col>
-                </Row>
-            </Container>
-        )
+        loadCafes();
+    }, []);
+
+    const loadCafes = async (page) => {
+        try {
+            const response = await getCafes(page);
+            setCafePage(previousCafePage => ({
+                ...response.data,
+                content: [...previousCafePage.content, ...response.data.content]
+            }))
+        } catch (error) { }
     }
+    const { content } = cafePage;
+
+    return (
+
+        <div className="container-fluid">
+            <Row>
+                {content.map(cafe => {
+                    if (cafe.id==1) {
+                        return (
+                            <CafeView key={cafe.id} cafe={cafe} />
+                        )
+                    }
+                })}
+            </Row>
+        </div>
+    )
 }
 
 
