@@ -1623,3 +1623,9 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection wa
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 81 more
+2020-08-18 14:48:07 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "IMAGE_URL VARCHAR(255)": "STRINGDECODE('Cadillac Hotel & Beach Club is an all-new oceanfront luxury hotel inspired by the 1940s Italian Riviera with a pre... (1928)"; SQL statement:
+INSERT INTO "PUBLIC"."HOTEL"("ID","HOTEL_CONTENT","HOTEL_NAME","IMAGE_URL","CITY_ID")VALUES(?,?,?,?,?) [22001-200]
+2020-08-18 14:48:07 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "IMAGE_URL VARCHAR(255)": "STRINGDECODE('Cadillac Hotel & Beach Club is an all-new oceanfront luxury hotel inspired by the 1940s Italian Riviera with a pre... (1928)"; SQL statement:
+INSERT INTO "PUBLIC"."HOTEL"("ID","HOTEL_CONTENT","HOTEL_NAME","IMAGE_URL","CITY_ID")VALUES(?,?,?,?,?) [22001-200]
