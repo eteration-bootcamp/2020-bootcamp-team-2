@@ -1,6 +1,6 @@
 package com.trawell.ws.controller;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,14 +18,15 @@ public class ActivityController {
 	@Autowired
 	ActivityService activityService;
 	
-	@GetMapping("api/1.0/activities")
+	@GetMapping("api/${api.version}/activities")
 	Page<Activity> getActivities(Pageable page){
 		return activityService.getActivities(page);
 	}
 	
-	@GetMapping("api/1.0/activities/{id}")
-	Optional<Activity> getfindById(@PathVariable Long id){
-		return activityService.getfindById(id);
+	
+	@GetMapping("api/${api.version}/activities/{cityId}")
+	List<Activity> findByCityId(@PathVariable Long cityId){
+		return activityService.findByCityId(cityId);
 	}
 	
 

@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.Size;
 
 import lombok.Data;
@@ -21,6 +22,9 @@ public class Hotel {
 	@Column(length = 5000)
 	private String hotelContent;
 	private String imageUrl;
+	
+	@ManyToOne
+	private City city;
 	
 
 }

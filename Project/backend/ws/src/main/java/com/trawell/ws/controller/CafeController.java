@@ -1,6 +1,6 @@
 package com.trawell.ws.controller;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,14 +18,14 @@ public class CafeController {
 	@Autowired
 	CafeService cafeService;
 	
-	@GetMapping("api/1.0/cafes")
+	@GetMapping("api/${api.version}/cafes")
 	Page<Cafe> getCafes(Pageable page){
 		return cafeService.getCafes(page);
 	}
 	
-	@GetMapping("api/1.0/cafes/{id}")
-	Optional<Cafe> getfindById(@PathVariable Long id){
-		return cafeService.getfindById(id);
+	@GetMapping("api/${api.version}/cafes/{cityId}")
+	List<Cafe> findByCityId(@PathVariable Long cityId){
+		return cafeService.findByCityId(cityId);
 	}
 	
 

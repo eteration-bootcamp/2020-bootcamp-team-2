@@ -15,7 +15,7 @@ public class CountryController {
 	@Autowired
 	CountryService countryService;
 	
-	@GetMapping("api/1.0/countries")
+	@GetMapping("api/${api.version}/countries")
 	Page<Country> getCountries(Pageable page){
 		return countryService.getCountries(page);
 	}

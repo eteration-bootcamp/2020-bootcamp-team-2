@@ -1,6 +1,6 @@
 package com.trawell.ws.controller;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,14 +18,14 @@ public class HistoricalController {
 	@Autowired
 	HistoricalService historicalService;
 	
-	@GetMapping("api/1.0/historicals")
+	@GetMapping("api/${api.version}/historicals")
 	Page<Historical> getHistoricals(Pageable page){
 		return historicalService.getHistoricals(page);
 	}
 	
-	@GetMapping("api/1.0/historicals/{id}")
-	Optional<Historical> getfindById(@PathVariable Long id){
-		return historicalService.getfindById(id);
+	@GetMapping("api/${api.version}/historicals/{cityId}")
+	List<Historical> findByCityId(@PathVariable Long cityId){
+		return historicalService.findByCityId(cityId);
 	}
 	
 

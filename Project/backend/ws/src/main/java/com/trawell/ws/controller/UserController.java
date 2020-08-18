@@ -19,7 +19,7 @@ public class UserController {
 	UserService userService;
 			
 
-	@PostMapping("/api/1.0/users")
+	@PostMapping("/api/${api.version}/users")
 	@ResponseStatus(HttpStatus.CREATED)
 	public GenericResponse createUser(@RequestBody User user) {
 		

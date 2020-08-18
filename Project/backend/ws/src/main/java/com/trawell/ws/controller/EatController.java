@@ -1,6 +1,6 @@
 package com.trawell.ws.controller;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,14 +18,14 @@ public class EatController {
 	@Autowired
 	EatService eatService;
 	
-	@GetMapping("api/1.0/eats")
+	@GetMapping("api/${api.version}/eats")
 	Page<Eat> getEats(Pageable page){
 		return eatService.getEats(page);
 	}
 	
-	@GetMapping("api/1.0/eats/{id}")
-	Optional<Eat> getfindById(@PathVariable Long id){
-		return eatService.getfindById(id);
+	@GetMapping("api/${api.version}/eats/{cityId}")
+	List<Eat> findByCityId(@PathVariable Long cityId){
+		return eatService.findByCityId(cityId);
 	}
 	
 

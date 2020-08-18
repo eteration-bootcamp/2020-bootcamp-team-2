@@ -1,6 +1,6 @@
 package com.trawell.ws.controller;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,14 +18,14 @@ public class BarController {
 	@Autowired
 	BarService barService;
 	
-	@GetMapping("api/1.0/bars")
+	@GetMapping("api/${api.version}/bars")
 	Page<Bar> getBars(Pageable page){
 		return barService.getBars(page);
 	}
 	
-	@GetMapping("api/1.0/bars/{id}")
-	Optional<Bar> getfindById(@PathVariable Long id){
-		return barService.getfindById(id);
+	@GetMapping("api/${api.version}/bars/{cityId}")
+	List<Bar> findByCityId(@PathVariable Long cityId){
+		return barService.findByCityId(cityId);
 	}
 	
 

@@ -1,6 +1,7 @@
 package com.trawell.ws.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.validation.Valid;
@@ -15,6 +16,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -32,17 +34,23 @@ public class BlogController {
 	BlogService blogService;
 			
 
-	@PostMapping("/api/1.0/blogs")
+	@PostMapping("/api/${api.version}/blogs")
 	public GenericResponse createBlog(@Valid @RequestBody Blog blog) {		
 		blogService.save(blog);
 		return new GenericResponse("Blog created!");	
 		
 	}
 	
-	@GetMapping("api/1.0/blogs")
+	@GetMapping("api/${api.version}/blogs")
 	Page<Blog> getBlogs(@PageableDefault(sort = "id", direction = Direction.DESC) Pageable page){
 		return blogService.getBlogs(page);
 	}
+	
+	@GetMapping("api/${api.version}/blogs/{userId}")
+	List<Blog> findByUserId(@PathVariable Long userId){
+		return blogService.findByUserId(userId);
+	}
+	
 	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)

@@ -1,6 +1,6 @@
 package com.trawell.ws.controller;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,15 +18,14 @@ public class HotelController {
 	@Autowired
 	HotelService hotelService;
 	
-	@GetMapping("api/1.0/hotels")
+	@GetMapping("api/${api.version}/hotels")
 	Page<Hotel> getHotels(Pageable page){
 		return hotelService.getHotels(page);
 	}
 	
-	@GetMapping("api/1.0/hotels/{id}")
-	Optional<Hotel> getfindById(@PathVariable Long id){
-		return hotelService.getfindById(id);
+	@GetMapping("api/${api.version}/hotels/{cityId}")
+	List<Hotel> findByCityId(@PathVariable Long cityId){
+		return hotelService.findByCityId(cityId);
 	}
-	
 
 }
