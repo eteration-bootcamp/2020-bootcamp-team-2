@@ -1629,3 +1629,15 @@ INSERT INTO "PUBLIC"."HOTEL"("ID","HOTEL_CONTENT","HOTEL_NAME","IMAGE_URL","CITY
 2020-08-18 14:48:07 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLDataException: Value too long for column "IMAGE_URL VARCHAR(255)": "STRINGDECODE('Cadillac Hotel & Beach Club is an all-new oceanfront luxury hotel inspired by the 1940s Italian Riviera with a pre... (1928)"; SQL statement:
 INSERT INTO "PUBLIC"."HOTEL"("ID","HOTEL_CONTENT","HOTEL_NAME","IMAGE_URL","CITY_ID")VALUES(?,?,?,?,?) [22001-200]
+2020-08-18 16:51:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ACTIVITY: ""CITY_ID"" BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."ACTIVITY"("ID","ACTIVITY_CONTENT","ACTIVITY_NAME","IMAGE_URL","CITY_ID")VALUES(?,?,?,?,?) [22018-200]
+2020-08-18 16:51:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ACTIVITY: ""CITY_ID"" BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."ACTIVITY"("ID","ACTIVITY_CONTENT","ACTIVITY_NAME","IMAGE_URL","CITY_ID")VALUES(?,?,?,?,?) [22018-200]
+2020-08-18 17:17:51 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "IMAGE_URL VARCHAR(255)": "'https://images.squarespace-cdn.com/content/v1/560eabc4e4b061c4bb358ae8/1452793734559-QLCKOROEMP7LRIN13J6N/ke17ZwdGBToddI8pDm48k... (337)"; SQL statement:
+INSERT INTO "PUBLIC"."CAFE"("ID","CAFE_CONTENT","CAFE_NAME","IMAGE_URL","CITY_ID")VALUES(?,?,?,?,?) [22001-200]
+2020-08-18 17:17:51 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "IMAGE_URL VARCHAR(255)": "'https://images.squarespace-cdn.com/content/v1/560eabc4e4b061c4bb358ae8/1452793734559-QLCKOROEMP7LRIN13J6N/ke17ZwdGBToddI8pDm48k... (337)"; SQL statement:
+INSERT INTO "PUBLIC"."CAFE"("ID","CAFE_CONTENT","CAFE_NAME","IMAGE_URL","CITY_ID")VALUES(?,?,?,?,?) [22001-200]
