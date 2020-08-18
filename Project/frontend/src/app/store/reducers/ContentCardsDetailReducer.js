@@ -1,6 +1,6 @@
 
 const initState = {
-    cardsDetail: [
+    cafesDetail: [
         { id: '1', title: 'Loop Cafe', url: 'https://b.zmtcdn.com/data/pictures/8/18480208/0071ba5033cddbe529bf8ab7a9992b82.jpg?output-format=webp', button: 'See and enjoy' },
         { id: '2', title: 'Brekkie Croissant & Cookie', url: 'https://b.zmtcdn.com/data/reviews_photos/65f/b8782f57a3dce0b6bb5de6e5fd04565f_1540190545.jpg?output-format=webp', button: 'See and enjoy' },
         { id: '3', title: 'Payidar Cafe & Restaurant', url: 'https://b.zmtcdn.com/data/pictures/2/18432132/2ded5c2be296e98d6b0b23d9793b93c3.jpg?output-format=webp', button: 'See and enjoy' },

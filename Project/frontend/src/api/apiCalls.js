@@ -19,6 +19,30 @@ export const getCountries = (page = 0) => {
     return axios.get('/api/1.0/countries?page=' + page);
 };
 
-export const getCities = (countryId) => {
-    return axios.get('/api/1.0/cities/' + countryId);
+export const getCities = (page = 0) => {
+    return axios.get('/api/1.0/cities?page=' + page);
+};
+
+export const getCafes = (page = 0) => {
+    return axios.get('/api/1.0/cafes?page=' + page);
+};
+
+export const getHotels = (page = 0) => {
+    return axios.get('/api/1.0/hotels?page=' + page);
+};
+
+export const getHistoricals = (page = 0) => {
+    return axios.get('/api/1.0/historicals?page=' + page);
+};
+
+export const getEats = (page = 0) => {
+    return axios.get('/api/1.0/eats?page=' + page);
+};
+
+export const getBars = (page = 0) => {
+    return axios.get('/api/1.0/bars?page=' + page);
+};
+
+export const getActivities = (page = 0) => {
+    return axios.get('/api/1.0/activities?page=' + page);
 };

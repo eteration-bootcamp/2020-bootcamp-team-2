@@ -3,35 +3,31 @@ import { getCities } from '../../api/apiCalls';
 import CityView from './CityView';
 
 const CityList = (props)=> {
-    const [cityPage, setCityPage] = useState({ content: [] })
-    
+    const [cityPage, setCityPage] = useState({ content: [], last: true, number: 0 })
 
     useEffect(() => {
         // props.countryId bilgisi geçipşehirleri çağıracaksınız.
         loadCities(props.countryId);
     }, []);
-    
+
     const loadCities = async (countryId) => {
         try {
-            console.log("SElammmmm " + countryId);
             const response = await getCities(countryId);
-            console.log("REsonpınsese"+response.data[0].cityName);
             setCityPage(previousCityPage => ({
                 ...response.data,
-                content: [...previousCityPage.content, ...response.data]
+                content: [...previousCityPage.content, ...response.data.content]
             }))
-            
-        } catch (error) {console.log("hataaa"+error) }
+        } catch (error) { }
     }
 
-    const { content } = cityPage;
+    const { content, last, number } = cityPage;
 
 
 
     return (
         <div>
             {content.map(city => {
-                {console.log("HEYYY"+city.cityName)}
+                
                 return <CityView key={city.id} city={city} />
                 
             })}

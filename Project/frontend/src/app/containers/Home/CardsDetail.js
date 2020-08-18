@@ -10,7 +10,7 @@ const CardsDetail = ({ cardDetail }) => {
             <Card.Img className="card_img_height" src={cardDetail.url} />
             <Card.ImgOverlay>
                 <Card.Title className="navbar_text_color">{cardDetail.title}</Card.Title>
-                <Link to="/Content">
+                <Link to={cardDetail.linkto}>
                     <Button className="card_button navbar_text_color">{cardDetail.button}</Button>
                 </Link>
             </Card.ImgOverlay>
