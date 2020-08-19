@@ -17,7 +17,11 @@ i18n.use(initReactI18next).init({
                 'FOLLOW US' : 'FOLLOW US',
                 'TRAWELL | All right reserved' : 'TRAWELL | All right reserved',
                 'HOME' : 'HOME',
-                'LOCATION' : 'LOCATION'
+                'LOCATION' : 'LOCATION',
+                'LOGIN' : 'LOGIN',
+                'REGISTER' : 'REGISTER',
+                'LOGOUT' : 'LOGOUT',
+                'PROFILE' : 'PROFILE'
             }
         },
         tr: {
@@ -35,7 +39,11 @@ i18n.use(initReactI18next).init({
                 'FOLLOW US': 'BIZI TAKIP EDIN',
                 'TRAWELL | All right reserved' : 'TRAWELL | Tüm hakları saklıdır',
                 'HOME' : 'ANASAYFA',
-                'LOCATION' : 'KONUM'
+                'LOCATION' : 'KONUM',
+                'LOGIN' : 'GİRİŞ YAP',
+                'REGISTER' : 'KAYDOL',
+                'LOGOUT' : 'ÇIKIŞ YAP',
+                'PROFILE' : 'PROFİL'
                  
             }
         }

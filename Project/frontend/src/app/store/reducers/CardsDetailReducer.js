@@ -20,9 +20,7 @@ const initState = {
 
 const CardsDetailReducer = (state = initState, action) => {
     return state
-      
 
 }
-
 
 export default CardsDetailReducer;
