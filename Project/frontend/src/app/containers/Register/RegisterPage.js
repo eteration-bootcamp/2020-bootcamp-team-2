@@ -93,7 +93,7 @@ class RegisterPage extends React.Component {
                             <Button className="login_register_button" variant="primary" type="submit">
                                 SIGN UP
                             </Button>
-                            {authError ? <LoginFail /> : <LoginSuccess />}
+                            {authError ? <LoginFail /> : <></>}
                         </Form>
 
                     </center>

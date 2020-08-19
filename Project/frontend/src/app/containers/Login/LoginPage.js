@@ -75,7 +75,7 @@ class LoginPage extends React.Component {
                         <Button className="login_register_button login_button_width" variant="primary" type="submit">
                             LOGIN
                         </Button>
-                        {authError ? <LoginFail /> : <LoginSuccess />}
+                        {authError ? <LoginFail /> : <></>}
                     </Form>
                 </Col>
             </Container>
