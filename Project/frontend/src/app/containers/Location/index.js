@@ -17,7 +17,7 @@ class Location extends React.Component {
     setCountry = (countryId) => {
         
         this.setState({
-            countryId
+            countryId : countryId
         }) 
         
     };
@@ -64,7 +64,6 @@ class Location extends React.Component {
                                         Please select a country
                                 </Dropdown.Toggle>
                                     <Dropdown.Menu>
-                                        {/* Pickerdan birşey seçildiğinde countryID bilgisini cityList componentine gönder. */}
                                         <CountryList onSelectCountryId = {this.setCountry}/>
                                     </Dropdown.Menu>
                                 </Dropdown>
@@ -74,7 +73,7 @@ class Location extends React.Component {
                                     <Dropdown>
                                         <Dropdown.Toggle className="location_header_style button_shadow" variant="outline-info" id="dropdown-basic">
                                             Please select a city
-                                </Dropdown.Toggle>
+                                        </Dropdown.Toggle>
                                         <Dropdown.Menu>
                                             <CityList countryId = {this.state.countryId} />
                                         </Dropdown.Menu>

@@ -9,15 +9,14 @@ const CityList = (props)=> {
     useEffect(() => {
 
         loadCities(props.countryId);
-    }, []);
+    }, [props.countryId]);
     
     const loadCities = async (countryId) => {
         try {         
             const response = await getCities(countryId);
-            setCityPage(previousCityPage => ({
-                ...response.data,
-                content: [...previousCityPage.content, ...response.data]
-            }))
+            setCityPage({
+                content: [ ...response.data]
+            })
             
         } catch (error) {console.log("hataaa"+error) }
     }

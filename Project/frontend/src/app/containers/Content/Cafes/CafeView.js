@@ -11,7 +11,7 @@ const CafeView = (props) => {
                     <Card.Img className="card_img_height" src={cafe.imageUrl} />
                     <Card.ImgOverlay>
                         <Card.Title className="navbar_text_color">{cafe.cafeName}</Card.Title>
-                        <Link to="/ContentDetail"><Button className="card_button navbar_text_color" variant="primary">See and Enjoy</Button></Link>
+                        <Link to={{pathname:`/ContentDetail/${cafe.id}`,state:{cafeId : cafe.id}}}  className="card_button navbar_text_color">See and Enjoy</Link>
                     </Card.ImgOverlay>
                 </Card>
             </CardDeck>

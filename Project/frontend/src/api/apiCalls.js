@@ -23,8 +23,8 @@ export const getCities = (countryId) => {
     return axios.get('/api/1.0/cities/' + countryId);
 };
 
-export const getCafes = (page = 0) => {
-    return axios.get('/api/1.0/cafes?page=' + page);
+export const getCafes = (page='') => {
+    return axios.get('/api/1.0/cafes/' + page);
 };
 
 export const getHotels = (page = 0) => {
