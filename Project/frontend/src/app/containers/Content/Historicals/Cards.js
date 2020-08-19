@@ -27,11 +27,7 @@ const Cards = () => {
         <div className="container-fluid">
             <Row>
                 {content.map(historical => {
-                    if (historical.id) {
-                        return (
-                            <HistoricalView key={historical.id} historical={historical} />
-                        )
-                    }
+                    return ( <HistoricalView key={historical.id} historical={historical} /> )
                 })}
             </Row>
         </div>

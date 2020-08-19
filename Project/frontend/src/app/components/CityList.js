@@ -7,15 +7,13 @@ const CityList = (props)=> {
     
 
     useEffect(() => {
-        // props.countryId bilgisi geçipşehirleri çağıracaksınız.
+
         loadCities(props.countryId);
     }, []);
     
     const loadCities = async (countryId) => {
-        try {
-            console.log("SElammmmm " + countryId);
+        try {         
             const response = await getCities(countryId);
-            console.log("REsonpınsese"+response.data[0].cityName);
             setCityPage(previousCityPage => ({
                 ...response.data,
                 content: [...previousCityPage.content, ...response.data]
@@ -31,11 +29,8 @@ const CityList = (props)=> {
     return (
         <div>
             {content.map(city => {
-                {console.log("HEYYY"+city.cityName)}
-                return <CityView key={city.id} city={city} />
-                
+                return <CityView key={city.id} city={city} />               
             })}
-
         </div>
     );
 };

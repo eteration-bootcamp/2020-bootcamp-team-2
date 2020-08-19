@@ -26,7 +26,7 @@ const CountryList = ({ onSelectCountryId }) => {
         } catch (error) { }
     }
 
-    const { content, last, number } = countryPage;
+    const { content } = countryPage;
 
 
 

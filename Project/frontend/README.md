@@ -1,4 +1,18 @@
-# ETERATION BOOTCAMP PROJECT PROPOSAL 
+# 2020 Bootcamp Team 2 - TRAWELL
+
+## Team Members
+
+| Role               | Name              |
+|--------------------|-------------------|
+| Fullstack Developer| Birhan ÖZÇELİK    |
+| Fullstack Developer| Eray Berat ATALAY |
+| Fullstack Developer| Merve YILDIRIM    |
+| Fullstack Developer| Güliz AKKAYA      |
+
+## Project
+
+Trawell is a web-based travel guide application. This application provides users to increase the travel experience. 
+
 
  
 ## Aim of the Project 
@@ -10,7 +24,6 @@ Travel guide application;
 
 - It guides the user with detailed explanations and user comments of the travel centers.  
 
-- The user can save the places he/she traveled and the places he/she wants to travel to browse later. 
 
 
 ## Methodology 
@@ -20,9 +33,8 @@ Travel guide application;
 
 - The Firebase API to be used must be investigated in order to login.  
 
-- Google Maps API will be used for map information of travel locations.  
 
-- How to enter the information of travel destinations (via DB or a different method) will be investigated. 
+- How to enter the information of travel destinations investigated. 
 
  
 ## Software/Hardware Requirements 
@@ -32,7 +44,7 @@ Travel guide application;
 
 - Backend: Spring Framework (Java) 
 
-- DB: MySQL 
+- DB: h2-database 
 
 
 ## Draft Time Plan 
@@ -50,4 +62,3 @@ Travel guide application;
 
 - Maintenance       (1 day )
 
- 

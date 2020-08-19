@@ -6,7 +6,6 @@ import bars from '../../images/bars.jpg';
 import historical_places from '../../images/historical_places.jpg';
 
 
-
 const initState = {
     cardsDetail : [
         {id: '1', title: 'Cafes' , url: cafes ,     linkto:'/Cafes', button: 'See and enjoy'},
@@ -17,11 +16,13 @@ const initState = {
         {id: '6', title: 'Bars' , url: bars ,       linkto:'/Bars', button: 'See and enjoy'}
 
     ]
-
 }
 
 const CardsDetailReducer = (state = initState, action) => {
     return state
+      
+
 }
 
-export default CardsDetailReducer
+
+export default CardsDetailReducer;

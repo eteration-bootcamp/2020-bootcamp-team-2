@@ -27,11 +27,7 @@ const Cards = () => {
         <div className="container-fluid">
             <Row>
                 {content.map(activity => {
-                    if (activity.id) {
-                        return (
-                            <ActivityView key={activity.id} activity={activity} />
-                        )
-                    }
+                    return ( <ActivityView key={activity.id} activity={activity} /> )
                 })}
             </Row>
         </div>

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Container, Card, Button, Row, Col } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Container, Card, Row, Col } from 'react-bootstrap'
 
 const BlogView = (props) => {
     const { blog } = props;

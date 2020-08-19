@@ -6,7 +6,7 @@ class Header extends React.Component {
         const { t } = this.props;
         return (
             <div className="header">
-                <div className="location_header_style">
+                <div className="location_header_style" style={{ marginTop: "0px" }}>
                     <center><h1>{t('Share Blog')}</h1></center>
                 </div>
             </div>

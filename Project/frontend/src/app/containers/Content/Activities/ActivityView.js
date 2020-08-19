@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardDeck, Card, Button, Row, Col } from 'react-bootstrap'
+import { CardDeck, Card, Button, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const ActivityView = (props) => {

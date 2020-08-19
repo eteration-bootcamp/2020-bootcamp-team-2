@@ -9,7 +9,7 @@
 .login_button_width{ width: 200px;}
 .location_header_style{margin-top: 30px; margin-bottom: 30px; font-family: MV Boli;color:#3B6978; width:100%;}
 .location_component_style{margin-top:40%; font-family: MV Boli;color:#3B6978; font-size: 28px; }
-.footer_style{margin-top:20px; background-color: #24a19c; color:#FFFFFF; 
+.footer_style{ background-color: #24a19c; color:#FFFFFF; 
     box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.70); width: 100%; font-family: Mv Boli; opacity: 0.9;}
 .location_card_button{ z-index:5; position:absolute ; top: 0; right:0; font-size: 17pt; border: 0px; background-color: #24a19c}
 .location_card_button:hover{background-color: #23ada9; box-shadow: 5px 5px 10px 0px rgba(22,109,106,0.70);}

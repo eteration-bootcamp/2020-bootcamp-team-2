@@ -27,11 +27,7 @@ const Cards = () => {
         <div className="container-fluid">
             <Row>
                 {content.map(eat => {
-                    if (eat.id) {
-                        return (
-                            <EatView key={eat.id} eat={eat} />
-                        )
-                    }
+                    return ( <EatView key={eat.id} eat={eat} /> )
                 })}
             </Row>
         </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Form, Button, Col, Row, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import { blog } from '../../../../api/apiCalls';
 import { withTranslation } from 'react-i18next';
-import Axios from 'axios';
+import Header from './Header'
+
 
 class Content extends React.Component {
     state = {
@@ -16,7 +16,6 @@ class Content extends React.Component {
 
 
     onChange = event => {
-        const { t } = this.props;
         const { name, value } = event.target;
         const errors = { ...this.state.errors }
         errors[name] = undefined
@@ -55,16 +54,14 @@ class Content extends React.Component {
 
     };
 
-    
-    
-
 
     render() {
         const { pendingApiCall, errors } = this.state;
         const { blogContent , blogName } = errors;
         const { t } = this.props;
         return (
-            <Container fluid>
+            <Container fluid style={{ backgroundSize: "cover" , backgroundImage: "url(https://www.dunyaatlasi.com/wp-content/uploads/2018/06/seyahat-ederken-dil-engeline-takilmamaniz-icin-8-ipucu.jpg)"}}>
+                <Header />
                 <Row >
                     <Col style={{ marginRight: "150px", marginLeft:"150px" }}>
                         <Form>
@@ -99,6 +96,7 @@ class Content extends React.Component {
         )
     }
 }
+
 
 const ContentWithTranslation = withTranslation()(Content);
 

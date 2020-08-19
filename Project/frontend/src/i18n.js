@@ -11,8 +11,13 @@ i18n.use(initReactI18next).init({
                 'Eat' : 'Eat',
                 'Hotel'  : 'Hotel',
                 'History' : 'History',
-                'Art' : 'Art'
-
+                'ABOUT US': 'ABOUT US',
+                'TRAWELL is a travel guide.' : 'TRAWELL is a travel guide.',
+                'TRAWELL enhances your travel experience and helps you plan a more enjoyable trip.' : 'TRAWELL enhances your travel experience and helps you plan a more enjoyable trip.',
+                'FOLLOW US' : 'FOLLOW US',
+                'TRAWELL | All right reserved' : 'TRAWELL | All right reserved',
+                'HOME' : 'HOME',
+                'LOCATION' : 'LOCATION'
             }
         },
         tr: {
@@ -23,8 +28,15 @@ i18n.use(initReactI18next).init({
                 'Eat' : 'Yemek',
                 'Hotel'  : 'Otel',
                 'History' : 'Tarih',
-                'Art' : 'Sanat'
-
+                'Art' : 'Sanat',
+                'ABOUT US': 'HAKKIMIZDA',
+                'TRAWELL is a travel guide.' : 'TRAWELL bir gezi rehberidir.',
+                'TRAWELL enhances your travel experience and helps you plan a more enjoyable trip.': 'TRAWELL seyahat deneyiminizi arttırırken keyifli yolculuklar planlamanızı destekler.',
+                'FOLLOW US': 'BIZI TAKIP EDIN',
+                'TRAWELL | All right reserved' : 'TRAWELL | Tüm hakları saklıdır',
+                'HOME' : 'ANASAYFA',
+                'LOCATION' : 'KONUM'
+                 
             }
         }
     },

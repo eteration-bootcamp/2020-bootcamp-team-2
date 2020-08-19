@@ -11,24 +11,6 @@ import { useState } from 'react';
 import Input from '../../components/Input';
 import { register } from '../../../api/apiCalls';
 
-function LoginSuccess() {
-    const [show, setShow] = useState(true);
-
-    return (
-        <>
-            <Alert className="alert_showbox" show={show} onClose={() => setShow(false)} dismissible>
-                <p>
-                    <center>Success</center>
-                </p>
-
-            </Alert>
-
-        </>
-
-    );
-
-
-}
 
 function LoginFail() {
     const [show, setShow] = useState(true);

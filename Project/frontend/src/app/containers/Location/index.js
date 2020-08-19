@@ -29,26 +29,26 @@ class Location extends React.Component {
                         <Carousel>
                             <Carousel.Item>
                                 <img
-                                    height={300}
+                                    height={500}
                                     className="d-block w-100"
-                                    src={require('./images/izmir.jpg')}
+                                    src={"https://media.ayder.com.tr/images/tours/2723_birgi-alacati-cesme-izmir-turu/birgi-alacati-cesme-izmir-turu_171226153850.jpg"}
                                     alt="First slide"
                                 />
                                 <Carousel.Caption>
-                                    <h3>First slide label</h3>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                    <h3>Alaçatı, IZMIR </h3>
+                                    <p>For a pleasant walk among the FLOWERS!</p>
                                 </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
-                                    height={300}
+                                    height={500}
                                     className="d-block w-100"
-                                    src={require('./images/izmir2.jpg')}
+                                    src={"https://img.redbull.com/images/q_auto,f_auto/redbullcom/2017/03/03/1331847629958_4/geceleri-b%C3%B6yle-bir-manzara-izmir-de-seni-bekliyor.jpg"}
                                     alt="Third slide"
                                 />
                                 <Carousel.Caption>
-                                    <h3>Second slide label</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h3>Konak, IZMIR</h3>
+                                    <p>Meeting point!</p>
                                 </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
@@ -76,8 +76,6 @@ class Location extends React.Component {
                                             Please select a city
                                 </Dropdown.Toggle>
                                         <Dropdown.Menu>
-                                            {/* CityList componentine gelen CountryId bilgisini prop olarak geç ve şehirleri servisten çağır */}
-                                            {console.log("Bakalım"+this.state.countryId)}
                                             <CityList countryId = {this.state.countryId} />
                                         </Dropdown.Menu>
                                     </Dropdown>
@@ -104,7 +102,7 @@ class Location extends React.Component {
                     </Row>
                 </Container>
 
-                <Container fluid>
+                <Container fluid style={{ marginBottom: "50px"}}>
                     <div className='mt-5'>
                         <Row>
                             <Col md={2}><center><h1 className="location_component_style">EAT</h1></center></Col>
@@ -124,6 +122,30 @@ class Location extends React.Component {
                     <div className='mt-5'>
                         <Row>
                             <Col md={2}><center><h1 className="location_component_style">HISTORY</h1></center></Col>
+                            <Col><CarouselBox /></Col>
+                            <Col><CarouselBox /></Col>
+                            <Col><CarouselBox /></Col>
+                        </Row>
+                    </div>
+                    <div className='mt-5'>
+                        <Row>
+                            <Col md={2}><center><h1 className="location_component_style">CAFE</h1></center></Col>
+                            <Col><CarouselBox /></Col>
+                            <Col><CarouselBox /></Col>
+                            <Col><CarouselBox /></Col>
+                        </Row>
+                    </div>
+                    <div className='mt-5'>
+                        <Row>
+                            <Col md={2}><center><h1 className="location_component_style">ACTIVITY</h1></center></Col>
+                            <Col><CarouselBox /></Col>
+                            <Col><CarouselBox /></Col>
+                            <Col><CarouselBox /></Col>
+                        </Row>
+                    </div>
+                    <div className='mt-5'>
+                        <Row>
+                            <Col md={2}><center><h1 className="location_component_style">BAR</h1></center></Col>
                             <Col><CarouselBox /></Col>
                             <Col><CarouselBox /></Col>
                             <Col><CarouselBox /></Col>
