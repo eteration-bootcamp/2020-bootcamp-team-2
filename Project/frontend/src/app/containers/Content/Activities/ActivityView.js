@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom'
 const ActivityView = (props) => {
     const { activity } = props;
     return (
-        <Col md={3}>
-            <CardDeck className="margin_top_20">
+        <Col md={3} style={{ marginBottom : "20px"}}>
+            <CardDeck className="margin_top_20" style={{ marginBottom : "50px"}}>
                 <Card className="text-white text-right">
                     <Card.Img className="card_img_height" src={activity.imageUrl} />
                     <Card.ImgOverlay>
                         <Card.Title className="navbar_text_color">{activity.activityName}</Card.Title>
-                        <Link to={{pathname:`/ActivityDetail/${activity.id}`,state:{activityId : activity.id}}}  className="card_button navbar_text_color">See and Enjoy</Link>
+                        <Link to={{pathname:`/ActivityDetail/${activity.id}`,state:{activityId : activity.id}}}  className="card_button">See and Enjoy</Link>
                     </Card.ImgOverlay>
                 </Card>
             </CardDeck>

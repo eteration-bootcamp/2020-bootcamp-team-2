@@ -2,22 +2,25 @@ import React, { useState, useEffect } from 'react';
 import Row from 'react-bootstrap/Row'
 import BlogView from './BlogView';
 import { getBlogs } from '../../../../api/apiCalls';
+import { useHistory } from 'react-router-dom';
 
-const Cards = ({ onSelectBlogId }) => {
+const Cards = (props) => {
     const [blogPage, setBlogPage] = useState({ content: [] })
-
+    const history = useHistory();
     useEffect(() => {
 
         loadBlogs();
+
     }, []);
 
     const loadBlogs = async (page) => {
+
         try {
             const response = await getBlogs(page);
-            setBlogPage(previousBlogPage => ({
-                ...response.data,
-                content: [...previousBlogPage.content, ...response.data.content]
-            }))
+            console.log(response)
+            setBlogPage({
+                content: [...response.data.content]
+            })
         } catch (error) { }
     }
     const { content } = blogPage;
@@ -26,10 +29,12 @@ const Cards = ({ onSelectBlogId }) => {
 
         <div className="container-fluid">
             <Row>
-                {content.map(blog => {
-                        return <BlogView onClick={ () => onSelectBlogId(blog.id)} key={blog.id} blog={blog} />                     
+                {content.filter(item => history.location.state.blogId === item.id).map(blog => {
+
+                        return <BlogView key={blog.id} blog={blog} />
+
                     }
-                )}
+                    )}
             </Row>
         </div>
     )

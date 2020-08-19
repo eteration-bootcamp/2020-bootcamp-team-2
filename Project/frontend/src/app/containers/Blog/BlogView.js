@@ -1,17 +1,17 @@
 import React from 'react';
-import { CardDeck, Card, Button, Col } from 'react-bootstrap'
+import { CardDeck, Card, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const BlogView = (props) => {
     const { blog } = props;
     return (    
-        <Col md={3}>
-            <CardDeck className="margin_top_20">
+        <Col md={3} style={{ marginBottom : "20px"}}>
+            <CardDeck className="margin_top_20" style={{ marginBottom : "50px"}}>
                 <Card className="text-white text-right">
                     <Card.Img className="card_img_height" src={blog.imageUrl} />
                     <Card.ImgOverlay>
                     <Card.Title className="navbar_text_color">{blog.blogName}</Card.Title>
-                    <Link to="/BlogExtra"><Button className="card_button navbar_text_color" variant="primary">See and Enjoy</Button></Link>
+                    <Link to={{pathname:`/BlogExtra/${blog.id}`,state:{blogId : blog.id}}}  className="card_button">See and Enjoy</Link>
                     </Card.ImgOverlay>
                 </Card>
             </CardDeck>

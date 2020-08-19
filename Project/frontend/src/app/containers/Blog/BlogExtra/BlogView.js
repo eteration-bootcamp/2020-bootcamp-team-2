@@ -14,7 +14,7 @@ const BlogView = (props) => {
                         <Card.Img class="card_img_height" src={blog.imageUrl} />
                     </Card>
                 </Col>
-                <Col md={6}>
+                <Col md={6} style={{ marginBottom : "200px"}}>
                     {blog.blogContent}
                 </Col>
             </Row>

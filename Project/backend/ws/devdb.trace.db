@@ -3345,3 +3345,19 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection wa
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 18 more
+2020-08-20 01:34:42 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BAR: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."BAR"("ID","BAR_CONTENT","BAR_NAME","IMAGE_URL","CITY_ID")VALUES(?,?,?,?,?) [22018-200]
+2020-08-20 01:34:42 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BAR: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."BAR"("ID","BAR_CONTENT","BAR_NAME","IMAGE_URL","CITY_ID")VALUES(?,?,?,?,?) [22018-200]
+2020-08-20 01:37:06 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BAR: ""CITY_ID"" BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."BAR"("ID","BAR_CONTENT","BAR_NAME","IMAGE_URL","CITY_ID")VALUES(?,?,?,?,?) [22018-200]
+2020-08-20 01:37:06 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (BAR: ""CITY_ID"" BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."BAR"("ID","BAR_CONTENT","BAR_NAME","IMAGE_URL","CITY_ID")VALUES(?,?,?,?,?) [22018-200]
+2020-08-20 02:28:13 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2020-08-20 02:28:18 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
