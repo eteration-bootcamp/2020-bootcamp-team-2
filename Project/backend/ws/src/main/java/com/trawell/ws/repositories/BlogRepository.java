@@ -9,6 +9,6 @@ import com.trawell.ws.model.User;
 
 public interface BlogRepository extends JpaRepository<Blog,Long> {
 	List<Blog> findByUser(User user);
-	Blog findByBlogComment(String blogComment);
+	Blog findByBlogContent(String blogContent);
 
 }

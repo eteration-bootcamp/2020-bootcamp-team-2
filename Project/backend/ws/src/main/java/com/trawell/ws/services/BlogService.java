@@ -1,6 +1,7 @@
 package com.trawell.ws.services;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,6 +28,7 @@ public class BlogService {
 	}
 	
 	public void save(Blog blog) {
+		blog.setTimestamp(new Date());
 		blogRepository.save(blog);
 		
 	}

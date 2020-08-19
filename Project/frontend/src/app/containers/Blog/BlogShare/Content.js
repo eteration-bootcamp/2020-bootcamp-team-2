@@ -1,17 +1,19 @@
 import React from 'react';
 import { Form, Button, Col, Row, Container } from 'react-bootstrap';
-import BlogNavbar from '../BlogNavbar';
 import { Link } from 'react-router-dom';
 import { blog } from '../../../../api/apiCalls';
 import { withTranslation } from 'react-i18next';
+import Axios from 'axios';
 
-class Comment extends React.Component {
+class Content extends React.Component {
     state = {
-        blogComment: '',
-        blogImage: '',
+        blogContent: '',
+        blogName: '',
+        imageUrl: '',
         pendingApiCall: false,
         errors: {}
     };
+
 
     onChange = event => {
         const { t } = this.props;
@@ -23,20 +25,24 @@ class Comment extends React.Component {
             errors
         });
     };
+        
 
-    onClickComment = async event => {
+    onClickContent = async event => {
         event.preventDefault();
 
-        const { blogComment, blogImage } = this.state;
+        const { blogContent, blogName, imageUrl } = this.state;
 
         const body = {
-            blogComment,
-            blogImage
+            blogContent,
+            blogName,
+            imageUrl
         };
+
         this.setState({ pendingApiCall: true });
 
         try {
             const response = await blog(body);
+    
         }
         catch (error) {
             if (error.response.data.validationErrors) {
@@ -49,32 +55,40 @@ class Comment extends React.Component {
 
     };
 
+    
+    
+
+
     render() {
         const { pendingApiCall, errors } = this.state;
-        const { blogComment } = errors;
+        const { blogContent , blogName } = errors;
         const { t } = this.props;
         return (
             <Container fluid>
                 <Row >
-                    <Col md={2}>
-                        <BlogNavbar/>
-                    </Col>
-                    <Col style={{ marginRight: "20px" }}>
+                    <Col style={{ marginRight: "150px", marginLeft:"150px" }}>
                         <Form>
                             <div className="form-group">
-                                <label for="exampleFormControlTextarea1">{t('Write a comment')}</label><br />
-                                <textarea onChange={this.onChange} name='blogComment' className={blogComment ? "form-control is-invalid" : "form-control"} id="exampleFormControlTextarea1" rows="3"></textarea>
-                                <div className="invalid-feedback">{blogComment}</div>
+                                <label for="exampleFormControlTextarea1">{t('Write a blog title!')}</label><br />          
+                                <textarea onChange={this.onChange} name='blogName' className={blogName ? "form-control is-invalid" : "form-control"} id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <div className="invalid-feedback">{blogName}</div>
+                            </div>
+
+                            <div className="form-group">
+                                <label for="exampleFormControlTextarea1">{t('Write a blog content!')}</label><br />          
+                                <textarea onChange={this.onChange} name='blogContent' className={blogContent ? "form-control is-invalid" : "form-control"} id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <div className="invalid-feedback">{blogContent}</div>
                             </div>
                             <br />
 
                             <div className="form-group">
                                 <label for="exampleFormControlFile1">{t('Choose photo')}</label>
-                                <input onChange={this.onChange} type="file" name='blogImage' className="form-control-file" id="exampleFormControlFile1" />
+                                <input onChange={this.onChange} type="file" name='imageUrl' className="form-control-file" id="exampleFormControlFile1" />
+                
                             </div>
                             <br /><br /> <br /><br />
 
-                            <Button onClick={this.onClickComment} disabled={pendingApiCall} className="card_button navbar_text_color share_button">
+                            <Button onClick={this.onClickContent} disabled={pendingApiCall} className="card_button navbar_text_color share_button">
                                 {pendingApiCall && <span className="spinner-border spinner-border-sm"></span>}{t('Share Blog')}</Button>
 
                         </Form>
@@ -86,6 +100,6 @@ class Comment extends React.Component {
     }
 }
 
-const CommentWithTranslation = withTranslation()(Comment);
+const ContentWithTranslation = withTranslation()(Content);
 
-export default CommentWithTranslation;
+export default ContentWithTranslation;

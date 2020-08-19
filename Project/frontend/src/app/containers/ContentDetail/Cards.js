@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row'
 import CafeView from './CafeView';
 import { getCafes } from '../../../api/apiCalls';
 
-const Cards = () => {
+const Cards = ({onSelectCafeId}) => {
     const [cafePage, setCafePage] = useState({ content: [] })
 
     useEffect(() => {
@@ -27,12 +27,9 @@ const Cards = () => {
         <div className="container-fluid">
             <Row>
                 {content.map(cafe => {
-                    if (cafe.id==1) {
-                        return (
-                            <CafeView key={cafe.id} cafe={cafe} />
-                        )
+                        return <CafeView onClick={ () => onSelectCafeId(cafe.id)} key={cafe.id} cafe={cafe} />                     
                     }
-                })}
+                )}
             </Row>
         </div>
     )

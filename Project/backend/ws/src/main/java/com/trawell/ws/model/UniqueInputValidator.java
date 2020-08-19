@@ -13,8 +13,8 @@ public class UniqueInputValidator implements ConstraintValidator<UniqueInput, St
 	BlogRepository blogRepository;
 	
 	@Override
-	public boolean isValid(String blogComment, ConstraintValidatorContext context) {
-		Blog blog = blogRepository.findByBlogComment(blogComment);
+	public boolean isValid(String blogContent, ConstraintValidatorContext context) {
+		Blog blog = blogRepository.findByBlogContent(blogContent);
 		if(blog != null) {
 			return false;
 		}

@@ -1,25 +1,38 @@
-import React from 'react';
-import Col from 'react-bootstrap/Col'
+import React, { useState, useEffect } from 'react';
 import Row from 'react-bootstrap/Row'
-import BlogNavbar from '../BlogNavbar'
-import Container from 'react-bootstrap/Container'
-import BlogList from "../../../components/BlogList";
-class Cards extends React.Component {
-    render() {
-        return (
-            <Container fluid>
-                <Row>
-                    <Col md={2}>
-                        <BlogNavbar />
-                    </Col>
-                    <Col style={{ marginRight: "20px" }}>
-                        <BlogList />
-                    </Col>
-                </Row>
-                <br /><br />
-            </Container>
-        )
+import BlogView from './BlogView';
+import { getBlogs } from '../../../../api/apiCalls';
+
+const Cards = ({ onSelectBlogId }) => {
+    const [blogPage, setBlogPage] = useState({ content: [] })
+
+    useEffect(() => {
+
+        loadBlogs();
+    }, []);
+
+    const loadBlogs = async (page) => {
+        try {
+            const response = await getBlogs(page);
+            setBlogPage(previousBlogPage => ({
+                ...response.data,
+                content: [...previousBlogPage.content, ...response.data.content]
+            }))
+        } catch (error) { }
     }
+    const { content } = blogPage;
+
+    return (
+
+        <div className="container-fluid">
+            <Row>
+                {content.map(blog => {
+                        return <BlogView onClick={ () => onSelectBlogId(blog.id)} key={blog.id} blog={blog} />                     
+                    }
+                )}
+            </Row>
+        </div>
+    )
 }
 
 

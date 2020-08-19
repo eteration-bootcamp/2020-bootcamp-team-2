@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from "./Header";
-import Comment from "./Comment";
+import Content from "./Content";
 
 function Blog() {
   return (
     <div>
       <Header />
-      <Comment />
+      <Content />
     </div>
   );
 }

@@ -14,7 +14,7 @@ import javax.validation.Payload;
 @Constraint(validatedBy = { UniqueInputValidator.class })
 public @interface UniqueInput {
 	
-	String message() default "{trawell.constraints.blogComment.UniqueInput.message}";
+	String message() default "{trawell.constraints.blogContent.UniqueInput.message}";
 
 	Class<?>[] groups() default { };
 

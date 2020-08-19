@@ -22,12 +22,13 @@ public class Blog {
 	@GeneratedValue
 	private long id;
 	
-	@NotNull(message= "{trawell.constraints.blogComment.Notnull.message}")
+	@NotNull(message= "{trawell.constraints.blogContent.Notnull.message}")
 	@Size(min = 500, max=10000)
 	@Column(length = 10000)
 	@UniqueInput
-	private String blogComment;
-	private String blogImage;
+	private String blogContent;
+	private String blogName;
+	private String imageUrl;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date timestamp;
 	
