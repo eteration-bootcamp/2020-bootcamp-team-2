@@ -1,14 +1,13 @@
 import React from 'react';
-import Header from "./Header";
 import Cards from "./Cards";
 
-function Content() {
+function ContentDetail() {
   return (
     <div>
-      <Header />
+      {/* <div> */}
       <Cards />
     </div>
   );
 }
 
-export default Content;
+export default ContentDetail;

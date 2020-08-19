@@ -1,37 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import Row from 'react-bootstrap/Row'
-import CafeView from './CafeView';
-import { getCafes } from '../../../api/apiCalls';
+import BarView from './BarView';
+import { getBars } from '../../../../api/apiCalls';
 import { useHistory } from 'react-router-dom';
 
 const Cards = (props) => {
-    const [cafePage, setCafePage] = useState({ content: [] })
+    const [barPage, setBarPage] = useState({ content: [] })
     const history = useHistory();
     useEffect(() => {
 
-        loadCafes();
+        loadBars();
 
     }, []);
 
-    const loadCafes = async (page) => {
+    const loadBars = async (page) => {
 
         try {
-            const response = await getCafes(page);
+            const response = await getBars(page);
             console.log(response)
-            setCafePage({
+            setBarPage({
                 content: [...response.data.content]
             })
         } catch (error) { }
     }
-    const { content } = cafePage;
+    const { content } = barPage;
 
     return (
 
         <div className="container-fluid">
             <Row>
-                {content.filter(item => history.location.state.cafeId === item.id).map(cafe => {
+                {content.filter(item => history.location.state.barId === item.id).map(bar => {
 
-                        return <CafeView key={cafe.id} cafe={cafe} />
+                        return <BarView key={bar.id} bar={bar} />
 
                     }
                     )}

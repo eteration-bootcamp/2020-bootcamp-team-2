@@ -11,7 +11,7 @@ const BarView = (props) => {
                     <Card.Img className="card_img_height" src={bar.imageUrl} />
                     <Card.ImgOverlay>
                         <Card.Title className="navbar_text_color">{bar.barName}</Card.Title>
-                        <Link to="/ContentDetail"><Button className="card_button navbar_text_color" variant="primary">See and Enjoy</Button></Link>
+                        <Link to={{pathname:`/BarDetail/${bar.id}`,state:{barId : bar.id}}}  className="card_button navbar_text_color">See and Enjoy</Link> 
                     </Card.ImgOverlay>
                 </Card>
             </CardDeck>

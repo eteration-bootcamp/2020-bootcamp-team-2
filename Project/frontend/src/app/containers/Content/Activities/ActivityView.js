@@ -11,7 +11,7 @@ const ActivityView = (props) => {
                     <Card.Img className="card_img_height" src={activity.imageUrl} />
                     <Card.ImgOverlay>
                         <Card.Title className="navbar_text_color">{activity.activityName}</Card.Title>
-                        <Link to="/ContentDetail"><Button className="card_button navbar_text_color" variant="primary">See and Enjoy</Button></Link>
+                        <Link to={{pathname:`/ActivityDetail/${activity.id}`,state:{activityId : activity.id}}}  className="card_button navbar_text_color">See and Enjoy</Link>
                     </Card.ImgOverlay>
                 </Card>
             </CardDeck>

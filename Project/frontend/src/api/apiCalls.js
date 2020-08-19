@@ -27,22 +27,22 @@ export const getCafes = (page='') => {
     return axios.get('/api/1.0/cafes/' + page);
 };
 
-export const getHotels = (page = 0) => {
-    return axios.get('/api/1.0/hotels?page=' + page);
+export const getHotels = (page='') => {
+    return axios.get('/api/1.0/hotels/' + page);
 };
 
-export const getHistoricals = (page = 0) => {
-    return axios.get('/api/1.0/historicals?page=' + page);
+export const getHistoricals = (page='') => {
+    return axios.get('/api/1.0/historicals/' + page);
 };
 
-export const getEats = (page = 0) => {
-    return axios.get('/api/1.0/eats?page=' + page);
+export const getEats = (page='') => {
+    return axios.get('/api/1.0/eats/' + page);
 };
 
-export const getBars = (page = 0) => {
-    return axios.get('/api/1.0/bars?page=' + page);
+export const getBars = (page='') => {
+    return axios.get('/api/1.0/bars/' + page);
 };
 
-export const getActivities = (page = 0) => {
-    return axios.get('/api/1.0/activities?page=' + page);
-};
+export const getActivities = (page='') => {
+    return axios.get('/api/1.0/activities/' + page);
+}; 

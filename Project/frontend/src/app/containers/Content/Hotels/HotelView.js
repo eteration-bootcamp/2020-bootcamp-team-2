@@ -11,7 +11,7 @@ const HotelView = (props) => {
                     <Card.Img className="card_img_height" src={hotel.imageUrl} />
                     <Card.ImgOverlay>
                         <Card.Title className="navbar_text_color">{hotel.hotelName}</Card.Title>
-                        <Link to="/ContentDetail"><Button className="card_button navbar_text_color" variant="primary">See and Enjoy</Button></Link>
+                        <Link to={{pathname:`/HotelDetail/${hotel.id}`,state:{hotelId : hotel.id}}}  className="card_button navbar_text_color">See and Enjoy</Link>
                     </Card.ImgOverlay>
                 </Card>
             </CardDeck>

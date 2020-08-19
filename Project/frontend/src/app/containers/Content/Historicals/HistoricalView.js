@@ -11,7 +11,7 @@ const HistoricalView = (props) => {
                     <Card.Img className="card_img_height" src={historical.imageUrl} />
                     <Card.ImgOverlay>
                         <Card.Title className="navbar_text_color">{historical.historicalName}</Card.Title>
-                        <Link to="/ContentDetail"><Button className="card_button navbar_text_color" variant="primary">See and Enjoy</Button></Link>
+                        <Link to={{pathname:`/HistoryDetail/${historical.id}`,state:{historicalId : historical.id}}}  className="card_button navbar_text_color">See and Enjoy</Link>
                     </Card.ImgOverlay>
                 </Card>
             </CardDeck>
