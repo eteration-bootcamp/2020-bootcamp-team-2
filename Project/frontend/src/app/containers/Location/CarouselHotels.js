@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { Dropdown, Carousel, Col, Row } from 'react-bootstrap'
-import { getCafes } from '../../../api/apiCalls';
+import { Carousel } from 'react-bootstrap'
+import { getHotels } from '../../../api/apiCalls';
 
 
 const CarouselBox = (props) => {
-    const [cityPage, setCafePage] = useState({ content: [], last: true, number: 0 })
+    const [hotelPage, setHotelsPage] = useState({ content: [], last: true, number: 0 })
     
+   
     useEffect(() => {
 
-        loadCities(props.cityId);
+        loadHotels(props.cityId);
 
     }, [props.cityId]);
 
-    const loadCities = async (cityId) => {
+    const loadHotels = async (cityId) => {
         try {
-            const response = await getCafes(cityId);
+            const response = await getHotels(cityId);
 
-            setCafePage({
+            setHotelsPage({
 
                 content: [...response.data]
 
@@ -25,22 +26,22 @@ const CarouselBox = (props) => {
         } catch (error) { }
     }
 
-    const { content } = cityPage;
+    const { content } = hotelPage;
     //console.log("cafe ID "+content);
 
 
     return (
         <div>
-            {content.map(cafe => {
+            {content.map(hotel => {
                
                 return (
                     <div>
                         
                                 <Carousel>
                                     <Carousel.Item>
-                                        <img height={200} className="d-block w-100" src={cafe.imageUrl} alt="Third slide" />
+                                        <img height={200} className="d-block w-100" src={hotel.imageUrl} alt="Third slide" />
                                         <Carousel.Caption>
-                                            <h3>{cafe.cafeName}</h3>
+                                            <h3>{hotel.hotelName}</h3>
                                             <p>Meeting point</p>
                                         </Carousel.Caption>
                                     </Carousel.Item>

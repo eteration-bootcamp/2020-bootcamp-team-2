@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { Dropdown, Carousel, Col, Row } from 'react-bootstrap'
-import { getCafes } from '../../../api/apiCalls';
+import { Carousel } from 'react-bootstrap'
+import { getHistoricals } from '../../../api/apiCalls';
 
 
 const CarouselBox = (props) => {
-    const [cityPage, setCafePage] = useState({ content: [], last: true, number: 0 })
+    const [historyPage, setHistoryPage] = useState({ content: [], last: true, number: 0 })
     
+   
     useEffect(() => {
 
-        loadCities(props.cityId);
+        loadHistory(props.cityId);
 
     }, [props.cityId]);
 
-    const loadCities = async (cityId) => {
+    const loadHistory = async (cityId) => {
         try {
-            const response = await getCafes(cityId);
+            const response = await getHistoricals(cityId);
 
-            setCafePage({
+            setHistoryPage({
 
                 content: [...response.data]
 
@@ -25,22 +26,22 @@ const CarouselBox = (props) => {
         } catch (error) { }
     }
 
-    const { content } = cityPage;
+    const { content } = historyPage;
     //console.log("cafe ID "+content);
 
 
     return (
         <div>
-            {content.map(cafe => {
+            {content.map(history => {
                
                 return (
                     <div>
                         
                                 <Carousel>
                                     <Carousel.Item>
-                                        <img height={200} className="d-block w-100" src={cafe.imageUrl} alt="Third slide" />
+                                        <img height={200} className="d-block w-100" src={history.imageUrl} alt="Third slide" />
                                         <Carousel.Caption>
-                                            <h3>{cafe.cafeName}</h3>
+                                            <h3>{history.historicalName}</h3>
                                             <p>Meeting point</p>
                                         </Carousel.Caption>
                                     </Carousel.Item>

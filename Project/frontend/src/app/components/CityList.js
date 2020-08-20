@@ -4,15 +4,15 @@ import CityView from './CityView';
 import Dropdown from 'react-bootstrap/Dropdown'
 
 
-const CityList = (props,onSelectCityId) => {
-    const [cityPage, setCityPage] = useState({ content: [] })
+const CityList = (props) => {
+    const [cityPage, setCityPage] = useState({ content: [] , last: true, number: 0  })
 
 
     useEffect(() => {
 
         loadCities(props.countryId);
     }, [props.countryId]);
-
+    
     const loadCities = async (countryId) => {
         try {
             const response = await getCities(countryId);
@@ -27,8 +27,8 @@ const CityList = (props,onSelectCityId) => {
 
     return (
         <div>
-            {content.map(city => {
-                return <Dropdown.Item onClick={ () => onSelectCityId(city.id)}> {city.cityName}</Dropdown.Item>
+            {content.map(city => {               
+                return <Dropdown.Item onClick={ () => props.setCity(city.id,city.cityName)}> {city.cityName}</Dropdown.Item>
                 //<CityView key={city.id} city={city} />               
             })}
         </div>

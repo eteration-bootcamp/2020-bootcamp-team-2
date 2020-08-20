@@ -23,26 +23,26 @@ export const getCities = (countryId) => {
     return axios.get('/api/1.0/cities/' + countryId);
 };
 
-export const getCafes = (page='') => {
-    return axios.get('/api/1.0/cafes/' + page);
+export const getCafes = (cityId) => {
+    return axios.get('/api/1.0/cafes/' + cityId); 
 };
 
-export const getHotels = (page='') => {
-    return axios.get('/api/1.0/hotels/' + page);
+export const getHotels = (cityId) => {
+    return axios.get('/api/1.0/hotels/' + cityId);
 };
 
-export const getHistoricals = (page='') => {
-    return axios.get('/api/1.0/historicals/' + page);
+export const getHistoricals = (cityId) => {
+    return axios.get('/api/1.0/historicals/' + cityId);
 };
 
-export const getEats = (page='') => {
-    return axios.get('/api/1.0/eats/' + page);
+export const getEats = (cityId) => {
+    return axios.get('/api/1.0/eats/' + cityId);
 };
 
-export const getBars = (page='') => {
-    return axios.get('/api/1.0/bars/' + page);
+export const getBars = (cityId) => {
+    return axios.get('/api/1.0/bars/' + cityId);
 };
 
-export const getActivities = (page='') => {
-    return axios.get('/api/1.0/activities/' + page);
+export const getActivities = (cityId) => {
+    return axios.get('/api/1.0/activities/' + cityId);
 }; 
