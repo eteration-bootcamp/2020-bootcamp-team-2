@@ -34,7 +34,6 @@ const CarouselBox = (props) => {
         <Row>
             <Col md={2}><center><h1 className="location_component_style">ACTIVITY</h1></center></Col>
             {content.map(activity => {
-
                 return (
                     <Col>
                         <Carousel>
