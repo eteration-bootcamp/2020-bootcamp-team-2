@@ -24,7 +24,7 @@ const Cards = () => {
 
     return (
 
-        <div className="container-fluid">
+        <div className="container-fluid"  style={{ marginBottom : "30px"}}>
             <Row>
                 {content.map(cafe => {   
                     return ( <CafeView key={cafe.id} cafe={cafe} /> )       

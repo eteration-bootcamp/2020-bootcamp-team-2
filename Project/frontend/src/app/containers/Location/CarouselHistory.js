@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Carousel } from 'react-bootstrap'
+import { Carousel , Row, Col} from 'react-bootstrap'
 import { getHistoricals } from '../../../api/apiCalls';
 
 
@@ -27,16 +27,15 @@ const CarouselBox = (props) => {
     }
 
     const { content } = historyPage;
-    //console.log("cafe ID "+content);
-
 
     return (
-        <div>
+        <Row>
+                            <Col md={2}><center><h1 className="location_component_style">HISTORY</h1></center></Col>
+                            
             {content.map(history => {
                
                 return (
-                    <div>
-                        
+                    <Col>
                                 <Carousel>
                                     <Carousel.Item>
                                         <img height={200} className="d-block w-100" src={history.imageUrl} alt="Third slide" />
@@ -45,14 +44,11 @@ const CarouselBox = (props) => {
                                             <p>Meeting point</p>
                                         </Carousel.Caption>
                                     </Carousel.Item>
-                                </Carousel>
-                           
-                    </div>
+                                </Carousel>    
+                    </Col>
                 )
-
-
             })}
-        </div>
+        </Row>
     )
 
 }

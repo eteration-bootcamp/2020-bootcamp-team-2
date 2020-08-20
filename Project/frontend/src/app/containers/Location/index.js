@@ -16,8 +16,8 @@ class Location extends React.Component {
             countryId: null,
             cityId: null,
             cityName: null,
-            selectCountry : "Please select a country",
-            selectCity : " Please select a city"
+            selectCountry: "Please select a country",
+            selectCity: " Please select a city"
         }
 
     };
@@ -26,16 +26,16 @@ class Location extends React.Component {
 
         this.setState({
             countryId: countryId,
-            selectCountry : countryName
+            selectCountry: countryName
         })
 
     };
-    setCity = (cityId,cityName) => {
+    setCity = (cityId, cityName) => {
 
         this.setState({
             cityId: cityId,
-            cityName : cityName,
-            selectCity : cityName
+            cityName: cityName,
+            selectCity: cityName
         })
 
     };
@@ -84,7 +84,7 @@ class Location extends React.Component {
                                 <Dropdown>
                                     <Dropdown.Toggle className="location_header_style button_shadow" variant="outline-info" id="dropdown-basic">
                                         {this.state.selectCountry}
-                                </Dropdown.Toggle>
+                                    </Dropdown.Toggle>
                                     <Dropdown.Menu>
                                         <CountryList onSelectCountryId={this.setCountry} />
                                         {console.log("country İD" + this.state.countryId)}
@@ -127,55 +127,22 @@ class Location extends React.Component {
 
                 <Container fluid style={{ marginBottom: "50px" }}>
                     <div className='mt-5'>
-                        <Row>
-                            <Col md={2}><center><h1 className="location_component_style">EAT</h1></center></Col>
-
-                            <Col ><CarouselEats cityId={this.state.cityId} /></Col>
-                            <Col ><CarouselEats /></Col>
-                            <Col ><CarouselEats  /></Col>
-
-
-                        </Row>
+                        <CarouselEats cityId={this.state.cityId} />
                     </div>
                     <div className='mt-5'>
-                        <Row>
-                            <Col md={2}><center><h1 className="location_component_style">HOTEL</h1></center></Col>
-                            <Col ><CarouselHotels cityId={this.state.cityId} /></Col>
-                            <Col><CarouselBox /></Col>
-                            <Col><CarouselBox /></Col>
-                        </Row>
+                        <CarouselHotels cityId={this.state.cityId} />
                     </div>
                     <div className='mt-5'>
-                        <Row>
-                            <Col md={2}><center><h1 className="location_component_style">HISTORY</h1></center></Col>
-                            <Col ><CarouselHistory cityId={this.state.cityId} /></Col>
-                            <Col><CarouselBox /></Col>
-                            <Col><CarouselBox /></Col>
-                        </Row>
+                        <CarouselHistory cityId={this.state.cityId} />
                     </div>
                     <div className='mt-5'>
-                        <Row>
-                            <Col md={2}><center><h1 className="location_component_style">CAFE</h1></center></Col>
-                            <Col ><CarouselBox cityId={this.state.cityId} /></Col>
-                            <Col><CarouselBox /></Col>
-                            <Col><CarouselBox /></Col>
-                        </Row>
+                        <CarouselBox cityId={this.state.cityId} />
                     </div>
                     <div className='mt-5'>
-                        <Row>
-                            <Col md={2}><center><h1 className="location_component_style">ACTIVITY</h1></center></Col>
-                            <Col ><CarouselActivities cityId={this.state.cityId} /></Col>
-                            <Col><CarouselBox /></Col>
-                            <Col><CarouselBox /></Col>
-                        </Row>
+                        <CarouselActivities cityId={this.state.cityId} />
                     </div>
                     <div className='mt-5'>
-                        <Row>
-                            <Col md={2}><center><h1 className="location_component_style">BAR</h1></center></Col>
-                            <Col ><CarouselBars cityId={this.state.cityId} /></Col>
-                            <Col><CarouselBox /></Col>
-                            <Col><CarouselBox /></Col>
-                        </Row>
+                        <CarouselBars cityId={this.state.cityId} />
                     </div>
                 </Container>
 

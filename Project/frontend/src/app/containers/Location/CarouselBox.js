@@ -5,7 +5,7 @@ import { getCafes } from '../../../api/apiCalls';
 
 const CarouselBox = (props) => {
     const [cityPage, setCafePage] = useState({ content: [], last: true, number: 0 })
-    
+
     useEffect(() => {
 
         loadCities(props.cityId);
@@ -30,28 +30,28 @@ const CarouselBox = (props) => {
 
 
     return (
-        <div>
+        <Row>
+            <Col md={2}><center><h1 className="location_component_style">CAFE</h1></center></Col>
+
             {content.map(cafe => {
-               
+
                 return (
-                    <div>
-                        
-                                <Carousel>
-                                    <Carousel.Item>
-                                        <img height={200} className="d-block w-100" src={cafe.imageUrl} alt="Third slide" />
-                                        <Carousel.Caption>
-                                            <h3>{cafe.cafeName}</h3>
-                                            <p>Meeting point</p>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                </Carousel>
-                           
-                    </div>
+                    <Col>
+                        <Carousel>
+                            <Carousel.Item>
+                                <img height={200} className="d-block w-100" src={cafe.imageUrl} alt="Third slide" />
+                                <Carousel.Caption>
+                                    <h3>{cafe.cafeName}</h3>
+                                    <p>Meeting point</p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        </Carousel>
+                    </Col>
                 )
 
 
             })}
-        </div>
+        </Row>
     )
 
 }

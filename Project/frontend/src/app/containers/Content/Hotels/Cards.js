@@ -24,7 +24,7 @@ const Cards = () => {
 
     return (
 
-        <div className="container-fluid">
+        <div className="container-fluid"  style={{ marginBottom : "30px"}}>
             <Row>
                 {content.map(hotel => {
                     return ( <HotelView key={hotel.id} hotel={hotel} /> )

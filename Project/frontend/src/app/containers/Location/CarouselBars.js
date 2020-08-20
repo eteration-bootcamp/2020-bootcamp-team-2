@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Carousel } from 'react-bootstrap'
+import { Carousel, Row, Col } from 'react-bootstrap'
 import { getBars } from '../../../api/apiCalls';
 
 
 const CarouselBox = (props) => {
     const [barPage, setBarPage] = useState({ content: [], last: true, number: 0 })
-    
-   
+
+
     useEffect(() => {
 
         loadBars(props.cityId);
@@ -31,28 +31,26 @@ const CarouselBox = (props) => {
 
 
     return (
-        <div>
+        <Row>
+            <Col md={2}><center><h1 className="location_component_style">BAR</h1></center></Col>
+
             {content.map(bar => {
-               
+                
                 return (
-                    <div>
-                        
-                                <Carousel>
-                                    <Carousel.Item>
-                                        <img height={200} className="d-block w-100" src={bar.imageUrl} alt="Third slide" />
-                                        <Carousel.Caption>
-                                            <h3>{bar.barName}</h3>
-                                            <p>Meeting point</p>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                </Carousel>
-                           
-                    </div>
+                    <Col>
+                        <Carousel>
+                            <Carousel.Item>
+                                <img height={200} className="d-block w-100" src={bar.imageUrl} alt="Third slide" />
+                                <Carousel.Caption>
+                                    <h3>{bar.barName}</h3>
+                                    <p>Meeting point</p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        </Carousel>
+                    </Col>
                 )
-
-
             })}
-        </div>
+        </Row>
     )
 
 }

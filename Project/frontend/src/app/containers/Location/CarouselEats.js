@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Carousel } from 'react-bootstrap'
+import { Carousel, Row, Col } from 'react-bootstrap'
 import { getEats } from '../../../api/apiCalls';
 
 
@@ -31,11 +31,13 @@ const CarouselBox = (props) => {
 
 
     return (
-        <div>
+        <Row>
+        <Col md={2}><center><h1 className="location_component_style">EAT</h1></center></Col>
+        
             {content.map(eat => {
                
                 return (
-                    <div>
+                    <Col>
                         
                                 <Carousel>
                                     <Carousel.Item>
@@ -47,12 +49,12 @@ const CarouselBox = (props) => {
                                     </Carousel.Item>
                                 </Carousel>
                            
-                    </div>
+                    </Col>
                 )
 
 
             })}
-        </div>
+        </Row>
     )
 
 }
