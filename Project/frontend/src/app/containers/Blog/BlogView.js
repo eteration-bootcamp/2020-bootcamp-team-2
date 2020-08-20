@@ -6,7 +6,7 @@ const BlogView = (props) => {
     const { blog } = props;
     return (    
         <Col md={3} style={{ marginBottom : "20px"}}>
-            <CardDeck className="margin_top_20" style={{ marginBottom : "50px"}}>
+            <CardDeck className="margin_top_20">
                 <Card className="text-white text-right">
                     <Card.Img className="card_img_height" src={blog.imageUrl} />
                     <Card.ImgOverlay>
