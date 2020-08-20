@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel, Row, Col } from 'react-bootstrap'
 import { getBars } from '../../../api/apiCalls';
+import { Link } from 'react-router-dom'
 
 
 const CarouselBox = (props) => {
@@ -35,7 +36,7 @@ const CarouselBox = (props) => {
             <Col md={2}><center><h1 className="location_component_style">BAR</h1></center></Col>
 
             {content.map(bar => {
-                
+
                 return (
                     <Col>
                         <Carousel>
@@ -45,6 +46,8 @@ const CarouselBox = (props) => {
                                     <h3>{bar.barName}</h3>
                                     <p>Meeting point</p>
                                 </Carousel.Caption>
+                                <Link to={{ pathname: `/BarDetail/${bar.id}`, state: { barId: bar.id } }} className="card_button">See and Enjoy</Link>
+
                             </Carousel.Item>
                         </Carousel>
                     </Col>

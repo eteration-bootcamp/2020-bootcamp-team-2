@@ -14,8 +14,8 @@ class Location extends React.Component {
         super(props)
         this.state = {
             countryId: null,
-            cityId: null,
-            cityName: null,
+            cityId: 1,
+            cityName: 'Istanbul',
             selectCountry: "Please select a country",
             selectCity: " Please select a city"
         }
@@ -96,11 +96,6 @@ class Location extends React.Component {
                                             {console.log("city İD" + this.state.cityId)}
                                         </Dropdown.Menu>
                                     </Dropdown>
-                                </center>
-                            </Col>
-                            <Col>
-                                <center>
-                                    <Button className="location_header_style button_shadow" variant="outline-info">SELECT</Button>{' '}
                                 </center>
                             </Col>
                         </Row>
