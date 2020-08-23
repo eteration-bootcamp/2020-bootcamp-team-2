@@ -22,6 +22,7 @@ import EatDetail from "./app/containers/ContentDetail/Eats/index";
 import HotelDetail from "./app/containers/ContentDetail/Hotels/index";
 import BarDetail from "./app/containers/ContentDetail/Bars/index";
 import HistoryDetail from "./app/containers/ContentDetail//Historicals/index";
+import NotFound from "./NotFound";
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
@@ -52,8 +53,9 @@ function App() {
           <Route path="/HotelDetail" component={HotelDetail} />
           <Route path="/BarDetail" component={BarDetail} />
           <Route path="/HistoryDetail" component={HistoryDetail} />
+          <Route path="/NotFound" component={NotFound} />
 
-          <Redirect to="/" />          
+          <Redirect to="/NotFound" />          
         </Switch>
         <Footer />
       </div>

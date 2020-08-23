@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 import './index.css';
 import './app/components/navbar.css';
 import './bootstrap-override.scss';
-import App from './App';
+import './i18n';
 import { Provider } from 'react-redux';
-import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from './app/store/reducers/rootReducer'
 import thunk from 'redux-thunk'
@@ -13,7 +14,6 @@ import { reduxFirestore, getFirestore, createFirestoreInstance } from 'redux-fir
 import { getFirebase, ReactReduxFirebaseProvider } from 'react-redux-firebase'
 import fbConfig from './app/config/fbConfig'
 import firebase from "firebase/app"
-import './i18n';
 import { initReactI18next } from 'react-i18next';
 
 const store = createStore(
