@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Dropdown, Carousel, Col, Row } from 'react-bootstrap'
+import { Carousel, Col, Row } from 'react-bootstrap'
 import { getCafes } from '../../../api/apiCalls';
 import { Link } from 'react-router-dom'
 

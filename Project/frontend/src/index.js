@@ -14,7 +14,6 @@ import { reduxFirestore, getFirestore, createFirestoreInstance } from 'redux-fir
 import { getFirebase, ReactReduxFirebaseProvider } from 'react-redux-firebase'
 import fbConfig from './app/config/fbConfig'
 import firebase from "firebase/app"
-import { initReactI18next } from 'react-i18next';
 
 const store = createStore(
   rootReducer,

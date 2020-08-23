@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import { withTranslation } from 'react-i18next';
 class Header extends React.Component {
     render() {
-        const { t } = this.props;
+        //const { t } = this.props;
         return (
             <div>
                 <Carousel>

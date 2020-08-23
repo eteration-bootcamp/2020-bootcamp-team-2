@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, Container, Row, Col, Button, Carousel } from 'react-bootstrap';
+import { Dropdown, Container, Row, Col } from 'react-bootstrap';
 import CountryList from '../../components/CountryList'
 import CityList from '../../components/CityList'
 import CarouselCafes from './CarouselCafes'

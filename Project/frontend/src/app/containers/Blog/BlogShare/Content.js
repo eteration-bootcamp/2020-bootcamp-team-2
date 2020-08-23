@@ -26,6 +26,7 @@ class Content extends React.Component {
         pendingApiCall: false,
         errors: {}
     };
+
     onChange = event => {
         const { name, value } = event.target;
         const errors = { ...this.state.errors }
@@ -36,12 +37,9 @@ class Content extends React.Component {
         });
     };
 
-
     onClickContent = async event => {
         event.preventDefault();
-
         const { blogContent, blogName, imageUrl } = this.state;
-
         const body = {
             blogContent,
             blogName,
@@ -52,19 +50,15 @@ class Content extends React.Component {
 
         try {
             const response = await blog(body);
-
         }
         catch (error) {
             if (error.response.data.validationErrors) {
                 this.setState({ errors: error.response.data.validationErrors });
             }
-
         }
 
         this.setState({ pendingApiCall: false });
-
     };
-
 
     render() {
         const { pendingApiCall, errors } = this.state;
