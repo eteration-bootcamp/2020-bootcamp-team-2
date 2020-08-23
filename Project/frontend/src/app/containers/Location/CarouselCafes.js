@@ -3,8 +3,7 @@ import { Dropdown, Carousel, Col, Row } from 'react-bootstrap'
 import { getCafes } from '../../../api/apiCalls';
 import { Link } from 'react-router-dom'
 
-
-const CarouselBox = (props) => {
+const CarouselCafes = (props) => {
     const [cityPage, setCafePage] = useState({ content: [], last: true, number: 0 })
 
     useEffect(() => {
@@ -45,7 +44,7 @@ const CarouselBox = (props) => {
                                     <h3>{cafe.cafeName}</h3>
                                     <p>Meeting point</p>
                                 </Carousel.Caption>
-                        <Link to={{pathname:`/CafeDetail/${cafe.id}`,state:{cafeId : cafe.id}}}  className="card_button">See and Enjoy</Link>
+                                <Link to={{ pathname: `/CafeDetail/${cafe.id}`, state: { cafeId: cafe.id } }} className="card_button">See and Enjoy</Link>
 
                             </Carousel.Item>
                         </Carousel>
@@ -76,4 +75,4 @@ const CarouselBox = (props) => {
 
         </div>
 */
-export default CarouselBox
+export default CarouselCafes
