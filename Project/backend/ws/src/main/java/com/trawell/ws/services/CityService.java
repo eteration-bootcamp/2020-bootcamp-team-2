@@ -16,7 +16,7 @@ import com.trawell.ws.repositories.CountryRepository;
 
 @Service
 public class CityService {
-	
+
 	@Autowired
 	CityRepository cityRepository;
 	@Autowired
@@ -25,19 +25,17 @@ public class CityService {
 	public CityService(CityRepository cityRepository) {
 		this.cityRepository = cityRepository;
 	}
-	
 
 	public Page<City> getCities(Pageable page) {
 		return cityRepository.findAll(page);
 	}
-	
 
 	public List<City> findByCountryId(Long countryId) {
 		List<City> cityList = new ArrayList<City>();
 		Optional<Country> optCountry = countryRepository.findById(countryId);
-		if(optCountry.isPresent()) {
+		if (optCountry.isPresent()) {
 			Country country = optCountry.get();
-			cityList = cityRepository.findByCountry(country);			
+			cityList = cityRepository.findByCountry(country);
 		}
 		return cityList;
 	}

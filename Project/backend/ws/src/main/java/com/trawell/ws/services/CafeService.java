@@ -16,7 +16,7 @@ import com.trawell.ws.repositories.CityRepository;
 
 @Service
 public class CafeService {
-	
+
 	@Autowired
 	CityRepository cityRepository;
 	@Autowired
@@ -25,18 +25,17 @@ public class CafeService {
 	public CafeService(CafeRepository cafeRepository) {
 		this.cafeRepository = cafeRepository;
 	}
-	
 
 	public Page<Cafe> getCafes(Pageable page) {
 		return cafeRepository.findAll(page);
 	}
-	
+
 	public List<Cafe> findByCityId(Long cityId) {
 		List<Cafe> cafeList = new ArrayList<Cafe>();
 		Optional<City> optCity = cityRepository.findById(cityId);
-		if(optCity.isPresent()) {
+		if (optCity.isPresent()) {
 			City city = optCity.get();
-			cafeList = cafeRepository.findByCity(city);			
+			cafeList = cafeRepository.findByCity(city);
 		}
 		return cafeList;
 	}

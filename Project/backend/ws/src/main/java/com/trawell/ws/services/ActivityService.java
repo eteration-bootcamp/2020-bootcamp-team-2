@@ -16,7 +16,7 @@ import com.trawell.ws.repositories.CityRepository;
 
 @Service
 public class ActivityService {
-	
+
 	@Autowired
 	CityRepository cityRepository;
 	@Autowired
@@ -25,19 +25,17 @@ public class ActivityService {
 	public ActivityService(ActivityRepository activityRepository) {
 		this.activityRepository = activityRepository;
 	}
-	
 
 	public Page<Activity> getActivities(Pageable page) {
 		return activityRepository.findAll(page);
 	}
-	
 
 	public List<Activity> findByCityId(Long cityId) {
 		List<Activity> activityList = new ArrayList<Activity>();
 		Optional<City> optCity = cityRepository.findById(cityId);
-		if(optCity.isPresent()) {
+		if (optCity.isPresent()) {
 			City city = optCity.get();
-			activityList = activityRepository.findByCity(city);			
+			activityList = activityRepository.findByCity(city);
 		}
 		return activityList;
 	}

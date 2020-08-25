@@ -14,19 +14,18 @@ import com.trawell.ws.services.HistoricalService;
 
 @RestController
 public class HistoricalController {
-	
+
 	@Autowired
 	HistoricalService historicalService;
-	
+
 	@GetMapping("api/${api.version}/historicals")
-	Page<Historical> getHistoricals(Pageable page){
+	Page<Historical> getHistoricals(Pageable page) {
 		return historicalService.getHistoricals(page);
 	}
-	
+
 	@GetMapping("api/${api.version}/historicals/{cityId}")
-	List<Historical> findByCityId(@PathVariable Long cityId){
+	List<Historical> findByCityId(@PathVariable Long cityId) {
 		return historicalService.findByCityId(cityId);
 	}
-	
 
 }

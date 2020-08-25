@@ -7,18 +7,16 @@ import javax.persistence.ManyToOne;
 
 import lombok.Data;
 
-
 @Data
 @Entity
 public class City {
-	
+
 	@Id
 	@GeneratedValue
 	private long id;
 	private String cityName;
-	
+
 	@ManyToOne
 	private Country country;
-	
 
 }

@@ -14,19 +14,18 @@ import com.trawell.ws.services.CityService;
 
 @RestController
 public class CityController {
-	
+
 	@Autowired
 	CityService cityService;
-	
+
 	@GetMapping("api/${api.version}/cities")
-	Page<City> getCities(Pageable page){
+	Page<City> getCities(Pageable page) {
 		return cityService.getCities(page);
 	}
-	
+
 	@GetMapping("api/${api.version}/cities/{countryId}")
-	List<City> findByCountryId(@PathVariable Long countryId){
+	List<City> findByCountryId(@PathVariable Long countryId) {
 		return cityService.findByCountryId(countryId);
 	}
-	
 
 }

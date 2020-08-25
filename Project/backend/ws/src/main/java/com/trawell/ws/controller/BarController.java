@@ -14,19 +14,18 @@ import com.trawell.ws.services.BarService;
 
 @RestController
 public class BarController {
-	
+
 	@Autowired
 	BarService barService;
-	
+
 	@GetMapping("api/${api.version}/bars")
-	Page<Bar> getBars(Pageable page){
+	Page<Bar> getBars(Pageable page) {
 		return barService.getBars(page);
 	}
-	
+
 	@GetMapping("api/${api.version}/bars/{cityId}")
-	List<Bar> findByCityId(@PathVariable Long cityId){
+	List<Bar> findByCityId(@PathVariable Long cityId) {
 		return barService.findByCityId(cityId);
 	}
-	
 
 }

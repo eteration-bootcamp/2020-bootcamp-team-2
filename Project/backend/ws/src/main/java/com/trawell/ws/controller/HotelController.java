@@ -14,17 +14,17 @@ import com.trawell.ws.services.HotelService;
 
 @RestController
 public class HotelController {
-	
+
 	@Autowired
 	HotelService hotelService;
-	
+
 	@GetMapping("api/${api.version}/hotels")
-	Page<Hotel> getHotels(Pageable page){
+	Page<Hotel> getHotels(Pageable page) {
 		return hotelService.getHotels(page);
 	}
-	
+
 	@GetMapping("api/${api.version}/hotels/{cityId}")
-	List<Hotel> findByCityId(@PathVariable Long cityId){
+	List<Hotel> findByCityId(@PathVariable Long cityId) {
 		return hotelService.findByCityId(cityId);
 	}
 

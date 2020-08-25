@@ -14,19 +14,18 @@ import com.trawell.ws.services.CafeService;
 
 @RestController
 public class CafeController {
-	
+
 	@Autowired
 	CafeService cafeService;
-	
+
 	@GetMapping("api/${api.version}/cafes")
-	Page<Cafe> getCafes(Pageable page){
+	Page<Cafe> getCafes(Pageable page) {
 		return cafeService.getCafes(page);
 	}
-	
+
 	@GetMapping("api/${api.version}/cafes/{cityId}")
-	List<Cafe> findByCityId(@PathVariable Long cityId){
+	List<Cafe> findByCityId(@PathVariable Long cityId) {
 		return cafeService.findByCityId(cityId);
 	}
-	
 
 }

@@ -9,22 +9,20 @@ import javax.validation.constraints.Size;
 
 import lombok.Data;
 
-
 @Data
 @Entity
 public class Activity {
-	
+
 	@Id
 	@GeneratedValue
 	private long id;
 	private String activityName;
-	@Size(min = 250, max=5000)
+	@Size(min = 250, max = 5000)
 	@Column(length = 5000)
 	private String activityContent;
 	private String imageUrl;
-	
+
 	@ManyToOne
 	private City city;
-	
 
 }

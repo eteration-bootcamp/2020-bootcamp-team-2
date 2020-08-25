@@ -13,12 +13,11 @@ import javax.validation.Payload;
 @Retention(RUNTIME)
 @Constraint(validatedBy = { UniqueInputValidator.class })
 public @interface UniqueInput {
-	
+
 	String message() default "{trawell.constraints.blogContent.UniqueInput.message}";
 
-	Class<?>[] groups() default { };
+	Class<?>[] groups() default {};
 
-	Class<? extends Payload>[] payload() default { };
-
+	Class<? extends Payload>[] payload() default {};
 
 }

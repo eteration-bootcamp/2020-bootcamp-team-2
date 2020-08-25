@@ -29,38 +29,36 @@ import com.trawell.ws.shared.GenericResponse;
 
 @RestController
 public class BlogController {
-	
+
 	@Autowired
 	BlogService blogService;
-			
 
 	@PostMapping("/api/${api.version}/blogs")
-	public GenericResponse createBlog(@Valid @RequestBody Blog blog) {		
+	public GenericResponse createBlog(@Valid @RequestBody Blog blog) {
 		blogService.save(blog);
-		return new GenericResponse("Blog created!");	
-		
+		return new GenericResponse("Blog created!");
+
 	}
-	
+
 	@GetMapping("api/${api.version}/blogs")
-	Page<Blog> getBlogs(@PageableDefault(sort = "id", direction = Direction.DESC) Pageable page){
+	Page<Blog> getBlogs(@PageableDefault(sort = "id", direction = Direction.DESC) Pageable page) {
 		return blogService.getBlogs(page);
 	}
-	
+
 	@GetMapping("api/${api.version}/blogs/{userId}")
-	List<Blog> findByUserId(@PathVariable Long userId){
+	List<Blog> findByUserId(@PathVariable Long userId) {
 		return blogService.findByUserId(userId);
 	}
-	
-	
+
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	public ApiError handleValidationException(MethodArgumentNotValidException exception) {
 		ApiError error = new ApiError(400, "Validation error", "/api/1.0/blogs");
 		Map<String, String> validationErrors = new HashMap<>();
-		for(FieldError fieldError: exception.getBindingResult().getFieldErrors()) {
+		for (FieldError fieldError : exception.getBindingResult().getFieldErrors()) {
 			validationErrors.put(fieldError.getField(), fieldError.getDefaultMessage());
 		}
-		error.setValidationErrors(validationErrors);		
+		error.setValidationErrors(validationErrors);
 		return error;
 	}
 

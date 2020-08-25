@@ -17,7 +17,7 @@ import com.trawell.ws.repositories.UserRepository;
 
 @Service
 public class BlogService {
-	
+
 	@Autowired
 	UserRepository userRepository;
 	@Autowired
@@ -26,23 +26,23 @@ public class BlogService {
 	public BlogService(BlogRepository blogRepository) {
 		this.blogRepository = blogRepository;
 	}
-	
+
 	public void save(Blog blog) {
 		blog.setTimestamp(new Date());
 		blogRepository.save(blog);
-		
+
 	}
 
 	public Page<Blog> getBlogs(Pageable page) {
 		return blogRepository.findAll(page);
 	}
-	
+
 	public List<Blog> findByUserId(Long userId) {
 		List<Blog> blogList = new ArrayList<Blog>();
 		Optional<User> optUser = userRepository.findById(userId);
-		if(optUser.isPresent()) {
+		if (optUser.isPresent()) {
 			User user = optUser.get();
-			blogList = blogRepository.findByUser(user);			
+			blogList = blogRepository.findByUser(user);
 		}
 		return blogList;
 	}

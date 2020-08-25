@@ -6,11 +6,10 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
-
 @Data
 @Entity
 public class Country {
-	
+
 	@Id
 	@GeneratedValue
 	private long id;

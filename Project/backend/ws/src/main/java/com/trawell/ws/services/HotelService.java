@@ -16,7 +16,7 @@ import com.trawell.ws.repositories.HotelRepository;
 
 @Service
 public class HotelService {
-	
+
 	@Autowired
 	CityRepository cityRepository;
 	@Autowired
@@ -25,18 +25,17 @@ public class HotelService {
 	public HotelService(HotelRepository hotelRepository) {
 		this.hotelRepository = hotelRepository;
 	}
-	
 
 	public Page<Hotel> getHotels(Pageable page) {
 		return hotelRepository.findAll(page);
 	}
-	
+
 	public List<Hotel> findByCityId(Long cityId) {
 		List<Hotel> hotelList = new ArrayList<Hotel>();
 		Optional<City> optCity = cityRepository.findById(cityId);
-		if(optCity.isPresent()) {
+		if (optCity.isPresent()) {
 			City city = optCity.get();
-			hotelList = hotelRepository.findByCity(city);			
+			hotelList = hotelRepository.findByCity(city);
 		}
 		return hotelList;
 	}

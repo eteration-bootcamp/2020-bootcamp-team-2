@@ -16,7 +16,7 @@ import com.trawell.ws.repositories.HistoricalRepository;
 
 @Service
 public class HistoricalService {
-	
+
 	@Autowired
 	CityRepository cityRepository;
 	@Autowired
@@ -25,18 +25,17 @@ public class HistoricalService {
 	public HistoricalService(HistoricalRepository historicalRepository) {
 		this.historicalRepository = historicalRepository;
 	}
-	
 
 	public Page<Historical> getHistoricals(Pageable page) {
 		return historicalRepository.findAll(page);
 	}
-	
+
 	public List<Historical> findByCityId(Long cityId) {
 		List<Historical> historicalList = new ArrayList<Historical>();
 		Optional<City> optCity = cityRepository.findById(cityId);
-		if(optCity.isPresent()) {
+		if (optCity.isPresent()) {
 			City city = optCity.get();
-			historicalList = historicalRepository.findByCity(city);			
+			historicalList = historicalRepository.findByCity(city);
 		}
 		return historicalList;
 	}

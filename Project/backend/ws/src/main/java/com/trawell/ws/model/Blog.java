@@ -17,13 +17,13 @@ import lombok.Data;
 @Data
 @Entity
 public class Blog {
-	
+
 	@Id
 	@GeneratedValue
 	private long id;
-	
-	@NotNull(message= "{trawell.constraints.blogContent.Notnull.message}")
-	@Size(min = 500, max=10000)
+
+	@NotNull(message = "{trawell.constraints.blogContent.Notnull.message}")
+	@Size(min = 500, max = 10000)
 	@Column(length = 10000)
 	@UniqueInput
 	private String blogContent;
@@ -31,9 +31,8 @@ public class Blog {
 	private String imageUrl;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date timestamp;
-	
+
 	@ManyToOne
 	private User user;
-	
 
 }

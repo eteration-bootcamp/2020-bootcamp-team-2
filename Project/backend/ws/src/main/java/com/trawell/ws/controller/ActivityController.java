@@ -14,20 +14,18 @@ import com.trawell.ws.services.ActivityService;
 
 @RestController
 public class ActivityController {
-	
+
 	@Autowired
 	ActivityService activityService;
-	
+
 	@GetMapping("api/${api.version}/activities")
-	Page<Activity> getActivities(Pageable page){
+	Page<Activity> getActivities(Pageable page) {
 		return activityService.getActivities(page);
 	}
-	
-	
+
 	@GetMapping("api/${api.version}/activities/{cityId}")
-	List<Activity> findByCityId(@PathVariable Long cityId){
+	List<Activity> findByCityId(@PathVariable Long cityId) {
 		return activityService.findByCityId(cityId);
 	}
-	
 
 }

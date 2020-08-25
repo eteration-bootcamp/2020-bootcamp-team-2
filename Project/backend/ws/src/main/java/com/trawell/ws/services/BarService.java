@@ -16,7 +16,7 @@ import com.trawell.ws.repositories.CityRepository;
 
 @Service
 public class BarService {
-	
+
 	@Autowired
 	CityRepository cityRepository;
 	@Autowired
@@ -25,18 +25,17 @@ public class BarService {
 	public BarService(BarRepository barRepository) {
 		this.barRepository = barRepository;
 	}
-	
 
 	public Page<Bar> getBars(Pageable page) {
 		return barRepository.findAll(page);
 	}
-	
+
 	public List<Bar> findByCityId(Long cityId) {
 		List<Bar> barList = new ArrayList<Bar>();
 		Optional<City> optCity = cityRepository.findById(cityId);
-		if(optCity.isPresent()) {
+		if (optCity.isPresent()) {
 			City city = optCity.get();
-			barList = barRepository.findByCity(city);			
+			barList = barRepository.findByCity(city);
 		}
 		return barList;
 	}

@@ -9,15 +9,14 @@ import lombok.Data;
 @Data
 @Entity
 public class User {
-	
+
 	@Id
 	@GeneratedValue
 	private long id;
-	
-	
+
 	private String email;
 	private String password;
 	private String fullName;
 	private String userName;
-	
+
 }

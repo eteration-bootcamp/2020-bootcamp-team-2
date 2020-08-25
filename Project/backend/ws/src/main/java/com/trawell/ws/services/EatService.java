@@ -16,7 +16,7 @@ import com.trawell.ws.repositories.EatRepository;
 
 @Service
 public class EatService {
-	
+
 	@Autowired
 	CityRepository cityRepository;
 	@Autowired
@@ -25,18 +25,17 @@ public class EatService {
 	public EatService(EatRepository eatRepository) {
 		this.eatRepository = eatRepository;
 	}
-	
 
 	public Page<Eat> getEats(Pageable page) {
 		return eatRepository.findAll(page);
 	}
-	
+
 	public List<Eat> findByCityId(Long cityId) {
 		List<Eat> eatList = new ArrayList<Eat>();
 		Optional<City> optCity = cityRepository.findById(cityId);
-		if(optCity.isPresent()) {
+		if (optCity.isPresent()) {
 			City city = optCity.get();
-			eatList = eatRepository.findByCity(city);			
+			eatList = eatRepository.findByCity(city);
 		}
 		return eatList;
 	}

@@ -11,14 +11,13 @@ import com.trawell.ws.services.CountryService;
 
 @RestController
 public class CountryController {
-	
+
 	@Autowired
 	CountryService countryService;
-	
+
 	@GetMapping("api/${api.version}/countries")
-	Page<Country> getCountries(Pageable page){
+	Page<Country> getCountries(Pageable page) {
 		return countryService.getCountries(page);
 	}
-	
 
 }

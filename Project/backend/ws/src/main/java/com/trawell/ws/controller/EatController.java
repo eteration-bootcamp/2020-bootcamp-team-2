@@ -14,19 +14,18 @@ import com.trawell.ws.services.EatService;
 
 @RestController
 public class EatController {
-	
+
 	@Autowired
 	EatService eatService;
-	
+
 	@GetMapping("api/${api.version}/eats")
-	Page<Eat> getEats(Pageable page){
+	Page<Eat> getEats(Pageable page) {
 		return eatService.getEats(page);
 	}
-	
+
 	@GetMapping("api/${api.version}/eats/{cityId}")
-	List<Eat> findByCityId(@PathVariable Long cityId){
+	List<Eat> findByCityId(@PathVariable Long cityId) {
 		return eatService.findByCityId(cityId);
 	}
-	
 
 }
