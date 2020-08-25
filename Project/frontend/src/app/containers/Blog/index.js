@@ -9,7 +9,6 @@ function Blog() {
       <Header />
       <Cards />
       <ShareButton />
-
     </div>
   );
 }

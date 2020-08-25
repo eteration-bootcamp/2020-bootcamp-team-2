@@ -14,7 +14,7 @@ const HistoricalView = (props) => {
                         <Card.Img class="card_img_height" src={historical.imageUrl} />
                     </Card>
                 </Col>
-                <Col md={6} style={{ marginBottom : "200px"}}>
+                <Col md={6} style={{ marginBottom: "200px" }}>
                     {historical.historicalContent}
                 </Col>
             </Row>

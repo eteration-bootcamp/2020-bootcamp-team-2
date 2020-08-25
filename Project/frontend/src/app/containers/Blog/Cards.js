@@ -23,20 +23,14 @@ const Cards = () => {
     const { content } = blogPage;
 
     return (
-
         <div className="container-fluid">
             <Row>
                 {content.map(blog => {
-                    if (blog.id) {
-                        return (
-                            <BlogView key={blog.id} blog={blog} />
-                        )
-                    }
+                    return <BlogView key={blog.id} blog={blog} />
                 })}
             </Row>
         </div>
     )
 }
-
 
 export default Cards

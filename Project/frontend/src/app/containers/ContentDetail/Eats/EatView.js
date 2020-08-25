@@ -14,7 +14,7 @@ const EatView = (props) => {
                         <Card.Img class="card_img_height" src={eat.imageUrl} />
                     </Card>
                 </Col>
-                <Col md={6} style={{ marginBottom : "200px"}}>
+                <Col md={6} style={{ marginBottom: "200px" }}>
                     {eat.eatContent}
                 </Col>
             </Row>

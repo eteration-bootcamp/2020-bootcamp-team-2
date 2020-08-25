@@ -10,8 +10,8 @@ import { withTranslation } from 'react-i18next';
 const Navbar = (props) => {
     const { auth } = props;
     const { t } = props;
-    const links = auth.uid ? <NavbarLogOut /> : <NavbarLogIn />; 
-     
+    const links = auth.uid ? <NavbarLogOut /> : <NavbarLogIn />;
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light navbar_style" >
             <Link to="/"><img src={require('../images/logo.png')} className="logo_style" alt="Logo" /></Link>

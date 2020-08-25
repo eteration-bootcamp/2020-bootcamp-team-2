@@ -1,7 +1,6 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
-
 class Footer extends React.Component {
     render() {
         const { t } = this.props;
@@ -35,7 +34,6 @@ class Footer extends React.Component {
                             &copy;{new Date().getFullYear()} {t('TRAWELL | All right reserved')}
                         </p>
                     </div>
-
                 </div>
             </div>
         )

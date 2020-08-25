@@ -14,7 +14,7 @@ const BarView = (props) => {
                         <Card.Img class="card_img_height" src={bar.imageUrl} />
                     </Card>
                 </Col>
-                <Col md={6} style={{ marginBottom : "200px"}}>
+                <Col md={6} style={{ marginBottom: "200px" }}>
                     {bar.barContent}
                 </Col>
             </Row>

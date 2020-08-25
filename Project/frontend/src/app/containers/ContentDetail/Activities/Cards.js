@@ -26,15 +26,12 @@ const Cards = (props) => {
     const { content } = activityPage;
 
     return (
-
         <div className="container-fluid">
             <Row>
                 {content.filter(item => history.location.state.activityId === item.id).map(activity => {
-
-                        return <ActivityView key={activity.id} activity={activity} />
-
-                    }
-                    )}
+                    return <ActivityView key={activity.id} activity={activity} />
+                }
+                )}
             </Row>
         </div>
     )

@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom';
 
-
 const CardsDetail = ({ cardDetail }) => {
     return (
         <Card className="text-white text-right">

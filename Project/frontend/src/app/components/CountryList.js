@@ -15,25 +15,16 @@ const CountryList = ({ onSelectCountryId }) => {
             setCountryPage({
                 content: [...response.data.content],
             })
-
-        } catch (error) { }
+        }
+        catch (error) { }
     }
-
     const { content } = countryPage;
-
-
 
     return (
         <div>
-
             {content.map(country => {
-                //return <CountryView key={country.id} country={country} />
-                
-                return <Dropdown.Item  onClick={ () => onSelectCountryId(country.id,country.countryName)}> {country.countryName} </Dropdown.Item>
-
-
+                return <Dropdown.Item onClick={() => onSelectCountryId(country.id, country.countryName)}> {country.countryName} </Dropdown.Item>
             })}
-
         </div>
     );
 };

@@ -24,10 +24,10 @@ const Cards = () => {
 
     return (
 
-        <div className="container-fluid"  style={{ marginBottom : "30px"}}>
+        <div className="container-fluid" style={{ marginBottom: "30px" }}>
             <Row>
-                {content.map(cafe => {   
-                    return ( <CafeView key={cafe.id} cafe={cafe} /> )       
+                {content.map(cafe => {
+                    return (<CafeView key={cafe.id} cafe={cafe} />)
                 })}
             </Row>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Button, Tabs, Tab, Image, Form} from 'react-bootstrap' 
+import { Container, Row, Col, Button, Tabs, Tab, Image, Form } from 'react-bootstrap'
 
 function EditProfilePage() {
     const [key, setKey] = useState('editProfile');
@@ -54,5 +54,5 @@ function EditProfilePage() {
         </div>
     )
 }
- 
+
 export default EditProfilePage;

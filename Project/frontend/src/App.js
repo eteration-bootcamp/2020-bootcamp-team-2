@@ -30,8 +30,8 @@ function App() {
   return (
     <Router>
       <div>
-      <Navbar />
-        <Switch>        
+        <Navbar />
+        <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/Blog" component={Blog} />
           <Route path="/BlogShare" component={BlogShare} />
@@ -45,7 +45,7 @@ function App() {
           <Route path="/Location" component={Location} />
           <Route path="/Login" component={Login} />
           <Route path="/Profile" component={Profile} />
-          <Route path="/Register" component={Register} />  
+          <Route path="/Register" component={Register} />
           <Route path="/EditProfile" component={EditProfile} />
           <Route path="/CafeDetail" component={CafeDetail} />
           <Route path="/ActivityDetail" component={ActivityDetail} />
@@ -55,7 +55,7 @@ function App() {
           <Route path="/HistoryDetail" component={HistoryDetail} />
           <Route path="/NotFound" component={NotFound} />
 
-          <Redirect to="/NotFound" />          
+          <Redirect to="/NotFound" />
         </Switch>
         <Footer />
       </div>

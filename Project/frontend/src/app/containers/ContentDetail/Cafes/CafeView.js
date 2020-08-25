@@ -14,7 +14,7 @@ const CafeView = (props) => {
                         <Card.Img class="card_img_height" src={cafe.imageUrl} />
                     </Card>
                 </Col>
-                <Col md={6} style={{ marginBottom : "200px"}}>
+                <Col md={6} style={{ marginBottom: "200px" }}>
                     {cafe.cafeContent}
                 </Col>
             </Row>

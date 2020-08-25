@@ -31,10 +31,10 @@ const Cards = (props) => {
             <Row>
                 {content.filter(item => history.location.state.barId === item.id).map(bar => {
 
-                        return <BarView key={bar.id} bar={bar} />
+                    return <BarView key={bar.id} bar={bar} />
 
-                    }
-                    )}
+                }
+                )}
             </Row>
         </div>
     )

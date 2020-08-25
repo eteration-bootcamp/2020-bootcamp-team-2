@@ -1,8 +1,5 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
+import { Form, Button, Col, Container } from 'react-bootstrap'
 import { connect } from 'react-redux';
 import { signUp } from '../../store/actions/authActions'
 import { Redirect } from 'react-router-dom'
@@ -10,7 +7,6 @@ import Alert from 'react-bootstrap/Alert';
 import { useState } from 'react';
 import Input from '../../components/Input';
 import { register } from '../../../api/apiCalls';
-
 
 function LoginFail() {
     const [show, setShow] = useState(true);
@@ -71,16 +67,13 @@ class RegisterPage extends React.Component {
                             <Input controlId="confirmPassword" onChange={this.handleChange} className="login_register_form" type="password" placeholder="CONFIRM A PASSWORD" />
                             <Input controlId="fullName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER A NAME AND SURNAME" />
                             <Input controlId="userName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER AN USERNAME" />
-
                             <Button className="login_register_button" variant="primary" type="submit">
                                 SIGN UP
                             </Button>
                             {authError ? <LoginFail /> : <></>}
                         </Form>
-
                     </center>
                 </Col>
-
             </Container>
         )
     }

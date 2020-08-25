@@ -7,8 +7,8 @@ const LanguageSelector = (props) => {
         const { i18n } = props;
         i18n.changeLanguage(language);
         changeLanguage(language);
-
     };
+
     return (
         <div className="container">
             <img src="https://www.countryflags.io/tr/shiny/24.png" alt="Turkısh Flag" onClick={() => onChangeLanguage('tr')} style={{ cursor: 'pointer', marginRight: "10px" }}></img>

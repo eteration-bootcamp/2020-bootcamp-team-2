@@ -1,15 +1,11 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+import { Form, Button, Col, Container } from 'react-bootstrap'
 import { connect } from 'react-redux';
 import { signIn } from '../../store/actions/authActions'
 import { Redirect } from 'react-router-dom'
 import Alert from 'react-bootstrap/Alert';
 import { useState } from 'react';
 import Input from '../../components/Input';
-
 
 function LoginFail() {
     const [show, setShow] = useState(true);

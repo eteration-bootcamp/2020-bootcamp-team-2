@@ -24,10 +24,10 @@ const Cards = () => {
 
     return (
 
-        <div className="container-fluid" style={{ marginBottom : "30px"}}>
+        <div className="container-fluid" style={{ marginBottom: "30px" }}>
             <Row>
                 {content.map(activity => {
-                    return ( <ActivityView key={activity.id} activity={activity} /> )
+                    return (<ActivityView key={activity.id} activity={activity} />)
                 })}
             </Row>
         </div>

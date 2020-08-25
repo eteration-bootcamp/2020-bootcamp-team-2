@@ -24,10 +24,10 @@ const Cards = () => {
 
     return (
 
-        <div className="container-fluid"  style={{ marginBottom : "30px"}}>
+        <div className="container-fluid" style={{ marginBottom: "30px" }}>
             <Row>
                 {content.map(hotel => {
-                    return ( <HotelView key={hotel.id} hotel={hotel} /> )
+                    return (<HotelView key={hotel.id} hotel={hotel} />)
                 })}
             </Row>
         </div>
