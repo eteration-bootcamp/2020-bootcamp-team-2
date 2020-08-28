@@ -3,15 +3,10 @@ import { Carousel, Row, Col } from 'react-bootstrap'
 import { getHotels } from '../../../api/apiCalls';
 import { Link } from 'react-router-dom'
 
-
 const CarouselBox = (props) => {
-    const [hotelPage, setHotelsPage] = useState({ content: [], last: true, number: 0 })
-
-
+    const [hotelPage, setHotelsPage] = useState({ content: [] })
     useEffect(() => {
-
         loadHotels(props.cityId);
-
     }, [props.cityId]);
 
     const loadHotels = async (cityId) => {
@@ -19,23 +14,18 @@ const CarouselBox = (props) => {
             const response = await getHotels(cityId);
 
             setHotelsPage({
-
                 content: [...response.data]
-
             })
 
         } catch (error) { }
     }
 
     const { content } = hotelPage;
-    //console.log("cafe ID "+content);
-
 
     return (
         <Row>
             <Col md={2}><center><h1 className="location_component_style">HOTEL</h1></center></Col>
             {content.map(hotel => {
-
                 return (
                     <Col>
                         <Carousel>
@@ -46,7 +36,6 @@ const CarouselBox = (props) => {
                                     <p>Meeting point</p>
                                 </Carousel.Caption>
                                 <Link to={{ pathname: `/HotelDetail/${hotel.id}`, state: { hotelId: hotel.id } }} className="card_button">See and Enjoy</Link>
-
                             </Carousel.Item>
                         </Carousel>
                     </Col>

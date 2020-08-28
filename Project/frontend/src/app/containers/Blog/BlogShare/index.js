@@ -4,7 +4,6 @@ import { blog } from '../../../../api/apiCalls';
 import { withTranslation } from 'react-i18next';
 import Header from './Header'
 
-
 class Content extends React.Component {
     /*
     constructor(props) {
@@ -101,7 +100,6 @@ class Content extends React.Component {
         )
     }
 }
-
 
 const ContentWithTranslation = withTranslation()(Content);
 

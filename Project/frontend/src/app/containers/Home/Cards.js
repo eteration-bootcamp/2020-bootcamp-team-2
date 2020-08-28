@@ -25,5 +25,4 @@ const Cards = ({ cardsDetail }) => {
     )
 }
 
-
 export default Cards

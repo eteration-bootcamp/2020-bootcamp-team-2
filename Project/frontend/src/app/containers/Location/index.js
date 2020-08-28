@@ -35,7 +35,6 @@ class Location extends React.Component {
             cityName: cityName,
             selectCity: cityName
         })
-
     };
 
     render() {
@@ -108,16 +107,9 @@ class Location extends React.Component {
                         <CarouselBars cityId={this.state.cityId} />
                     </div>
                 </Container>
-
-
-
             </div >
         )
-
     }
 }
 
-
-
 export default Location;
-

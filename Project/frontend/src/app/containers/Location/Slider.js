@@ -14,7 +14,6 @@ export default class Slider extends Component {
                                 src={"https://media.ayder.com.tr/images/tours/2723_birgi-alacati-cesme-izmir-turu/birgi-alacati-cesme-izmir-turu_171226153850.jpg"}
                                 alt="First slide"
                             />
-
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
@@ -23,7 +22,6 @@ export default class Slider extends Component {
                                 src={"https://img.redbull.com/images/q_auto,f_auto/redbullcom/2017/03/03/1331847629958_4/geceleri-b%C3%B6yle-bir-manzara-izmir-de-seni-bekliyor.jpg"}
                                 alt="Third slide"
                             />
-
                         </Carousel.Item>
                     </Carousel>
                 </Row>

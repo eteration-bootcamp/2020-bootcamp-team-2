@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Button, Col, Container } from 'react-bootstrap'
 import { connect } from 'react-redux';
 import { signUp } from '../../store/actions/authActions'
 import { Redirect } from 'react-router-dom'
 import Alert from 'react-bootstrap/Alert';
-import { useState } from 'react';
 import Input from '../../components/Input';
 import { register } from '../../../api/apiCalls';
 
@@ -14,9 +13,7 @@ function LoginFail() {
     return (
         <>
             <Alert className="alert_showbox_fail" show={show} onClose={() => setShow(false)} dismissible>
-                <p>
-                    <center>Fail</center>
-                </p>
+                <p><center>Fail</center></p>
             </Alert>
         </>
     );
@@ -59,20 +56,15 @@ class RegisterPage extends React.Component {
         return (
             <Container fluid="md">
                 <Col>
-                    <center md={6} className="col-md-offset-6 centered">
-                        <Form onSubmit={this.handleSubmit} style={{ position: "absolute", zIndex: "3", marginTop: "15%", marginLeft: "30%" }}>
-
-                            <Input controlId="email" onChange={this.handleChange} className="login_register_form" type="email" placeholder="ENTER AN E-MAIL ADDRESS" />
-                            <Input controlId="password" onChange={this.handleChange} className="login_register_form" type="password" placeholder="ENTER A PASSWORD" />
-                            <Input controlId="confirmPassword" onChange={this.handleChange} className="login_register_form" type="password" placeholder="CONFIRM A PASSWORD" />
-                            <Input controlId="fullName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER A NAME AND SURNAME" />
-                            <Input controlId="userName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER AN USERNAME" />
-                            <Button className="login_register_button" variant="primary" type="submit">
-                                SIGN UP
-                            </Button>
-                            {authError ? <LoginFail /> : <></>}
-                        </Form>
-                    </center>
+                    <Form onSubmit={this.handleSubmit} style={{ position: "absolute", zIndex: "3", marginTop: "10%", marginLeft: "30%" }}>
+                        <Input controlId="email" onChange={this.handleChange} className="login_register_form" type="email" placeholder="ENTER AN E-MAIL ADDRESS" />
+                        <Input controlId="password" onChange={this.handleChange} className="login_register_form" type="password" placeholder="ENTER A PASSWORD" />
+                        <Input controlId="confirmPassword" onChange={this.handleChange} className="login_register_form" type="password" placeholder="CONFIRM A PASSWORD" />
+                        <Input controlId="fullName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER A NAME AND SURNAME" />
+                        <Input controlId="userName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER AN USERNAME" />
+                        <Button className="login_register_button" variant="primary" type="submit">SIGN UP</Button>
+                        {authError ? <LoginFail /> : <></>}
+                    </Form>
                 </Col>
             </Container>
         )

@@ -4,37 +4,26 @@ import { getCafes } from '../../../api/apiCalls';
 import { Link } from 'react-router-dom'
 
 const CarouselCafes = (props) => {
-    const [cityPage, setCafePage] = useState({ content: [], last: true, number: 0 })
-
+    const [cityPage, setCafePage] = useState({ content: [] })
     useEffect(() => {
-
         loadCities(props.cityId);
-
     }, [props.cityId]);
 
     const loadCities = async (cityId) => {
         try {
             const response = await getCafes(cityId);
-
             setCafePage({
-
                 content: [...response.data]
-
             })
 
         } catch (error) { }
     }
 
     const { content } = cityPage;
-    //console.log("cafe ID "+content);
-
-
     return (
         <Row>
             <Col md={2}><center><h1 className="location_component_style">CAFE</h1></center></Col>
-
             {content.map(cafe => {
-
                 return (
                     <Col>
                         <Carousel>
@@ -50,29 +39,9 @@ const CarouselCafes = (props) => {
                         </Carousel>
                     </Col>
                 )
-
-
             })}
         </Row>
     )
-
 }
 
-/*
- <div>
-            
-             <div>
-                <Carousel>
-                    <Carousel.Item>
-                        <img height={200} className="d-block w-100" src={require('./images/izmir.jpg')} alt="Third slide" />
-                        <Carousel.Caption>
-                            <h3>Clock Tower, IZMIR/TURKEY</h3>
-                            <p>Meeting point</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
-            </div>
-
-        </div>
-*/
 export default CarouselCafes
