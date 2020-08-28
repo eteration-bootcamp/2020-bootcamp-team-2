@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const HistoricalView = (props) => {
     const { historical } = props;
     return (
-        <Col md={3} style={{ marginBottom: "20px" }}>
+        <Col md={3} className="margin_bottom_20">
             <CardDeck className="margin_top_20">
                 <Card className="text-white text-right">
                     <Card.Img className="card_img_height" src={historical.imageUrl} />

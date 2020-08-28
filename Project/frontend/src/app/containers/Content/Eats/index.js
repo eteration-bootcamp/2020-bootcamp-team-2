@@ -1,15 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Container, Row } from 'react-bootstrap'
 import Header from "./Header";
-import Cards from "./Cards";
+import EatView from './EatView';
+import { getEats } from '../../../../api/apiCalls';
 
-function Content() {
-  return (
-    <div>
-      <Header />
-      <Cards />
+const Cards = () => {
+    const [eatPage, setEatPage] = useState({ content: [] })
 
-    </div>
-  );
+    useEffect(() => {
+
+        loadEats();
+    }, []);
+
+    const loadEats = async (page) => {
+        try {
+            const response = await getEats(page);
+            setEatPage(previousEatPage => ({
+                ...response.data,
+                content: [...previousEatPage.content, ...response.data.content]
+            }))
+        } catch (error) { }
+    }
+    const { content } = eatPage;
+
+    return (
+        <Container fluid className="margin_bottom_20">
+            <Header />
+            <Row>
+                {content.map(eat => {
+                    return (<EatView key={eat.id} eat={eat} />)
+                })}
+            </Row>
+        </Container>
+    )
 }
 
-export default Content;
+export default Cards

@@ -1,15 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Container, Row } from 'react-bootstrap'
 import Header from "./Header";
-import Cards from "./Cards";
+import CafeView from './CafeView';
+import { getCafes } from '../../../../api/apiCalls';
 
-function Content() {
+const Cards = () => {
+  const [cafePage, setCafePage] = useState({ content: [] })
+
+  useEffect(() => {
+
+    loadCafes();
+  }, []);
+
+  const loadCafes = async (page) => {
+    try {
+      const response = await getCafes(page);
+      setCafePage(previousCafePage => ({
+        ...response.data,
+        content: [...previousCafePage.content, ...response.data.content]
+      }))
+    } catch (error) { }
+  }
+  const { content } = cafePage;
+
   return (
-    <div>
+    <Container fluid className="margin_bottom_20">
       <Header />
-      <Cards />
-
-    </div>
-  );
+      <Row>
+        {content.map(cafe => {
+          return (<CafeView key={cafe.id} cafe={cafe} />)
+        })}
+      </Row>
+    </Container>
+  )
 }
 
-export default Content;
+export default Cards

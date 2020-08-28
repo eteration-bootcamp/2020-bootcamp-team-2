@@ -1,15 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Container, Row } from 'react-bootstrap'
 import Header from "./Header";
-import Cards from "./Cards";
+import HistoricalView from './HistoricalView';
+import { getHistoricals } from '../../../../api/apiCalls';
 
-function Content() {
+const Cards = () => {
+  const [historicalPage, setHistoricalPage] = useState({ content: [] })
+
+  useEffect(() => {
+
+    loadHistoricals();
+  }, []);
+
+  const loadHistoricals = async (page) => {
+    try {
+      const response = await getHistoricals(page);
+      setHistoricalPage(previousHistoricalPage => ({
+        ...response.data,
+        content: [...previousHistoricalPage.content, ...response.data.content]
+      }))
+    } catch (error) { }
+  }
+  const { content } = historicalPage;
+
   return (
-    <div>
+    <Container fluid className="margin_bottom_20">
       <Header />
-      <Cards />
-
-    </div>
-  );
+      <Row>
+        {content.map(historical => {
+          return (<HistoricalView key={historical.id} historical={historical} />)
+        })}
+      </Row>
+    </Container>
+  )
 }
 
-export default Content;
+export default Cards
