@@ -3,7 +3,7 @@ import { getCountries } from '../../api/apiCalls';
 import Dropdown from 'react-bootstrap/Dropdown'
 
 const CountryList = ({ onSelectCountryId }) => {
-    const [countryPage, setCountryPage] = useState({ content: [], last: true, number: 0 })
+    const [countryPage, setCountryPage] = useState({ content: []})
     useEffect(() => {
 
         loadCountries();

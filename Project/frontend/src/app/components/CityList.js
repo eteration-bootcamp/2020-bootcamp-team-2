@@ -3,7 +3,7 @@ import { getCities } from '../../api/apiCalls';
 import Dropdown from 'react-bootstrap/Dropdown'
 
 const CityList = (props) => {
-    const [cityPage, setCityPage] = useState({ content: [], last: true, number: 0 })
+    const [cityPage, setCityPage] = useState({ content: [] })
 
     useEffect(() => {
         loadCities(props.countryId);
@@ -23,9 +23,7 @@ const CityList = (props) => {
         <div>
             {content.map(city => {
                 return <Dropdown.Item onClick={() => props.setCity(city.id, city.cityName)}> {city.cityName}</Dropdown.Item>
-                //<CityView key={city.id} city={city} />               
-
-            })}
+               })}
         </div>
     )
 };

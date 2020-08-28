@@ -1,6 +1,7 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 import { changeLanguage } from '../../api/apiCalls';
+import Container from 'react-bootstrap/Container'
 
 const LanguageSelector = (props) => {
     const onChangeLanguage = language => {
@@ -10,10 +11,10 @@ const LanguageSelector = (props) => {
     };
 
     return (
-        <div className="container">
+        <Container>
             <img src="https://www.countryflags.io/tr/shiny/24.png" alt="Turkısh Flag" onClick={() => onChangeLanguage('tr')} style={{ cursor: 'pointer', marginRight: "10px" }}></img>
             <img src="https://www.countryflags.io/us/shiny/24.png" alt="USA Flag" onClick={() => onChangeLanguage('en')} style={{ cursor: 'pointer' }}></img>
-        </div>
+        </Container>
     );
 };
 
