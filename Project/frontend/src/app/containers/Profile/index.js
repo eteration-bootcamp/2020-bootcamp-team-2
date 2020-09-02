@@ -10,9 +10,8 @@ class ProfilePage extends React.Component {
                 <Row md={6} >
                     <Col md={6}>
                         <Media className="margin_top_20" as="li">
-                            <img alt="bilmiyorum" className="mr-3 profile-image-style" src={require('./images/user.png')} />
+                            <img alt="bilmiyorum" className="mr-3 profile-image-style" src={require('../../images/profile/user.png')} />
                             <Media.Body>
-
                                 <center>
                                     <h5 className="profile-font-style margin_top_20">Merve Yıldırım</h5>
                                     <Link to="/EditProfile">

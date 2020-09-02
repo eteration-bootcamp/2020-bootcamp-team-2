@@ -1,6 +1,5 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+import { Button, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
 const CardsDetail = ({ cardDetail }) => {

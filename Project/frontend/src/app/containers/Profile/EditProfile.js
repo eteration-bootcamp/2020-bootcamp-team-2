@@ -9,12 +9,12 @@ function EditProfilePage() {
         <Row >
           <Col md={4}>
             <center>
-              <Image className="edit_profile_image" src={require('./images/user.png')} rounded />
+              <Image className="edit_profile_image" src={require('../../images/profile/user.png')} rounded />
               <h3 class="profile-font-style">Name Surname</h3>
             </center>
           </Col>
           <Col md={8} >
-            <Tabs className="profile-font-style" style={{ marginTop: "20px" }} defaultActiveKey="profile" id="uncontrolled-tab-example" activeKey={key} onSelect={(k) => setKey(k)}>
+            <Tabs className="profile-font-style margin_top_20" defaultActiveKey="profile" id="uncontrolled-tab-example" activeKey={key} onSelect={(k) => setKey(k)}>
 
               <Tab eventKey="editProfile" title=" Edit Profile" >
                 <Form className="margin_bottom_20">
