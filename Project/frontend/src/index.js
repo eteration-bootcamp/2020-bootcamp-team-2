@@ -4,7 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 import './app/components/navbar.css';
-import './bootstrap-override.scss';
+import './main.scss';
 import './i18n';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from "redux";
