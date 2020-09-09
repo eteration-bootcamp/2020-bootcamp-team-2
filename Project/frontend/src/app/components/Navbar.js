@@ -15,23 +15,23 @@ const Navbar = (props) => {
     return (
         <nav className="navbar navbar-expand-lg" >
             <Link to="/"><img src={require('../images/logo.png')} className="w-50 mr-3" alt="Logo" /></Link>
-            <div className="collapse navbar-collapse h3" id="nvbarSupportedContent">
+            <div className="collapse navbar-collapse h3">
                 <ul className="navbar-nav mr-auto">
-                    <Link to="/">
-                        <li className="nav-item active">
-                            <a className="mr-5" href="index.html">{t('HOME')}</a>
-                        </li>
-                    </Link>
-                    <Link to="/Location">
-                        <li className="nav-item">
-                            <a className="mr-5" href="index.html" role="button">{t('LOCATION')}</a>
-                        </li>
-                    </Link>
-                    <Link to="/Blog">
-                        <li className="nav-item">
-                            <a href="index.html" role="button">{t('BLOG')}</a>
-                        </li>
-                    </Link>
+                    <li className="nav-item">
+                        <Link to="/" className="mr-5">
+                            {t('HOME')}
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/Location" className="mr-5">
+                            {t('LOCATION')}
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/Blog">
+                            {t('BLOG')}
+                        </Link>
+                    </li>
                 </ul>
             </div>
             {links}

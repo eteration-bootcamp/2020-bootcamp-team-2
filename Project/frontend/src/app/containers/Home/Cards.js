@@ -13,7 +13,7 @@ const Cards = ({ cardsDetail }) => {
                         }
                     })}
                 </CardDeck>
-                <CardDeck className="margin_top_20" style={{ marginBottom: "20px" }}>
+                <CardDeck className="margin_top_20 margin_bottom_20">
                     {cardsDetail && cardsDetail.map(cardDetail => {
                         if (cardDetail.id > 3) {
                             return (<CardsDetail cardDetail={cardDetail} key={cardDetail.id} />)

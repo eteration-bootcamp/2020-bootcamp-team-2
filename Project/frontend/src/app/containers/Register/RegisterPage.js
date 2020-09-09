@@ -62,7 +62,7 @@ class RegisterPage extends React.Component {
                         <Input controlId="confirmPassword" onChange={this.handleChange} className="login_register_form" type="password" placeholder="CONFIRM A PASSWORD" />
                         <Input controlId="fullName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER A NAME AND SURNAME" />
                         <Input controlId="userName" onChange={this.handleChange} className="login_register_form" type="name" placeholder="ENTER AN USERNAME" />
-                        <Button className="login_register_button" variant="primary" type="submit">SIGN UP</Button>
+                        <Button className="login_button_radius" type="submit">SIGN UP</Button>
                         {authError ? <LoginFail /> : <></>}
                     </Form>
                 </Col>

@@ -34,7 +34,7 @@ const CarouselBox = (props) => {
                                     <h3>{history.historicalName}</h3>
                                     <p>Meeting point</p>
                                 </Carousel.Caption>
-                                <Link to={{ pathname: `/HistoryDetail/${history.id}`, state: { historicalId: history.id } }} className="btn btn-primary">See and Enjoy</Link>
+                                <Link to={{ pathname: `/HistoryDetail/${history.id}`, state: { historicalId: history.id } }} className="btn btn-primary card_button">See and Enjoy</Link>
 
                             </Carousel.Item>
                         </Carousel>

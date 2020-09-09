@@ -3,6 +3,15 @@
 $primary-color: #23ada9;
 $font-family: Mv Boli;
 $white_color: #fff;
+$hover_color: #505050af;
+
+.margin_top_20 {
+  margin-top: 20px;
+}
+
+.margin_bottom_20 {
+  margin-bottom: 20px;
+}
 
 body {
   font-family: $font-family;
@@ -10,6 +19,10 @@ body {
 
 a {
   color: $white_color;
+  &:hover {
+    text-decoration: none;
+    color: $hover_color;
+  }
 }
 
 .navbar {
@@ -17,27 +30,45 @@ a {
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
-.nav-item a:hover {
-  text-decoration: none !important;
-  color: #ccc;
-}
 
 .btn-primary {
   background-color: $primary-color;
   font-family: $font-family;
   color: $white_color;
-  font-size: 14pt;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border: 0px;
-  height: 15%;
-  width: 100%;
+  font-size: 12pt;
   border-radius: 0;
+  border: 0px;
   text-align: center;
+  width: 100%;
   &:hover {
-    font-size: 14pt;
+    font-size: 12pt;
     background-color: #23ada9;
     box-shadow: 5px 5px 10px 0px rgba(22, 109, 106, 0.7);
   }
+}
+
+.card_button {
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  position: absolute;
+}
+
+.slider_image {
+  height: 650px;
+}
+
+.login_register_form {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #000;
+  border: 1px solid $primary-color;
+  width: 420px;
+}
+
+.login_button_radius {
+  border-radius: 50px;
+}
+
+.login_button_width {
+  width: 200px;
 }
