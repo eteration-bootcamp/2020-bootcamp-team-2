@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from "../../components/Header";
+import Slider from "../../components/Slider";
 import LoginPage from "./LoginPage";
 
 function Login() {
   return (
     <div>
       <LoginPage />
-      <Header />
+      <Slider />
     </div>
   );
 }

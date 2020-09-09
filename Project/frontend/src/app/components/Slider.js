@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { withTranslation } from 'react-i18next';
-class Header extends React.Component {
+class Slider extends React.Component {
     render() {
         //const { t } = this.props;
         return (
@@ -34,6 +34,6 @@ class Header extends React.Component {
     }
 }
 
-const HeaderWithTranslation = withTranslation()(Header);
+const SliderWithTranslation = withTranslation()(Slider);
 
-export default HeaderWithTranslation;
+export default SliderWithTranslation;
