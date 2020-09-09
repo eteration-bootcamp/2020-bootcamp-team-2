@@ -42,7 +42,7 @@ a {
   width: 100%;
   &:hover {
     font-size: 12pt;
-    background-color: #23ada9;
+    background-color: $primary-color;
     box-shadow: 5px 5px 10px 0px rgba(22, 109, 106, 0.7);
   }
 }
