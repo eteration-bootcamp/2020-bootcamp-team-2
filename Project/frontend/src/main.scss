@@ -2,7 +2,42 @@
 
 $primary-color: #23ada9;
 $font-family: Mv Boli;
+$white_color: #fff;
 
 body {
   font-family: $font-family;
+}
+
+a {
+  color: $white_color;
+}
+
+.navbar {
+  background-color: rgba(36, 161, 156, 0.7);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+.nav-item a:hover {
+  text-decoration: none !important;
+  color: #ccc;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  font-family: $font-family;
+  color: $white_color;
+  font-size: 14pt;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border: 0px;
+  height: 15%;
+  width: 100%;
+  border-radius: 0;
+  text-align: center;
+  &:hover {
+    font-size: 14pt;
+    background-color: #23ada9;
+    box-shadow: 5px 5px 10px 0px rgba(22, 109, 106, 0.7);
+  }
 }

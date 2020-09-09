@@ -8,7 +8,7 @@ const NavbarLogOut = (props) => {
     const { t } = props;
 
     return (
-        <div className="navbar_login">
+        <div className="float-right">
             <Link to="/">
                 <button onClick={props.signOut} className="btn btn-outline-light my-2 my-sm-0 mr-3 " type="submit">{t('LOGOUT')}</button>
             </Link>

@@ -13,23 +13,23 @@ const Navbar = (props) => {
     const links = auth.uid ? <NavbarLogOut /> : <NavbarLogIn />;
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light navbar_style" >
-            <Link to="/"><img src={require('../images/logo.png')} className="logo_style" alt="Logo" /></Link>
-            <div className="collapse navbar-collapse" id="nvbarSupportedContent">
+        <nav className="navbar navbar-expand-lg" >
+            <Link to="/"><img src={require('../images/logo.png')} className="w-50 mr-3" alt="Logo" /></Link>
+            <div className="collapse navbar-collapse h3" id="nvbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <Link to="/">
                         <li className="nav-item active">
-                            <a className="navbar_menu_margin navbar_text_color" href="index.html">{t('HOME')}</a>
+                            <a className="mr-5" href="index.html">{t('HOME')}</a>
                         </li>
                     </Link>
                     <Link to="/Location">
                         <li className="nav-item">
-                            <a className="navbar_menu_margin navbar_text_color" href="index.html" role="button">{t('LOCATION')}</a>
+                            <a className="mr-5" href="index.html" role="button">{t('LOCATION')}</a>
                         </li>
                     </Link>
                     <Link to="/Blog">
                         <li className="nav-item">
-                            <a className="navbar_text_color" href="index.html" role="button">{t('BLOG')}</a>
+                            <a href="index.html" role="button">{t('BLOG')}</a>
                         </li>
                     </Link>
                 </ul>

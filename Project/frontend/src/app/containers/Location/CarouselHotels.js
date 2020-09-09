@@ -35,7 +35,7 @@ const CarouselBox = (props) => {
                                     <h3>{hotel.hotelName}</h3>
                                     <p>Meeting point</p>
                                 </Carousel.Caption>
-                                <Link to={{ pathname: `/HotelDetail/${hotel.id}`, state: { hotelId: hotel.id } }} className="card_button">See and Enjoy</Link>
+                                <Link to={{ pathname: `/HotelDetail/${hotel.id}`, state: { hotelId: hotel.id } }} className="btn btn-primary">See and Enjoy</Link>
                             </Carousel.Item>
                         </Carousel>
                     </Col>
@@ -43,7 +43,6 @@ const CarouselBox = (props) => {
             })}
         </Row>
     )
-
 }
 
 /*
